@@ -1411,14 +1411,22 @@
   if('scrollRestoration' in history){
     history.scrollRestoration = 'manual';
   }
+  if(location.hash){
+    history.replaceState(null, '', location.pathname + location.search);
+  }
   function scrollToTop(){
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }
   window.addEventListener('DOMContentLoaded', scrollToTop);
   window.addEventListener('load', scrollToTop);
   window.addEventListener('pageshow', () => {
     scrollToTop();
   });
+  requestAnimationFrame(() => {
+    scrollToTop();
+    requestAnimationFrame(scrollToTop);
+  });
+  setTimeout(scrollToTop, 150);
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
