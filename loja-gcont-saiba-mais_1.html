@@ -1009,31 +1009,50 @@
   /* TOAST */
   .toast{
     position:fixed;
-    bottom: 90px; left:50%;
-    transform: translate(-50%, 20px);
+    right: 16px;
+    bottom: 16px;
+    left: auto;
+    transform: translateY(16px);
     background: rgba(255, 216, 107, 0.96);
     border:1px solid rgba(212, 136, 15, 0.55);
     color: #2a2100;
-    font-size:13.5px;
-    padding: 12px 20px;
+    font-size:12px;
+    line-height: 1.35;
+    padding: 8px 12px;
     border-radius: 999px;
     box-shadow: 0 18px 36px rgba(0,0,0,0.2);
-    z-index: 90;
+    z-index: 35;
     opacity:0;
     visibility:hidden;
     transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
     display:flex; align-items:center; gap:8px;
+    max-width: min(320px, calc(100vw - 32px));
+    width: fit-content;
+    pointer-events: none;
   }
-  .toast svg{ width:15px; height:15px; stroke: #2a2100; }
+  .toast svg{ width:13px; height:13px; stroke: #2a2100; flex: 0 0 auto; }
   .toast.show{
     opacity:1;
-    transform: translate(-50%, 0);
+    transform: translateY(0);
     visibility:visible;
     animation: toastPop .32s ease;
   }
   @keyframes toastPop{
-    0%{ transform: translate(-50%, 14px) scale(.96); }
-    100%{ transform: translate(-50%, 0) scale(1); }
+    0%{ transform: translateY(10px) scale(.96); }
+    100%{ transform: translateY(0) scale(1); }
+  }
+  @media (max-width: 600px){
+    .toast{
+      right: 12px;
+      left: 12px;
+      bottom: calc(12px + env(safe-area-inset-bottom));
+      max-width: none;
+      width: auto;
+      font-size: 11.5px;
+      padding: 8px 10px;
+      justify-content: center;
+      text-align: center;
+    }
   }
 </style>
 </head>
