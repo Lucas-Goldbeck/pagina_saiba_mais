@@ -1411,8 +1411,13 @@
   if('scrollRestoration' in history){
     history.scrollRestoration = 'manual';
   }
-  window.addEventListener('pageshow', () => {
+  function scrollToTop(){
     window.scrollTo(0, 0);
+  }
+  window.addEventListener('DOMContentLoaded', scrollToTop);
+  window.addEventListener('load', scrollToTop);
+  window.addEventListener('pageshow', () => {
+    scrollToTop();
   });
 
   document.getElementById('year').textContent = new Date().getFullYear();
