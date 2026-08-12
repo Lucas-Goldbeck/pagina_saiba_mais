@@ -331,6 +331,13 @@
     .hero-text{ flex-basis: 44%; }
     .hero-visual{ flex-basis: 73%; margin: 80px -48px 0 -22px; }
   }
+  @media (max-width: 600px){
+    .hero-text h1{
+      font-size: clamp(20px, 5.8vw, 30px);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+    }
+  }
   .hero-ctas{
     display:flex;
     gap:14px;
