@@ -1071,10 +1071,6 @@
         <a href="#contato">Contato</a>
       </nav>
       <div class="nav-actions">
-        <button class="cart-btn" id="cartOpenBtn" aria-label="Abrir carrinho">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-          <span class="cart-badge" id="cartBadge">0</span>
-        </button>
         <a class="nav-cta" href="#produtos">Ver produtos</a>
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
           <span></span><span></span><span></span>
@@ -1159,7 +1155,7 @@
             <div class="rating"><span class="stars">★★★★★</span><span>(novo)</span></div>
             <div class="card-footer">
               <div class="price">R$ 49,99 <small>pagamento único</small></div>
-              <button class="buy-btn" onclick="addToCart(this)">Adicionar</button>
+              <button class="buy-btn" onclick="buyNow()">Comprar</button>
             </div>
             <div class="card-details">
               <h4>Mais detalhes</h4>
@@ -1226,7 +1222,7 @@
             <button class="faq-q">Posso comprar mais de um produto de uma vez?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
             </button>
-            <div class="faq-a"><p>Sim! Adicione quantos produtos quiser à sua sacola e finalize tudo automaticamente.</p></div>
+            <div class="faq-a"><p>No momento, a loja está com um único produto disponível. Para comprar, basta clicar em Comprar e você será levado direto para a Hotmart.</p></div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-q">Os materiais servem para qualquer tipo de empresa?
@@ -1299,28 +1295,6 @@
 <a class="float-wpp" href="https://wa.me/554936740176?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GCONT%20e%20fiquei%20com%20algumas%20d%C3%BAvidas%20sobre%20os%20materiais%20dispon%C3%ADveis.%20Poderiam%20me%20ajudar%3F" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
 </a>
-
-<div class="cart-overlay" id="cartOverlay">
-  <div class="cart-drawer">
-    <div class="cart-head">
-      <h3>Sua sacola</h3>
-      <button class="cart-close" id="cartCloseBtn" aria-label="Fechar carrinho">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    <div class="cart-items" id="cartItems"></div>
-    <div class="cart-foot">
-      <div class="cart-subtotal"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div>
-      <button class="cart-checkout" id="cartCheckoutBtn" disabled>Finalizar compra</button>
-    </div>
-  </div>
-</div>
-
-<div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>
-  <span id="toastMsg">Produto adicionado à sacola</span>
-</div>
-
 <script>
   if('scrollRestoration' in history){
     history.scrollRestoration = 'manual';
@@ -1418,140 +1392,10 @@
     });
   });
 
-  /* ---------- Cart ---------- */
-  const HOTMART_CHECKOUT_URL = 'https://pay.hotmart.com/D107135598O';
-  const CART_KEY = 'gcont_cart';
-  let cart = JSON.parse(localStorage.getItem(CART_KEY) || '{}');
-
-  const cartItemsEl = document.getElementById('cartItems');
-  const cartSubtotalEl = document.getElementById('cartSubtotal');
-  const cartBadgeEl = document.getElementById('cartBadge');
-  const cartCheckoutBtn = document.getElementById('cartCheckoutBtn');
-  const cartOverlay = document.getElementById('cartOverlay');
-  const toastEl = document.getElementById('toast');
-  const toastMsgEl = document.getElementById('toastMsg');
-  let toastTimer = null;
-
-  function showToast(msg){
-    toastMsgEl.textContent = msg;
-    toastEl.style.display = 'flex';
-    clearTimeout(toastTimer);
-    toastEl.classList.remove('show');
-    void toastEl.offsetWidth;
-    toastEl.classList.add('show');
-    toastTimer = setTimeout(() => {
-      toastEl.classList.remove('show');
-    }, 2600);
-  }
-
-  function animateAddButton(btn){
-    btn.classList.remove('added');
-    void btn.offsetWidth;
-    btn.classList.add('added');
-    setTimeout(() => btn.classList.remove('added'), 520);
-  }
-
-  function showAddedTag(card, productName){
-    let tag = card.querySelector('.cart-added-tag');
-    if(!tag){
-      tag = document.createElement('span');
-      tag.className = 'cart-added-tag';
-      tag.setAttribute('role', 'status');
-      tag.setAttribute('aria-live', 'polite');
-      const footer = card.querySelector('.card-footer');
-      if(footer) card.insertBefore(tag, footer);
-      else card.appendChild(tag);
-    }
-    const footer = card.querySelector('.card-footer');
-    if(footer && tag.nextElementSibling !== footer){
-      card.insertBefore(tag, footer);
-    }
-    tag.textContent = productName + ' adicionado ao carrinho';
-    tag.classList.remove('show');
-    void tag.offsetWidth;
-    tag.classList.add('show');
-    clearTimeout(tag._hideTimer);
-    tag._hideTimer = setTimeout(() => tag.classList.remove('show'), 2400);
-  }
-
-  function openCart(){
-    cartOverlay.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeCart(){
-    cartOverlay.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  function saveCart(){ localStorage.setItem(CART_KEY, JSON.stringify(cart)); }
-
-  function formatPrice(n){ return 'R$ ' + n.toFixed(2).replace('.', ','); }
-
-  function renderCart(){
-    const ids = Object.keys(cart);
-    let totalQty = 0, subtotal = 0;
-    if(ids.length === 0){
-      cartItemsEl.innerHTML = '<p class="cart-empty">Sua sacola está vazia.<br>Adicione produtos do catálogo.</p>';
-    } else {
-      cartItemsEl.innerHTML = ids.map(id => {
-        const item = cart[id];
-        totalQty += item.qty;
-        subtotal += item.qty * item.price;
-        return `<div class="cart-item" data-id="${id}">
-          <div class="cart-item-info">
-            <h4>${item.name}</h4>
-            <div class="cart-item-price">${formatPrice(item.price)} cada</div>
-            <div class="cart-item-qty">
-              <button class="qty-btn" data-action="dec">−</button>
-              <span>${item.qty}</span>
-              <button class="qty-btn" data-action="inc">+</button>
-              <a class="cart-item-remove" data-action="remove">remover</a>
-            </div>
-          </div>
-        </div>`;
-      }).join('');
-    }
-    cartSubtotalEl.textContent = formatPrice(subtotal);
-    cartBadgeEl.textContent = totalQty;
-    cartBadgeEl.classList.toggle('show', totalQty > 0);
-    cartCheckoutBtn.disabled = totalQty === 0;
-    saveCart();
-  }
-
-  window.addToCart = function(btn){
-    const card = btn.closest('.card');
-    const id = card.dataset.id;
-    const name = card.dataset.name;
-    const price = parseFloat(card.dataset.price);
-    if(cart[id]){ cart[id].qty += 1; } else { cart[id] = { name, price, qty: 1 }; }
-    renderCart();
-    showAddedTag(card, name);
-    showToast(name + ' adicionado ao carrinho');
-    animateAddButton(btn);
+  window.HOTMART_CHECKOUT_URL = 'https://pay.hotmart.com/D107135598O';
+  window.buyNow = function(){
+    window.location.href = window.HOTMART_CHECKOUT_URL;
   };
-
-  cartItemsEl.addEventListener('click', e => {
-    const actionEl = e.target.closest('[data-action]');
-    if(!actionEl) return;
-    const id = actionEl.closest('.cart-item').dataset.id;
-    const action = actionEl.dataset.action;
-    if(action === 'inc') cart[id].qty += 1;
-    if(action === 'dec'){ cart[id].qty -= 1; if(cart[id].qty <= 0) delete cart[id]; }
-    if(action === 'remove') delete cart[id];
-    renderCart();
-  });
-
-  document.getElementById('cartOpenBtn').addEventListener('click', openCart);
-  document.getElementById('cartCloseBtn').addEventListener('click', closeCart);
-  cartOverlay.addEventListener('click', e => { if(e.target === cartOverlay) closeCart(); });
-
-  cartCheckoutBtn.addEventListener('click', () => {
-    if(Object.keys(cart).length === 0) return;
-    window.location.href = HOTMART_CHECKOUT_URL;
-  });
-
-  renderCart();
 
   /* ---------- Scroll reveal ---------- */
   const revealObserver = new IntersectionObserver(entries => {
