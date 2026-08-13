@@ -764,57 +764,6 @@
   .why-item h3{ font-size:16px; margin-bottom:8px; }
   .why-item p{ color: var(--text-dim); font-size: 13.5px; }
 
-  /* SYNC */
-  .sync{
-    background:
-      radial-gradient(circle at top center, rgba(245,166,35,0.08), transparent 45%),
-      linear-gradient(180deg, rgba(245,166,35,0.03), transparent 42%);
-  }
-  .sync-grid{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-  }
-  @media (max-width: 900px){ .sync-grid{ grid-template-columns: 1fr; } }
-  .sync-card{
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px;
-    display:flex;
-    flex-direction:column;
-    gap: 14px;
-    min-height: 100%;
-    box-shadow: 0 18px 44px rgba(0,0,0,0.24);
-  }
-  .sync-card h3{ font-size: 18px; font-weight: 600; }
-  .sync-card p{
-    color: var(--text-dim);
-    font-size: 13.5px;
-    line-height: 1.6;
-  }
-  .sync-card code{
-    color: var(--gold-2);
-    font-size: 0.95em;
-  }
-  .sync-callout{
-    margin-top: 22px;
-    padding: 18px 20px;
-    border-radius: 16px;
-    border: 1px solid rgba(245,166,35,0.28);
-    background: rgba(245,166,35,0.08);
-    color: var(--text-dim);
-    line-height: 1.6;
-  }
-  .sync-callout strong{
-    display:block;
-    color: var(--gold-2);
-    margin-bottom: 6px;
-    font-size: 12px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-  }
-
   /* CTA BAND */
   .cta-band{
     text-align:center;
@@ -1117,7 +1066,6 @@
       </a>
       <nav class="nav-links">
         <a href="#produtos">Produtos</a>
-        <a href="#sincronizacao">Sincronização</a>
         <a href="#vantagens">Por que a GCONT</a>
         <a href="#faq">FAQ</a>
         <a href="#contato">Contato</a>
@@ -1141,7 +1089,6 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
       <a href="#produtos">Produtos</a>
-      <a href="#sincronizacao">Sincronização</a>
       <a href="#vantagens">Por que a GCONT</a>
       <a href="#faq">FAQ</a>
       <a href="#contato">Contato</a>
@@ -1170,7 +1117,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
           Ver catálogo e preços
         </a>
-        <a href="#sincronizacao" class="btn btn-ghost">Como funciona</a>
+        <a href="#faq" class="btn btn-ghost">Tirar dúvidas</a>
       </div>
 
       <div class="trust">
@@ -1195,7 +1142,7 @@
         <div class="section-head reveal">
           <span class="section-tag">Catálogo</span>
           <h2>Conheça os produtos da Loja GCONT</h2>
-          <p>Os cards abaixo são exemplos de vitrine. No site final, os produtos ativos da Hotmart podem entrar e sair do catálogo automaticamente.</p>
+          <p>Modelos ilustrativos — os produtos finais e preços serão atualizados conforme forem lançados.</p>
         </div>
 
         <div class="categories" id="categoryFilters">
@@ -1329,51 +1276,7 @@
           </div>
 
         </div>
-        <p class="placeholder-note">* Produtos e valores acima são exemplos para lançamento — no site final, o catálogo real pode ser sincronizado com a Hotmart.</p>
-      </div>
-    </section>
-
-    <!-- SYNC -->
-    <section class="section sync" id="sincronizacao">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-tag">Integração Hotmart</span>
-          <h2>O catálogo pode ser atualizado automaticamente</h2>
-          <p>Quando um produto novo entra na Hotmart, o site consulta a API em intervalos programados, compara com o que já existe e publica apenas os itens ativos.</p>
-        </div>
-        <div class="sync-grid">
-          <article class="sync-card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12a9 9 0 0 0-9-9"></path><path d="M3 12a9 9 0 0 1 9-9"></path><path d="M3 12a9 9 0 0 0 9 9"></path><path d="M21 12a9 9 0 0 1-9 9"></path><path d="M12 3v18"></path><path d="M3 12h18"></path>
-              </svg>
-            </div>
-            <h3>Consulta periódica</h3>
-            <p>Uma rotina agendada renova o token OAuth e percorre a lista paginada de produtos várias vezes ao dia.</p>
-          </article>
-          <article class="sync-card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5"></path>
-              </svg>
-            </div>
-            <h3>Publica só o que está ativo</h3>
-            <p>Produtos em rascunho, análise, pausa ou exclusão não entram no catálogo. Se virarem <code>PAUSED</code> ou <code>DELETED</code>, saem de exibição.</p>
-          </article>
-          <article class="sync-card reveal">
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M7 8h10"></path><path d="M7 12h6"></path>
-              </svg>
-            </div>
-            <h3>Preço vem da oferta principal</h3>
-            <p>Depois de localizar o produto pelo <code>ucode</code>, o site busca as ofertas e usa o código e o preço da oferta principal.</p>
-          </article>
-        </div>
-        <div class="sync-callout reveal">
-          <strong>Importante</strong>
-          <p>A Hotmart não envia webhook de “produto criado”, então a sincronização não é em tempo real. A atualização costuma acontecer em poucas horas. Imagem e descrição de venda continuam fora da API e podem precisar de complementação manual.</p>
-        </div>
+        <p class="placeholder-note">* Produtos e valores acima são exemplos para lançamento — serão substituídos pelo catálogo real da GCONT.</p>
       </div>
     </section>
 
@@ -1419,16 +1322,10 @@
             <div class="faq-a"><p>Você escolhe o material que deseja, realiza o pagamento de forma segura pela Hotmart e, após a confirmação, recebe o acesso ao produto diretamente pela Hotmart. Todo o processo é simples, rápido e online, e seus materiais ficam disponíveis na plataforma para você acessar quando quiser.</p></div>
           </div>
           <div class="faq-item reveal">
-            <button class="faq-q">O catálogo é atualizado sozinho com produtos da Hotmart?
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            </button>
-            <div class="faq-a"><p>Sim. O site consulta a Hotmart algumas vezes por dia, cria novos produtos ativos, atualiza nome, preço e status, e despublica itens pausados ou excluídos. Como a Hotmart não oferece webhook de produto criado, a atualização acontece por consulta periódica. Imagem e descrição de venda podem seguir como complementação manual.</p></div>
-          </div>
-          <div class="faq-item reveal">
             <button class="faq-q">Quais formas de pagamento são aceitas?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
             </button>
-            <div class="faq-a"><p>Você pode realizar sua compra de forma rápida e segura pela Hotmart, utilizando cartão de crédito, Pix, boleto bancário ou carteiras digitais, conforme as opções disponíveis no momento da compra. Basta escolher a forma de pagamento que preferir e finalizar seu pedido com segurança.</p></div>
+            <div class="faq-a"><p>Você pode realizar sua compra de forma rápida e segura através da Stripe, utilizando cartão de crédito, Pix, boleto bancário ou carteiras digitais, conforme as opções disponíveis no momento da compra. Basta escolher a forma de pagamento que preferir e finalizar seu pedido com segurança.</p></div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-q">Posso comprar mais de um produto de uma vez?
@@ -1470,7 +1367,6 @@
         <div class="footer-col">
           <h4>Navegação</h4>
           <a href="#produtos">Produtos</a>
-          <a href="#sincronizacao">Sincronização</a>
           <a href="#vantagens">Por que a GCONT</a>
           <a href="#contato">Contato</a>
         </div>
