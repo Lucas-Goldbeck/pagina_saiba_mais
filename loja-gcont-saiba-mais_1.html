@@ -529,7 +529,8 @@
     padding:4px 10px;
     border-radius:999px;
   }
-  .card:has(.best-badge){
+  .card:has(.best-badge),
+  .card.featured{
     padding-top: 52px;
     border-color: rgba(245,166,35,0.65);
     background:
@@ -541,22 +542,26 @@
       0 0 28px rgba(245,166,35,0.12);
     transform: translateY(-2px);
   }
-  .card:has(.best-badge)::before{
+  .card:has(.best-badge)::before,
+  .card.featured::before{
     content:'';
     position:absolute;
     inset: 0;
     background: linear-gradient(135deg, rgba(255,216,107,0.12), transparent 38%);
     pointer-events:none;
   }
-  .card:has(.best-badge) .card-icon{
+  .card:has(.best-badge) .card-icon,
+  .card.featured .card-icon{
     background: linear-gradient(135deg, rgba(245,166,35,0.26), rgba(245,166,35,0.08));
     border-color: rgba(245,166,35,0.42);
     box-shadow: 0 10px 24px rgba(245,166,35,0.12);
   }
-  .card:has(.best-badge) .card-footer{
+  .card:has(.best-badge) .card-footer,
+  .card.featured .card-footer{
     border-top-color: rgba(245,166,35,0.35);
   }
-  .card:has(.best-badge):hover{
+  .card:has(.best-badge):hover,
+  .card.featured:hover{
     transform: translateY(-7px);
     border-color: rgba(245,166,35,0.9);
     box-shadow:
@@ -1102,7 +1107,7 @@
             Novidade GCONT
           </span>
           <h1>Ferramentas práticas para <span class="accent">simplificar</span> a gestão da sua empresa</h1>
-          <p class="lead">E-books, planilhas com sistema e materiais criados pela equipe da GCONT para você organizar rotinas financeiras, fiscais e de gestão sem complicação.</p>
+          <p class="lead">E-books, planilhas com sistema e materiais criados pela equipe da GCONT para você organizar rotinas financeiras, fiscais e de gestão sem complicação. Agora com o novo destaque GCONT IA Contábil.</p>
         </div>
         <div class="hero-visual">
           <img src="logos/mockup-produtos.png" alt="Materiais GCONT: e-book, checklist e app de controle financeiro">
@@ -1137,15 +1142,40 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="section-tag">Catálogo</span>
-          <h2>Conheça o produto da Loja GCONT</h2>
-          <p>Modelo ilustrativo — o produto final e o preço serão atualizados conforme forem lançados.</p>
+          <h2>Conheça os produtos da Loja GCONT</h2>
+          <p>Modelo ilustrativo — o destaque agora é o GCONT IA Contábil, inspirado na apresentação do PDF, com foco em uso prático de IA na rotina contábil.</p>
         </div>
 
         <div class="categories" id="categoryFilters">
-          <button class="cat-pill active" data-filter="planilha"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Planilhas com sistema</button>
+          <button class="cat-pill active" data-filter="todos"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Todos</button>
+          <button class="cat-pill" data-filter="ia"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v1a3 3 0 0 0-3 3v2a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3v1a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-1a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3V9a3 3 0 0 0-3-3V5a3 3 0 0 0-3-3Z"></path><circle cx="9" cy="10" r="1"></circle><circle cx="15" cy="10" r="1"></circle><path d="M9 15c1 .8 2.3 1.2 3 .4.7.8 2 1.1 3-.4"></path></svg> IA contábil</button>
+          <button class="cat-pill" data-filter="planilha"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Planilhas com sistema</button>
         </div>
 
         <div class="grid">
+
+          <div class="card reveal featured" data-category="ia" data-id="gcont-ia-contabil" data-name="GCONT IA Contábil" data-price="97.00">
+            <span class="best-badge">Destaque</span>
+            <span class="card-badge">Produto digital</span>
+            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 7v10l8 5 8-5V7l-8-5z"></path><path d="M9 12h.01"></path><path d="M15 12h.01"></path><path d="M8 16c1.2-1 2.8-1.5 4-1.5s2.8.5 4 1.5"></path></svg></div>
+            <h3>GCONT IA Contábil</h3>
+            <p class="desc">Produto inspirado na apresentação do PDF para apoiar escritórios contábeis e empresas no uso prático da IA, com fluxos, prompts e ideias para ganhar agilidade na rotina.</p>
+            <div class="rating"><span class="stars">★★★★★</span><span>lançamento</span></div>
+            <div class="card-footer">
+              <div class="price">R$ 97,00 <small>pagamento único</small></div>
+              <button class="buy-btn" onclick="buyNow()">Comprar</button>
+            </div>
+            <div class="card-details">
+              <h4>Mais detalhes</h4>
+              <div class="card-details-grid">
+                <div><span>Formato</span><strong>PDF + material prático</strong></div>
+                <div><span>Entrega</span><strong>Download imediato</strong></div>
+                <div><span>Indicado para</span><strong>Contadores e equipes financeiras</strong></div>
+                <div><span>Foco</span><strong>Automação e apoio inteligente</strong></div>
+              </div>
+              <p>Ideal para quem quer transformar IA em uma aliada real da contabilidade, com mais organização, velocidade e clareza na tomada de decisão.</p>
+            </div>
+          </div>
 
           <div class="card reveal" data-category="planilha" data-id="precos-ponto-equilibrio" data-name="Preços e Ponto de Equilíbrio" data-price="50.00">
             <span class="card-badge">Planilha</span>
@@ -1222,7 +1252,7 @@
             <button class="faq-q">Posso comprar mais de um produto de uma vez?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
             </button>
-            <div class="faq-a"><p>No momento, a loja está com um único produto disponível. Para comprar, basta clicar em Comprar e você será levado direto para a Hotmart.</p></div>
+            <div class="faq-a"><p>No momento, a loja está com dois produtos disponíveis. Para comprar, basta clicar em Comprar e você será levado direto para a Hotmart.</p></div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-q">Os materiais servem para qualquer tipo de empresa?
