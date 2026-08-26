@@ -1275,6 +1275,7 @@
         <div class="categories" id="categoryFilters">
           <button class="cat-pill active" data-filter="todos"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Todos</button>
           <button class="cat-pill" data-filter="ia"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v1a3 3 0 0 0-3 3v2a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3v1a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-1a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3V9a3 3 0 0 0-3-3V5a3 3 0 0 0-3-3Z"></path><circle cx="9" cy="10" r="1"></circle><circle cx="15" cy="10" r="1"></circle><path d="M9 15c1 .8 2.3 1.2 3 .4.7.8 2 1.1 3-.4"></path></svg> IA contábil</button>
+          <button class="cat-pill" data-filter="fiscal"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path><path d="M8 14c2-2 6-2 8 0"></path><path d="M9 11c1.3-1.2 2.8-1.8 5-1.8s3.7.6 5 1.8"></path></svg> Automação fiscal</button>
           <button class="cat-pill" data-filter="planilha"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Planilhas com sistema</button>
         </div>
 
@@ -1303,6 +1304,40 @@
                 <div><span>Foco</span><strong>Automação e apoio inteligente</strong></div>
               </div>
               <p>Ideal para automatizar consultas, respostas e rotinas com a IA conectada ao banco de dados do cliente.</p>
+            </div>
+          </div>
+
+          <div class="card reveal featured" data-category="fiscal" data-id="notasync-busca-sincronizacao-nfe-nfse" data-name="NotaSync — Busca e Sincronização de NF-e e NFS-e" data-price="sob-consulta">
+            <span class="best-badge">Destaque</span>
+            <span class="card-badge">Sob consulta</span>
+            <div class="card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 3v5h5"></path>
+                <path d="M19 8V6l-5-3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5"></path>
+                <path d="M10 12h4"></path>
+                <path d="M12 10v4"></path>
+                <path d="M8.5 17.5a5 5 0 0 0 7 0"></path>
+                <path d="M15.5 14.5a5 5 0 0 0-7 0"></path>
+                <path d="M8 15.5l.5-1.5 1.5.5"></path>
+                <path d="M16 18.5l-.5 1.5-1.5-.5"></path>
+              </svg>
+            </div>
+            <h3>NotaSync — Busca e Sincronização de NF-e e NFS-e</h3>
+            <p class="desc">Automatize a busca, consulta e organização das Notas Fiscais Eletrônicas (NF-e) e das Notas Fiscais de Serviço Eletrônicas (NFS-e) da sua empresa. O NotaSync facilita o acompanhamento dos documentos fiscais e reduz processos manuais relacionados à busca, conferência, organização e controle das notas.</p>
+            <div class="rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>Solução integrada</span></div>
+            <div class="card-footer">
+              <div class="price">Valor a negociar <small>Entre em contato para orçamento</small></div>
+              <button class="buy-btn" onclick="saibaMaisNotaSync()">Saiba mais</button>
+            </div>
+            <div class="card-details">
+              <h4>Mais detalhes</h4>
+              <div class="card-details-grid">
+                <div><span>Formato</span><strong>Módulo integrado</strong></div>
+                <div><span>Entrega</span><strong>Implantação assistida</strong></div>
+                <div><span>Integração</span><strong>Sistema de Vendas</strong></div>
+                <div><span>Foco</span><strong>Automação de NF-e e NFS-e</strong></div>
+              </div>
+              <p>Ideal para empresas que desejam automatizar a busca, consulta, organização e sincronização de NF-e e NFS-e, reduzindo conferências manuais e centralizando os documentos fiscais dentro do Sistema de Vendas.</p>
             </div>
           </div>
 
@@ -1628,9 +1663,14 @@
   window.buyNow = function(){
     window.location.href = window.HOTMART_CHECKOUT_URL;
   };
+  function openConsultaWhatsApp(message){
+    window.location.href = `https://wa.me/554936740176?text=${encodeURIComponent(message)}`;
+  }
   window.saibaMaisIA = function(){
-    const message = encodeURIComponent('Olá! Tudo bem? Tenho interesse na conexão de IA com banco de dados e gostaria de receber mais informações, como valores, condições de pagamento e como funciona. Poderia me passar mais detalhes, por favor?');
-    window.location.href = `https://wa.me/554936740176?text=${message}`;
+    openConsultaWhatsApp('Olá! Tudo bem? Tenho interesse na conexão de IA com banco de dados e gostaria de receber mais informações, como valores, condições de pagamento e como funciona. Poderia me passar mais detalhes, por favor?');
+  };
+  window.saibaMaisNotaSync = function(){
+    openConsultaWhatsApp('Olá! Tudo bem? Tenho interesse no NotaSync — Busca e Sincronização de NF-e e NFS-e e gostaria de receber mais informações, como valores, condições de pagamento e como funciona. Poderia me passar mais detalhes, por favor?');
   };
 
   /* ---------- Scroll reveal ---------- */
