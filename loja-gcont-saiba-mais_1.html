@@ -533,7 +533,13 @@
     transition: opacity .2s ease, transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
     z-index: 3;
   }
-  .card-video-btn svg{ width:16px; height:16px; stroke: currentColor; margin-left: 1px; }
+  .card-video-btn svg{
+    width:16px;
+    height:16px;
+    stroke: currentColor;
+    display:block;
+    margin:0;
+  }
   .card.expanded .card-video-btn{
     opacity: 1;
     transform: translateY(0) scale(1);
