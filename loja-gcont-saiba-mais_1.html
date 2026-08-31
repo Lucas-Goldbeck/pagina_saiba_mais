@@ -366,10 +366,14 @@
   .btn-primary:hover{ box-shadow: 0 12px 30px rgba(245,166,35,0.35); }
   .btn-ghost{
     background: transparent;
-    color: var(--text);
-    border: 1px solid var(--border);
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.9);
   }
-  .btn-ghost:hover{ border-color: var(--gold-2); color: var(--gold-2); }
+  .btn-ghost:hover{
+    border-color: #ffffff;
+    color: #ffffff;
+    background: rgba(255,255,255,0.08);
+  }
 
   /* trust strip */
   .trust{
@@ -704,20 +708,20 @@
     display:inline-flex;
     align-items:center;
     gap:6px;
-    background: rgba(245,166,35,0.12);
-    border: 1px solid rgba(245,166,35,0.4);
-    color: var(--gold-2);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.9);
+    color: #ffffff;
     font-size: 13px;
     font-weight:600;
     padding: 9px 16px;
     border-radius: 999px;
     transition: background .18s ease, color .18s ease, transform .18s ease;
   }
-  .buy-btn:hover{ background: var(--gold-2); color:#2a2100; transform: translateY(-2px); }
+  .buy-btn:hover{ background: rgba(255,255,255,0.12); color:#ffffff; transform: translateY(-2px); }
   .buy-btn:active{ transform: translateY(0) scale(.98); }
   .buy-btn.added{
-    background: var(--gold-2);
-    color:#2a2100;
+    background: rgba(255,255,255,0.14);
+    color:#ffffff;
     animation: buyBtnPop .42s ease;
   }
   .buy-btn::after{
