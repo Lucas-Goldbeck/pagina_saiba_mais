@@ -793,6 +793,61 @@
     margin-top: 34px;
   }
 
+  /* VITRINE */
+  .vitrine-label{
+    display:flex;
+    align-items:center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .vitrine-label::before,.vitrine-label::after{
+    content:'';
+    flex:1;
+    height:1px;
+    background: linear-gradient(90deg, transparent, rgba(245,166,35,0.45), transparent);
+  }
+  .vitrine-label span{
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-2);
+    font-weight: 700;
+    white-space: nowrap;
+    padding: 0 4px;
+  }
+  .vitrine-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  @media (max-width: 700px){
+    .vitrine-grid{ grid-template-columns: 1fr; max-width: 100%; }
+  }
+  .other-products-wrap{ margin-top: 56px; }
+  .other-products-label{
+    display:flex;
+    align-items:center;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+  .other-products-label::before,.other-products-label::after{
+    content:'';
+    flex:1;
+    height:1px;
+    background: var(--border);
+  }
+  .other-products-label span{
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 0 4px;
+  }
+
   /* WHY SECTION */
   .why{
     position:relative;
@@ -1505,7 +1560,10 @@
           <button class="cat-pill" data-filter="planilha"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Planilhas com sistema</button>
         </div>
 
-        <div class="grid">
+        <!-- Vitrine — produtos em destaque -->
+        <div id="vitrineSection">
+          <div class="vitrine-label reveal"><span>Produtos em destaque</span></div>
+          <div class="vitrine-grid">
 
           <div class="card reveal featured" data-category="ia" data-id="integracao-ia-banco-dados" data-name="Integração de Inteligência Artificial com Banco de Dados" data-price="sob-consulta">
             <span class="best-badge">Destaque</span>
@@ -1566,6 +1624,14 @@
               <p>Ideal para empresas que desejam automatizar e centralizar a gestão de NF-e e NFS-e, reduzindo processos manuais, agilizando conferências e trazendo mais organização, segurança e eficiência ao controle fiscal.</p>
             </div>
           </div>
+
+          </div><!-- /vitrine-grid -->
+        </div><!-- /vitrineSection -->
+
+        <!-- Outros produtos -->
+        <div class="other-products-wrap" id="otherProductsWrap">
+          <div class="other-products-label reveal"><span>Mais produtos</span></div>
+          <div class="grid">
 
           <div class="card reveal" data-category="planilha" data-id="precos-ponto-equilibrio" data-name="Preços e Ponto de Equilíbrio" data-price="50.00">
             <span class="card-badge">Planilha</span>
@@ -1653,7 +1719,8 @@
             </div>
           </div>
 
-        </div>
+          </div><!-- /grid -->
+        </div><!-- /otherProductsWrap -->
       </div>
     </section>
 
@@ -1982,6 +2049,16 @@
       const show = filter === 'todos' || card.dataset.category === filter;
       card.classList.toggle('hidden', !show);
     });
+    const vitrineSection = document.getElementById('vitrineSection');
+    if(vitrineSection){
+      const anyVis = Array.from(vitrineSection.querySelectorAll('.card')).some(c => !c.classList.contains('hidden'));
+      vitrineSection.style.display = anyVis ? '' : 'none';
+    }
+    const otherWrap = document.getElementById('otherProductsWrap');
+    if(otherWrap){
+      const anyVis = Array.from(otherWrap.querySelectorAll('.card')).some(c => !c.classList.contains('hidden'));
+      otherWrap.style.display = anyVis ? '' : 'none';
+    }
   });
 
   /* ---------- FAQ accordion ---------- */
