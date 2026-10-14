@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Loja GCONT | Soluções inteligentes para a gestão da sua empresa</title>
-<meta name="description" content="Planilhas inteligentes, sistemas de automação e soluções com Inteligência Artificial desenvolvidos pela GCONT para otimizar processos e apoiar decisões empresariais.">
+<title>Loja Digital GCONT | Ferramentas para simplificar sua gestão</title>
+<meta name="description" content="Planilhas inteligentes, calculadoras e materiais digitais desenvolvidos pela GCONT para organizar processos, facilitar decisões e trazer mais praticidade à rotina empresarial.">
 <style>
   :root{
     --bg: #131214;
@@ -1418,6 +1418,29 @@
     }
   }
 
+  /* SYSTEMS BANNER */
+  .sys-banner-section{
+    padding: 0 0 60px;
+  }
+  .sys-banner{
+    background: linear-gradient(135deg, rgba(255,216,107,0.08) 0%, rgba(245,166,35,0.04) 100%);
+    border: 1px solid rgba(255,216,107,0.2);
+    border-radius: var(--radius);
+    padding: 40px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .sys-banner-content{ display:flex; flex-direction:column; gap:8px; }
+  .sys-banner-content .section-tag{ margin-bottom:4px; }
+  .sys-banner h2{ font-size:1.35rem; font-weight:700; line-height:1.3; }
+  .sys-banner p{ color:var(--text-dim); font-size:0.925rem; }
+  @media(max-width:700px){
+    .sys-banner{ flex-direction:column; align-items:flex-start; padding:28px 24px; }
+    .sys-banner .btn{ width:100%; justify-content:center; }
+  }
+
   /* TOAST */
   .toast{
     position:fixed;
@@ -1473,17 +1496,17 @@
 
   <header class="nav">
     <div class="nav-inner">
-      <a href="#topo" class="brand">
+      <a href="/" class="brand">
         <img src="logos/logo2.png" alt="GCONT - Gestão Contábil e Empresarial">
       </a>
       <nav class="nav-links">
-        <a href="#produtos">Produtos</a>
+        <a href="#produtos" class="active">Loja Digital</a>
+        <a href="/sistemas">Sistemas Contábeis</a>
         <a href="#vantagens">Por que a GCONT</a>
-        <a href="#faq">FAQ</a>
         <a href="#contato">Contato</a>
       </nav>
       <div class="nav-actions">
-        <a class="nav-cta" href="#produtos">Ver produtos</a>
+        <a class="nav-cta" href="#produtos">Ver ferramentas</a>
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
           <span></span><span></span><span></span>
         </button>
@@ -1496,11 +1519,11 @@
       <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fechar menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
-      <a href="#produtos">Produtos</a>
+      <a href="#produtos">Loja Digital</a>
+      <a href="/sistemas">Sistemas Contábeis</a>
       <a href="#vantagens">Por que a GCONT</a>
-      <a href="#faq">FAQ</a>
       <a href="#contato">Contato</a>
-      <a class="nav-cta" href="#produtos" style="justify-content:center;">Ver produtos</a>
+      <a class="nav-cta" href="#produtos" style="justify-content:center;">Ver ferramentas</a>
     </div>
   </div>
 
@@ -1511,10 +1534,10 @@
         <div class="hero-text">
           <span class="eyebrow">
             <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-            Novidade GCONT
+            Loja Digital GCONT
           </span>
-          <h1>Tecnologia e <span class="accent">soluções inteligentes</span> para simplificar a gestão da sua empresa</h1>
-          <p class="lead">Planilhas inteligentes, sistemas de automação e soluções com Inteligência Artificial desenvolvidos pela GCONT para otimizar processos, economizar tempo e apoiar decisões.</p>
+          <h1>Ferramentas práticas para <span class="accent">simplificar</span> a gestão da sua empresa</h1>
+          <p class="lead">Planilhas inteligentes, calculadoras e materiais digitais para organizar processos, facilitar decisões e trazer mais praticidade à rotina empresarial.</p>
         </div>
         <div class="hero-visual">
           <img src="logos/mockup-produtos.png" alt="Soluções GCONT: planilhas inteligentes, sistemas de automação e integração com IA">
@@ -1523,7 +1546,7 @@
       <div class="hero-ctas">
         <a href="#produtos" class="btn btn-primary">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
-          Explorar soluções
+          Ver ferramentas
         </a>
         <a href="https://wa.me/554936740176?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GCONT%20e%20gostaria%20de%20falar%20com%20um%20especialista.%20Pode%20me%20ajudar%3F" class="btn btn-ghost" target="_blank" rel="noopener">Falar com especialista</a>
       </div>
@@ -1549,87 +1572,11 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="section-tag">Catálogo</span>
-          <h2>Encontre a solução ideal para sua empresa</h2>
-          <p>Explore ferramentas práticas, sistemas inteligentes e soluções desenvolvidas para simplificar sua rotina e melhorar seus processos.</p>
+          <h2>Ferramentas prontas para usar</h2>
+          <p>Planilhas inteligentes, calculadoras e materiais digitais para organizar processos, facilitar decisões e trazer mais praticidade à rotina empresarial.</p>
         </div>
 
-        <div class="categories" id="categoryFilters">
-          <button class="cat-pill active" data-filter="todos"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Todos</button>
-          <button class="cat-pill" data-filter="ia"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v1a3 3 0 0 0-3 3v2a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3v1a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-1a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3V9a3 3 0 0 0-3-3V5a3 3 0 0 0-3-3Z"></path><circle cx="9" cy="10" r="1"></circle><circle cx="15" cy="10" r="1"></circle><path d="M9 15c1 .8 2.3 1.2 3 .4.7.8 2 1.1 3-.4"></path></svg> Inteligência Artificial</button>
-          <button class="cat-pill" data-filter="automacao"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"></path><path d="M14 3v5h5"></path><path d="M8 14c2-2 6-2 8 0"></path><path d="M9 11c1.3-1.2 2.8-1.8 5-1.8s3.7.6 5 1.8"></path></svg> Sistemas e Automações</button>
-          <button class="cat-pill" data-filter="planilha"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg> Planilhas Inteligentes</button>
-        </div>
-
-        <!-- Vitrine — produtos em destaque -->
-        <div id="vitrineSection">
-          <div class="vitrine-label reveal"><span>Soluções empresariais em destaque</span></div>
-          <div class="vitrine-grid">
-
-          <div class="card reveal featured" data-category="ia" data-id="integracao-ia-banco-dados" data-name="Integração de Inteligência Artificial com Banco de Dados" data-price="sob-consulta">
-            <span class="best-badge">Destaque</span>
-            <span class="card-badge">Sob consulta</span>
-            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 7v10l8 5 8-5V7l-8-5z"></path><path d="M9 12h.01"></path><path d="M15 12h.01"></path><path d="M8 16c1.2-1 2.8-1.5 4-1.5s2.8.5 4 1.5"></path></svg></div>
-            <button class="card-video-btn" type="button" data-video-open aria-label="Assistir vídeo explicativo" title="Assistir vídeo explicativo">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M10 8.5 16 12l-6 3.5z"></path></svg>
-            </button>
-            <h3>Integração de Inteligência Artificial com Banco de Dados</h3>
-            <p class="desc">Conecte uma IA ao banco de dados da sua empresa para automatizar consultas, respostas e rotinas internas. Implantação assistida pela equipe GCONT, adaptada ao seu sistema.</p>
-            <div class="card-footer">
-              <div class="price">Projeto sob orçamento <small>Implantação assistida sob medida</small></div>
-              <button class="buy-btn" onclick="saibaMaisIA()">Solicitar orçamento</button>
-            </div>
-            <div class="card-details">
-              <h4>Mais detalhes</h4>
-              <div class="card-details-grid">
-                <div><span>Formato</span><strong>Implantação assistida</strong></div>
-                <div><span>Entrega</span><strong>Projeto sob medida</strong></div>
-                <div><span>Integração</span><strong>Banco de dados do cliente</strong></div>
-                <div><span>Foco</span><strong>Automação e apoio inteligente</strong></div>
-              </div>
-              <p>Ideal para automatizar consultas, respostas e rotinas com a IA conectada ao banco de dados do cliente.</p>
-            </div>
-          </div>
-
-          <div class="card reveal featured" data-category="automacao" data-id="notasync-busca-sincronizacao-nfe-nfse" data-name="NotaSync — Busca e Sincronização de NF-e e NFS-e" data-price="sob-consulta">
-            <span class="best-badge">Destaque</span>
-            <span class="card-badge">Sob consulta</span>
-            <div class="card-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 3v5h5"></path>
-                <path d="M19 8V6l-5-3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5"></path>
-                <path d="M10 12h4"></path>
-                <path d="M12 10v4"></path>
-                <path d="M8.5 17.5a5 5 0 0 0 7 0"></path>
-                <path d="M15.5 14.5a5 5 0 0 0-7 0"></path>
-                <path d="M8 15.5l.5-1.5 1.5.5"></path>
-                <path d="M16 18.5l-.5 1.5-1.5-.5"></path>
-              </svg>
-            </div>
-            <h3>NotaSync — Busca e Sincronização de NF-e e NFS-e</h3>
-            <p class="desc">Centralize o controle fiscal da sua empresa: busca automática de NF-e e NFS-e, Leitor de DIFAL, Compara-SPED e armazenamento seguro de certificados digitais em um único lugar, integrado ao Domínio.</p>
-            <div class="card-footer">
-              <div class="price">Projeto sob orçamento <small>Implantação assistida sob medida</small></div>
-              <button class="buy-btn" onclick="saibaMaisNotaSync()">Conhecer o NotaSync</button>
-            </div>
-            <div class="card-details">
-              <h4>Mais detalhes</h4>
-              <div class="card-details-grid">
-                <div><span>Formato</span><strong>Módulo integrado</strong></div>
-                <div><span>Entrega</span><strong>Implantação assistida</strong></div>
-                <div><span>Integração</span><strong>Integrado a Dominio</strong></div>
-                <div><span>Foco</span><strong>Automação de NF-e e NFS-e</strong></div>
-              </div>
-              <p>Ideal para empresas que desejam automatizar e centralizar a gestão de NF-e e NFS-e, reduzindo processos manuais, agilizando conferências e trazendo mais organização, segurança e eficiência ao controle fiscal.</p>
-            </div>
-          </div>
-
-          </div><!-- /vitrine-grid -->
-        </div><!-- /vitrineSection -->
-
-        <!-- Outros produtos -->
-        <div class="other-products-wrap" id="otherProductsWrap">
-          <div class="other-products-label reveal"><span>Ferramentas prontas para usar</span></div>
-          <div class="grid">
+        <div class="grid">
 
           <div class="card reveal" data-category="planilha" data-id="precos-ponto-equilibrio" data-name="Preços e Ponto de Equilíbrio" data-price="50.00">
             <span class="card-badge">Planilha</span>
@@ -1714,7 +1661,23 @@
           </div>
 
           </div><!-- /grid -->
-        </div><!-- /otherProductsWrap -->
+      </div>
+    </section>
+
+    <!-- SISTEMAS BANNER -->
+    <section class="sys-banner-section">
+      <div class="container">
+        <div class="sys-banner reveal">
+          <div class="sys-banner-content">
+            <span class="section-tag">GCONT Tecnologia</span>
+            <h2>Precisa de mais automação na sua rotina contábil?</h2>
+            <p>Conheça os sistemas e soluções com Inteligência Artificial desenvolvidos pela GCONT.</p>
+          </div>
+          <a href="/sistemas" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 7v10l8 5 8-5V7l-8-5z"></path><path d="M9 12h.01"></path><path d="M15 12h.01"></path><path d="M8 16c1.2-1 2.8-1.5 4-1.5s2.8.5 4 1.5"></path></svg>
+            Conhecer os sistemas
+          </a>
+        </div>
       </div>
     </section>
 
@@ -1801,34 +1764,16 @@
         </div>
         <div class="faq-list">
           <div class="faq-item reveal">
-            <button class="faq-q">Como funciona a contratação da Integração de Inteligência Artificial com Banco de Dados?
+            <button class="faq-q">Posso comprar mais de uma ferramenta?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
             </button>
-            <div class="faq-a"><p>O primeiro passo é falar com a nossa equipe. Fazemos uma análise dos sistemas que a sua empresa já utiliza, entendemos o banco de dados disponível e definimos o melhor formato de implantação da IA, que funciona como uma conexão inteligente com a operação do cliente.</p></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">Como é definido o valor do projeto?
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            </button>
-            <div class="faq-a"><p>O investimento é negociado caso a caso, porque depende dos sistemas que a empresa possui, da complexidade da integração e do escopo da implantação. Depois do contato inicial, nossa equipe apresenta a proposta mais adequada.</p></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">Posso contratar mais de um produto de uma vez?
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            </button>
-            <div class="faq-a"><p>Sim! Você pode adquirir quantos produtos desejar. As <strong>compras imediatas são realizadas individualmente</strong>. Já os produtos que exigem <strong>orçamento e implantação assistida</strong> devem ser contratados diretamente com nossa equipe.</p></div>
+            <div class="faq-a"><p>Sim! Você pode adquirir quantas ferramentas desejar. Cada compra é realizada individualmente através da plataforma Hotmart. Se tiver dúvidas sobre qual ferramenta escolher, nossa equipe pode ajudar.</p></div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-q">Os materiais servem para qualquer tipo de empresa?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
             </button>
             <div class="faq-a"><p>Os conteúdos foram criados com foco em pequenas e médias empresas, mas os conceitos e planilhas se adaptam a diferentes segmentos e portes.</p></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">Como funcionam os produtos com implementação assistida?
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            </button>
-            <div class="faq-a"><p>O cliente entra em contato conosco para fornecer os dados necessários de acesso ao sistema. Em seguida, nossa equipe acessa o sistema do cliente remotamente e realiza toda a implementação de forma assistida, configura as rotinas conforme a necessidade e testa antes de liberar o uso. Prazo e valor variam conforme a complexidade de cada sistema.</p></div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-q">Como recebo meu produto após a compra?
@@ -2058,27 +2003,29 @@
   document.addEventListener('keydown', e => {
     if(e.key === 'Escape') closeVideoOverlay();
   });
-  categoryFilters.addEventListener('click', e => {
-    const btn = e.target.closest('.cat-pill');
-    if(!btn) return;
-    categoryFilters.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    productCards.forEach(card => {
-      const show = filter === 'todos' || card.dataset.category === filter;
-      card.classList.toggle('hidden', !show);
+  if(categoryFilters){
+    categoryFilters.addEventListener('click', e => {
+      const btn = e.target.closest('.cat-pill');
+      if(!btn) return;
+      categoryFilters.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      productCards.forEach(card => {
+        const show = filter === 'todos' || card.dataset.category === filter;
+        card.classList.toggle('hidden', !show);
+      });
+      const vitrineSection = document.getElementById('vitrineSection');
+      if(vitrineSection){
+        const anyVis = Array.from(vitrineSection.querySelectorAll('.card')).some(c => !c.classList.contains('hidden'));
+        vitrineSection.style.display = anyVis ? '' : 'none';
+      }
+      const otherWrap = document.getElementById('otherProductsWrap');
+      if(otherWrap){
+        const anyVis = Array.from(otherWrap.querySelectorAll('.card')).some(c => !c.classList.contains('hidden'));
+        otherWrap.style.display = anyVis ? '' : 'none';
+      }
     });
-    const vitrineSection = document.getElementById('vitrineSection');
-    if(vitrineSection){
-      const anyVis = Array.from(vitrineSection.querySelectorAll('.card')).some(c => !c.classList.contains('hidden'));
-      vitrineSection.style.display = anyVis ? '' : 'none';
-    }
-    const otherWrap = document.getElementById('otherProductsWrap');
-    if(otherWrap){
-      const anyVis = Array.from(otherWrap.querySelectorAll('.card')).some(c => !c.classList.contains('hidden'));
-      otherWrap.style.display = anyVis ? '' : 'none';
-    }
-  });
+  }
 
   /* ---------- FAQ accordion ---------- */
   document.querySelectorAll('.faq-item').forEach(item => {
