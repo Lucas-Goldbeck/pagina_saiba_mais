@@ -1509,15 +1509,56 @@
     .sys-card { grid-template-columns:1fr; gap:24px; padding:24px; }
   }
 
-  /* Hero single-column override for sistemas page */
+  /* Hero with image for sistemas page */
+  .sys-hero-layout {
+    display:flex;
+    align-items:flex-start;
+    gap:24px;
+  }
+  .sys-hero-content {
+    flex:0 0 44%;
+    min-width:0;
+  }
   .hero--single {
-    max-width: 780px;
+    max-width:none;
   }
   .hero--single h1 {
     max-width: 700px;
   }
   .hero--single p.lead {
     max-width: 580px;
+  }
+  .sys-hero-visual {
+    position:relative;
+    flex:0 0 73%;
+    min-width:0;
+    align-self:flex-start;
+    margin:80px -48px 0 -22px;
+    padding:0;
+  }
+  .sys-hero-visual img {
+    position:relative;
+    z-index:1;
+    display:block;
+    width:100%;
+    height:auto;
+    filter:drop-shadow(0 34px 46px rgba(0,0,0,0.6)) drop-shadow(0 12px 20px rgba(0,0,0,0.45));
+  }
+  @media (max-width: 900px) {
+    .sys-hero-layout {
+      flex-direction:column;
+      align-items:stretch;
+      gap:24px;
+    }
+    .sys-hero-content {
+      flex:1 1 auto;
+    }
+    .sys-hero-visual {
+      flex:0 0 auto;
+      width:100%;
+      max-width:460px;
+      margin:0 auto;
+    }
   }
 
   /* sys video btn override — always visible in sys cards */
@@ -1593,6 +1634,8 @@
 
     <!-- HERO -->
     <section class="hero container">
+      <div class="sys-hero-layout">
+        <div class="sys-hero-content">
       <div class="hero--single">
         <span class="eyebrow">
           <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
@@ -1607,6 +1650,11 @@
           Conhecer os sistemas
         </a>
         <a href="https://wa.me/554936740176?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GCONT%20e%20gostaria%20de%20falar%20com%20um%20especialista%20sobre%20os%20sistemas.%20Pode%20me%20ajudar%3F" class="btn btn-ghost" target="_blank" rel="noopener">Falar com especialista</a>
+      </div>
+        </div>
+        <div class="sys-hero-visual">
+          <img src="logos/mockup-sistemas.png" alt="Computador, tablet e nuvem com ferramentas digitais e automa&#231;&#227;o GCONT">
+        </div>
       </div>
 
       <div class="trust">
