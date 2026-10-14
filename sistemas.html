@@ -1511,6 +1511,8 @@
 
   /* Match the main page hero while keeping the image beside the text on mobile */
   .hero-visual { flex-basis:68%; margin:40px -48px 0 -22px; }
+  .hero-title-mobile,
+  .hero-description-mobile { display:none; }
   @media (max-width: 900px) {
     .hero-top { gap:12px; }
     .hero-text { flex:0 0 50%; }
@@ -1518,8 +1520,15 @@
   }
   @media (max-width: 600px) {
     .hero-top { gap:8px; }
-    .hero-text { flex-basis:44%; }
-    .hero-visual { flex-basis:56%; margin:24px -24px 0 -10px; }
+    .hero-text { flex-basis:32%; }
+    .hero-visual { flex-basis:68%; margin:16px -12px 0 -8px; }
+    .hero-title-desktop,
+    .hero-description-desktop { display:none; }
+    .hero-title-mobile,
+    .hero-description-mobile { display:inline; }
+    .hero-text .eyebrow { font-size:8px; gap:4px; padding:5px 6px; margin-bottom:10px; }
+    .hero-text h1 { font-size:18px; line-height:1.08; letter-spacing:-0.03em; margin-bottom:8px; }
+    .hero-text p.lead { font-size:12px; line-height:1.35; padding-right:2px; }
   }
 
   /* sys video btn override — always visible in sys cards */
@@ -1601,8 +1610,8 @@
             <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
             Sistemas GCONT
           </span>
-          <h1>Sistemas inteligentes para <span class="accent">simplificar</span> sua rotina contábil</h1>
-          <p class="lead">Reduza atividades manuais, organize informações e ganhe produtividade com soluções desenvolvidas para os desafios reais dos escritórios de contabilidade.</p>
+          <h1><span class="hero-title-desktop">Sistemas inteligentes para <span class="accent">simplificar</span> sua rotina contábil</span><span class="hero-title-mobile">Simplifique sua <span class="accent">rotina contábil</span></span></h1>
+          <p class="lead"><span class="hero-description-desktop">Reduza atividades manuais, organize informações e ganhe produtividade com soluções desenvolvidas para os desafios reais dos escritórios de contabilidade.</span><span class="hero-description-mobile">Automatize tarefas e ganhe tempo no escritório.</span></p>
         </div>
         <div class="hero-visual">
           <img src="logos/mockup-sistemas.png" alt="Computador, tablet e nuvem com ferramentas digitais e automa&#231;&#227;o GCONT">
