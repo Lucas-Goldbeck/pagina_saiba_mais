@@ -2320,7 +2320,7 @@
       hint.className = 'details-hint';
       hint.textContent = 'Clique para ver detalhes';
       const footer = card.querySelector('.card-footer');
-      if(footer) card.insertBefore(hint, footer);
+      if(footer) footer.parentNode.insertBefore(hint, footer);
       else card.appendChild(hint);
     }
     hint.hidden = false;
