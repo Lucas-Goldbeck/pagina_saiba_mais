@@ -1567,8 +1567,8 @@
 body{background:#111112;color:var(--text)}
 body::before{background:radial-gradient(ellipse at 15% 0,rgba(216,139,20,.1),transparent 38rem),radial-gradient(ellipse at 95% 40%,rgba(216,139,20,.05),transparent 40rem)}
 body::after{opacity:.3;background-size:56px 56px}
-.container,.nav{max-width:1180px}
-.nav{min-height:72px}.nav-links{gap:clamp(16px,2.5vw,32px)}.nav-cta{font-size:12px}
+.container{max-width:1180px}
+.nav{width:100%;max-width:none}
 .tech-shell{width:min(1180px,calc(100% - 48px));margin:0 auto}
 .tech-hero{padding:58px 0 84px}
 .tech-hero-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(440px,1.08fr);align-items:center;gap:clamp(28px,5vw,68px);min-height:450px}
@@ -1686,6 +1686,16 @@ body::after{opacity:.3;background-size:56px 56px}
 .system-preview-data span{height:17px;padding:5px 6px;border:1px solid rgba(255,255,255,.065);border-radius:4px;color:#99958e;background:#1a1a1c;font-size:6px}
 .system-preview-label{position:absolute;z-index:2;right:10px;bottom:8px;color:#aaa59a;font-size:7px;letter-spacing:.1em}
 .system-preview-image{position:relative;z-index:1;width:100%;height:100%;max-height:300px;object-fit:contain}
+.system-ai-preview{position:relative;z-index:1;width:min(100%,430px);overflow:hidden;border:1px solid rgba(255,255,255,.11);border-radius:10px;background:#111113;box-shadow:0 16px 38px rgba(0,0,0,.44);transform:rotate(-1deg)}
+.system-ai-preview-top{display:flex;min-height:28px;align-items:center;gap:7px;padding:0 9px;border-bottom:1px solid rgba(255,255,255,.08);color:#d7d2c9;font-size:8px}
+.system-ai-preview-top strong{margin-left:auto;color:var(--gold-1);font-size:7px;letter-spacing:.08em}
+.system-ai-preview-flow{display:grid;grid-template-columns:1fr 15px 1fr 15px 1fr;align-items:center;gap:4px;padding:16px 10px 11px}
+.system-ai-preview-node{display:grid;min-height:53px;align-content:center;gap:4px;padding:6px;border:1px solid rgba(255,255,255,.1);border-radius:6px;background:#19191b;text-align:center}
+.system-ai-preview-node small{color:var(--text-faint);font-size:5px;font-weight:700;letter-spacing:.08em}
+.system-ai-preview-node b{color:#eee9df;font-size:7px;line-height:1.25}
+.system-ai-preview-node.accent{border-color:rgba(244,183,44,.3);background:rgba(244,183,44,.07)}
+.system-ai-preview-arrow{height:1px;background:var(--gold-2)}
+.system-ai-preview-note{padding:0 10px 10px;color:#aaa59a;font-size:6px;text-align:center}
 .system-more{margin-top:44px}
 .system-more-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:16px}
 .system-more-heading h3{margin:5px 0 0;font-size:23px;line-height:1.15;letter-spacing:-.03em}
@@ -1774,12 +1784,12 @@ body::after{opacity:.3;background-size:56px 56px}
       </a>
       <nav class="nav-links">
         <a href="/">Loja Digital</a>
-        <a href="/sistemas" class="active">Sistemas</a>
+        <a href="/sistemas" class="active">Sistemas Contábeis</a>
         <a href="/#vantagens">Por que a GCONT</a>
         <a href="#contato">Contato</a>
       </nav>
       <div class="nav-actions">
-        <a class="nav-cta" href="https://wa.me/554936740176?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GCONT%20e%20gostaria%20de%20falar%20com%20um%20especialista%20sobre%20os%20sistemas.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener">Falar com especialista</a>
+        <a class="nav-cta" href="/#produtos">Ver ferramentas</a>
         <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -1793,10 +1803,10 @@ body::after{opacity:.3;background-size:56px 56px}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
       <a href="/">Loja Digital</a>
-      <a href="/sistemas">Sistemas</a>
+      <a href="/sistemas">Sistemas Contábeis</a>
       <a href="/#vantagens">Por que a GCONT</a>
       <a href="#contato">Contato</a>
-      <a class="nav-cta" href="https://wa.me/554936740176?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GCONT%20e%20gostaria%20de%20falar%20com%20um%20especialista%20sobre%20os%20sistemas.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener" style="justify-content:center;">Falar com especialista</a>
+      <a class="nav-cta" href="/#produtos" style="justify-content:center;">Ver ferramentas</a>
     </div>
   </div>
 
@@ -1899,7 +1909,7 @@ body::after{opacity:.3;background-size:56px 56px}
         <div class="system-more-heading">
           <div>
             <span class="system-eyebrow">Mais soluções</span>
-            <h3 id="systemMoreTitle">Outros sistemas</h3>
+            <h3 id="systemMoreTitle">Outras soluções</h3>
           </div>
           <span class="system-results" id="systemResults" aria-live="polite"></span>
         </div>
@@ -2007,7 +2017,7 @@ body::after{opacity:.3;background-size:56px 56px}
 
 <script>
 (() => {
-  // Cadastre aqui apenas softwares publicáveis; serviços personalizados ficam na chamada ao final da vitrine.
+  // Cadastre aqui sistemas e integrações publicáveis, com suas condições comerciais reais.
   const SYSTEMS = [
     {
       slug: 'notasync',
@@ -2032,6 +2042,31 @@ body::after{opacity:.3;background-size:56px 56px}
         note: 'Valores e condições são apresentados pela equipe GCONT.'
       },
       contactAction: 'saibaMaisNotaSync'
+    },
+    {
+      slug: 'integracao-ia-banco-de-dados',
+      name: 'Integração de IA com banco de dados',
+      category: 'Integração personalizada',
+      summary: 'Integração de inteligência artificial com os dados e sistemas da empresa, planejada conforme cada operação.',
+      description: 'Projeto personalizado para conectar inteligência artificial a bancos de dados e sistemas empresariais. O escopo é definido conforme os dados, sistemas e necessidades da empresa.',
+      features: [
+        'Integração de IA com dados empresariais',
+        'Conexão com bancos de dados e sistemas existentes',
+        'Escopo personalizado conforme a operação'
+      ],
+      benefits: [
+        'Aproxime recursos de inteligência artificial das informações usadas pela empresa.',
+        'Defina o escopo da conexão conforme os dados e sistemas disponíveis.',
+        'Converse com a equipe GCONT para avaliar uma proposta sob medida.'
+      ],
+      preview: { type: 'ai' },
+      demoVideo: true,
+      commercial: {
+        mode: 'quote',
+        label: 'Projeto sob orçamento',
+        note: 'Escopo e condições avaliados conforme os dados e sistemas da empresa.'
+      },
+      contactAction: 'saibaMaisIA'
     }
   ];
 
@@ -2080,6 +2115,20 @@ body::after{opacity:.3;background-size:56px 56px}
             <div class="system-preview-data"><span>Leitura especializada</span><span>Consulta de dados</span></div>
           </div></div>
         </div><span class="system-preview-label">REPRESENTAÇÃO ILUSTRATIVA</span>
+      </div>`;
+    }
+
+    if (system.preview?.type === 'ai') {
+      return `<div class="system-preview" role="img" aria-label="${escapeHtml(ariaLabel)}: representação conceitual de uma integração entre inteligência artificial e banco de dados">
+        <div class="system-ai-preview" aria-hidden="true">
+          <div class="system-ai-preview-top"><span class="system-preview-dots"><i></i><i></i><i></i></span>GCONT TECH <strong>IA ↔ DADOS</strong></div>
+          <div class="system-ai-preview-flow">
+            <div class="system-ai-preview-node"><small>INFORMAÇÃO</small><b>Dados da empresa</b></div><span class="system-ai-preview-arrow"></span>
+            <div class="system-ai-preview-node accent"><small>INTEGRAÇÃO</small><b>Inteligência artificial</b></div><span class="system-ai-preview-arrow"></span>
+            <div class="system-ai-preview-node"><small>ORIGEM</small><b>Banco de dados</b></div>
+          </div>
+          <div class="system-ai-preview-note">Representação conceitual · projeto sob medida</div>
+        </div><span class="system-preview-label">PRÉVIA ILUSTRATIVA</span>
       </div>`;
     }
 
@@ -2148,6 +2197,7 @@ body::after{opacity:.3;background-size:56px 56px}
           <span class="system-eyebrow">${escapeHtml(system.category || 'Sistema GCONT TECH')}</span>
           <h1>${escapeHtml(system.name)}</h1>
           <p class="system-detail-description">${escapeHtml(system.description || system.summary)}</p>
+          ${system.demoVideo ? '<button class="system-video-link" type="button" data-video-open>Ver exemplo da integração com IA <span aria-hidden="true">↗</span></button>' : ''}
           ${system.audience ? `<p class="system-detail-audience"><b>Indicado para:</b> ${escapeHtml(system.audience)}</p>` : ''}
         </div>
         <div class="system-detail-visual">${renderPreview(system, 'Representação visual')}</div>
@@ -2180,7 +2230,7 @@ body::after{opacity:.3;background-size:56px 56px}
     const matched = matchingSystems();
     const visible = matched.slice(0, visibleCount);
     cardGrid.innerHTML = visible.map(renderSystemCard).join('');
-    const systemWord = matched.length === 1 ? 'sistema' : 'sistemas';
+    const systemWord = matched.length === 1 ? 'solução' : 'soluções';
     resultsLabel.textContent = matched.length > PAGE_SIZE ? `${visible.length} de ${matched.length} ${systemWord}` : `${matched.length} ${systemWord}`;
     noResults.hidden = matched.length !== 0;
     loadMoreButton.hidden = visible.length >= matched.length;
@@ -2335,12 +2385,12 @@ body::after{opacity:.3;background-size:56px 56px}
     updateBodyScrollLock();
     if(lastVideoTrigger) lastVideoTrigger.focus();
   }
-  document.querySelectorAll('[data-video-open]').forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.preventDefault();
-      e.stopPropagation();
-      openVideoOverlay(btn);
-    });
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('[data-video-open]');
+    if (!btn) return;
+    e.preventDefault();
+    e.stopPropagation();
+    openVideoOverlay(btn);
   });
   if(videoCloseBtn){
     videoCloseBtn.addEventListener('click', closeVideoOverlay);
