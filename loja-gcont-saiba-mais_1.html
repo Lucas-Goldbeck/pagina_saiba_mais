@@ -1484,10 +1484,355 @@
       text-align: center;
     }
   }
-  .system-catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px;margin:0 auto}
-  .system-catalog-grid .card-footer{flex-wrap:wrap;gap:12px}
-  .system-catalog-grid .buy-btn{min-height:40px;justify-content:center}
-  @media(max-width:600px){.system-catalog-grid{grid-template-columns:1fr}}
+  /* SYSTEM SHOWCASE — scoped to the systems catalog only */
+  .system-catalog-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    width:100%;
+    max-width:none;
+    margin:0;
+    gap:24px;
+    align-items:stretch;
+  }
+  .system-showcase-card{
+    min-height:420px;
+    padding:26px;
+    gap:18px;
+    border-color:rgba(245,166,35,.2);
+    background:
+      radial-gradient(circle at 100% 0%, rgba(245,166,35,.11), transparent 42%),
+      linear-gradient(145deg, rgba(32,29,26,.98), rgba(20,19,21,.98));
+    isolation:isolate;
+  }
+  .system-showcase-card::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg, rgba(255,216,107,.08), transparent 38%, rgba(245,166,35,.035));
+    opacity:.65;
+    pointer-events:none;
+  }
+  .system-showcase-card .card-badge{
+    position:relative;
+    top:auto;
+    right:auto;
+    align-self:flex-start;
+    z-index:1;
+    padding:6px 11px;
+    font-size:10px;
+    letter-spacing:.09em;
+  }
+  .system-showcase-card .card-video-btn{
+    top:18px;
+    right:18px;
+    width:40px;
+    height:40px;
+    border-color:rgba(255,216,107,.38);
+    background:rgba(15,14,15,.92);
+  }
+  .system-showcase-main{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+    align-items:stretch;
+    gap:22px;
+    min-width:0;
+    flex:1;
+  }
+  .system-showcase-copy{
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+  }
+  .system-showcase-card .card-icon{
+    width:48px;
+    height:48px;
+    margin:0 0 14px;
+    border-radius:15px;
+    box-shadow:0 10px 24px rgba(245,166,35,.1);
+  }
+  .system-showcase-card .system-eyebrow{
+    margin-bottom:8px;
+    color:var(--gold-2);
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+  }
+  .system-showcase-card h3{
+    margin:0;
+    font-size:clamp(20px,2vw,25px);
+    line-height:1.16;
+    letter-spacing:-.025em;
+  }
+  .system-showcase-card p.desc{
+    margin-top:10px;
+    color:var(--text-dim);
+    font-size:14px;
+    line-height:1.6;
+    flex-grow:0;
+  }
+  .system-showcase-card .card-footer{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+    gap:12px;
+    width:100%;
+    margin-top:14px;
+    padding-top:15px;
+    border-top-color:rgba(255,255,255,.1);
+  }
+  .system-showcase-card .price{
+    color:var(--text);
+    font-size:14px;
+    font-weight:700;
+  }
+  .system-showcase-card .price small{
+    display:block;
+    margin-top:4px;
+    color:var(--text-faint);
+    font-size:11px;
+    font-weight:400;
+  }
+  .system-showcase-card .system-action{
+    width:100%;
+    min-height:46px;
+    justify-content:center;
+    padding:11px 14px;
+    border-radius:13px;
+    background:linear-gradient(135deg,var(--gold-1),var(--gold-3));
+    border-color:transparent;
+    color:#2a2100;
+    font-size:13px;
+    text-align:center;
+    box-shadow:0 10px 24px rgba(245,166,35,.16);
+  }
+  .system-showcase-card .system-action:hover{
+    background:linear-gradient(135deg,#ffe17a,var(--gold-2));
+    color:#2a2100;
+    box-shadow:0 13px 28px rgba(245,166,35,.24);
+  }
+  .system-preview{
+    position:relative;
+    min-width:0;
+    min-height:292px;
+    padding:16px;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    background:
+      radial-gradient(circle at 50% 40%, rgba(245,166,35,.12), transparent 55%),
+      linear-gradient(145deg,rgba(27,26,27,.98),rgba(12,12,13,.98));
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.045),0 18px 36px rgba(0,0,0,.25);
+    transition:border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+  }
+  .system-preview::after{
+    content:'';
+    position:absolute;
+    width:150px;
+    height:150px;
+    right:-78px;
+    bottom:-88px;
+    border-radius:50%;
+    background:rgba(245,166,35,.12);
+    filter:blur(38px);
+    pointer-events:none;
+  }
+  .preview-topbar{
+    position:relative;
+    z-index:1;
+    display:flex;
+    align-items:center;
+    gap:6px;
+    min-height:24px;
+    padding-bottom:12px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .preview-window-dot{width:6px;height:6px;border-radius:50%;background:rgba(255,216,107,.7)}
+  .preview-window-dot:nth-child(2){opacity:.55}
+  .preview-window-dot:nth-child(3){opacity:.3}
+  .preview-topbar-label{
+    margin-left:5px;
+    color:rgba(255,255,255,.72);
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+  }
+  .preview-concept-label{
+    margin-left:auto;
+    color:var(--text-faint);
+    font-size:8px;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+  }
+  .preview-flow{
+    position:relative;
+    z-index:1;
+    display:flex;
+    flex:1;
+    flex-direction:column;
+    justify-content:center;
+    gap:0;
+    padding:12px 0 8px;
+  }
+  .preview-step{
+    display:grid;
+    grid-template-columns:36px minmax(0,1fr) 24px;
+    align-items:center;
+    gap:10px;
+    min-height:52px;
+    padding:9px 11px;
+    border:1px solid rgba(255,255,255,.075);
+    border-radius:13px;
+    background:linear-gradient(110deg,rgba(255,255,255,.045),rgba(255,255,255,.018));
+  }
+  .preview-step-icon{
+    width:34px;
+    height:34px;
+    display:grid;
+    place-items:center;
+    border:1px solid rgba(245,166,35,.28);
+    border-radius:10px;
+    background:rgba(245,166,35,.09);
+    color:var(--gold-2);
+  }
+  .preview-step-icon svg{width:17px;height:17px;stroke:currentColor}
+  .preview-step-copy{min-width:0;display:flex;flex-direction:column;gap:3px}
+  .preview-step-copy strong{color:var(--text);font-size:10px;line-height:1.25;font-weight:600}
+  .preview-step-copy small{color:var(--text-faint);font-size:9px;line-height:1.25}
+  .preview-step-index{color:rgba(255,216,107,.72);font-size:9px;font-weight:700;letter-spacing:.05em}
+  .preview-flow-line{
+    position:relative;
+    width:1px;
+    height:14px;
+    margin-left:27px;
+    background:linear-gradient(rgba(245,166,35,.12),rgba(255,216,107,.72),rgba(245,166,35,.12));
+  }
+  .preview-flow-line::after{
+    content:'';
+    position:absolute;
+    left:-2px;
+    top:0;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:var(--gold-1);
+    box-shadow:0 0 10px rgba(255,216,107,.8);
+    animation:system-flow-pulse 2.6s ease-in-out infinite;
+  }
+  .ai-flow-diagram{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr) 22px minmax(0,1fr);
+    align-items:center;
+    flex:1;
+    padding:20px 0 12px;
+  }
+  .ai-flow-node{
+    min-width:0;
+    min-height:96px;
+    padding:10px 5px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:15px;
+    background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.02));
+  }
+  .ai-flow-node--core{
+    border-color:rgba(255,216,107,.38);
+    background:radial-gradient(circle at 50% 25%,rgba(245,166,35,.2),rgba(245,166,35,.06) 58%,rgba(255,255,255,.02));
+    box-shadow:0 0 24px rgba(245,166,35,.1),inset 0 0 16px rgba(245,166,35,.06);
+  }
+  .ai-flow-icon{width:34px;height:34px;display:grid;place-items:center;color:var(--gold-2)}
+  .ai-flow-icon svg{width:26px;height:26px;stroke:currentColor}
+  .ai-flow-node--core .ai-flow-icon{width:40px;height:40px;border:1px solid rgba(255,216,107,.32);border-radius:13px;background:rgba(245,166,35,.1)}
+  .ai-flow-node--core .ai-flow-icon svg{width:23px;height:23px}
+  .ai-flow-node strong{color:var(--text);font-size:9px;line-height:1.25;font-weight:600}
+  .ai-flow-connector{
+    position:relative;
+    height:1px;
+    background:linear-gradient(90deg,rgba(245,166,35,.15),rgba(255,216,107,.65),rgba(245,166,35,.15));
+  }
+  .ai-flow-connector::after{
+    content:'';
+    position:absolute;
+    top:-2px;
+    left:0;
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background:var(--gold-1);
+    box-shadow:0 0 10px rgba(255,216,107,.8);
+    animation:system-flow-horizontal 2.8s ease-in-out infinite;
+  }
+  .ai-flow-connector:last-of-type::after{animation-delay:1.2s}
+  .preview-footnote{
+    position:relative;
+    z-index:1;
+    padding-top:10px;
+    border-top:1px solid rgba(255,255,255,.07);
+    color:var(--text-faint);
+    font-size:9px;
+    line-height:1.35;
+  }
+  @keyframes system-flow-pulse{
+    0%,100%{transform:translateY(0);opacity:.45}
+    50%{transform:translateY(9px);opacity:1}
+  }
+  @keyframes system-flow-horizontal{
+    0%,100%{transform:translateX(0);opacity:.45}
+    50%{transform:translateX(14px);opacity:1}
+  }
+  @media (hover:hover){
+    .system-showcase-card:hover{
+      border-color:rgba(255,216,107,.52);
+      box-shadow:0 22px 50px rgba(0,0,0,.38),0 0 34px rgba(245,166,35,.1);
+    }
+    .system-showcase-card:hover .system-preview{
+      transform:translateY(-3px);
+      border-color:rgba(255,216,107,.28);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 22px 38px rgba(0,0,0,.3),0 0 25px rgba(245,166,35,.08);
+    }
+  }
+  @media (max-width:1000px){
+    .system-catalog-grid{grid-template-columns:1fr}
+    .system-showcase-card{min-height:380px}
+  }
+  @media (max-width:600px){
+    .system-catalog-grid{gap:16px}
+    .system-showcase-card{min-height:0;padding:20px;gap:16px;border-radius:20px}
+    .system-showcase-card .card-badge{font-size:9px}
+    .system-showcase-card .card-video-btn{top:15px;right:15px;width:42px;height:42px}
+    .system-showcase-main{grid-template-columns:1fr;gap:18px}
+    .system-showcase-copy{justify-content:flex-start;padding-top:2px}
+    .system-showcase-card .card-icon{width:44px;height:44px;margin-bottom:12px}
+    .system-showcase-card h3{font-size:22px;max-width:20ch}
+    .system-showcase-card p.desc{font-size:14px;line-height:1.55;margin-top:8px}
+    .system-showcase-card .card-footer{margin-top:12px;padding-top:13px}
+    .system-preview{min-height:244px;padding:14px;border-radius:17px}
+    .preview-step{grid-template-columns:34px minmax(0,1fr) 22px;gap:8px;padding:8px 9px}
+    .preview-step-copy strong{font-size:10px}
+    .ai-flow-diagram{grid-template-columns:minmax(0,1fr) 17px minmax(0,1fr) 17px minmax(0,1fr);padding:16px 0 10px}
+    .ai-flow-node{min-height:90px;padding:8px 3px;gap:7px;border-radius:12px}
+    .ai-flow-node strong{font-size:8.5px}
+    .ai-flow-icon{width:30px;height:30px}
+    .ai-flow-icon svg{width:23px;height:23px}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .system-showcase-card,.system-preview,.system-showcase-card .system-action{transition:none}
+    .preview-flow-line::after,.ai-flow-connector::after{animation:none}
+  }
 </style>
 </head>
 <body>
@@ -1572,21 +1917,53 @@
         <div class="section-head reveal">
           <span class="section-tag">Soluções GCONT</span>
           <h2>Conheça nossos sistemas</h2>
-          <p>Explore o NotaSync e projetos de integração de inteligência artificial, com contratação sob consulta.</p>
+          <p>Tecnologia para organizar arquivos fiscais, conectar dados e apoiar decisões empresariais.</p>
         </div>
 
         <div class="grid system-catalog-grid">
-          <div class="card reveal" data-category="sistema" data-id="notasync" data-name="NotaSync">
-            <span class="card-badge">Sistema</span>
+          <div class="card reveal system-showcase-card" data-category="sistema" data-id="notasync" data-name="NotaSync">
+            <span class="card-badge">Gestão fiscal</span>
             <button class="card-video-btn" type="button" data-video-open data-video-src="logos/notasync-demo.mp4" data-video-title="Demonstração do NotaSync" data-video-description="Assista à gravação de demonstração do NotaSync." aria-label="Assistir demonstração do NotaSync">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 10 6-10 6z"></path></svg>
             </button>
-            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4M7 9h4m-4 4h7"></path></svg></div>
-            <h3>NotaSync</h3>
-            <p class="desc">Envie arquivos fiscais por upload e consulte as informações com leitores especializados.</p>
-            <div class="card-footer">
-              <div class="price">Sob orçamento <small>condições com a equipe GCONT</small></div>
-              <a class="buy-btn" href="https://wa.me/554936740176?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20NotaSync%20e%20gostaria%20de%20conhecer%20as%20funcionalidades%20e%20condi%C3%A7%C3%B5es%20comerciais." target="_blank" rel="noopener">Solicitar informações</a>
+            <div class="system-showcase-main">
+              <div class="system-showcase-copy">
+                <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4M7 9h4m-4 4h7"></path></svg></div>
+                <span class="system-eyebrow">Organização e consulta fiscal</span>
+                <h3>NotaSync</h3>
+                <p class="desc">Seus arquivos fiscais organizados, processados e disponíveis para consultas inteligentes.</p>
+                <div class="card-footer">
+                  <div class="price">Sob orçamento <small>Condições com a equipe GCONT</small></div>
+                  <a class="buy-btn system-action" href="https://wa.me/554936740176?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20NotaSync%20e%20gostaria%20de%20conhecer%20as%20funcionalidades%20e%20condi%C3%A7%C3%B5es%20comerciais." target="_blank" rel="noopener">Conhecer NotaSync</a>
+                </div>
+              </div>
+              <div class="system-preview system-preview--notasync" role="img" aria-label="Representação ilustrativa do fluxo de upload, leitura e consulta de arquivos fiscais no NotaSync">
+                <div class="preview-topbar">
+                  <span class="preview-window-dot"></span><span class="preview-window-dot"></span><span class="preview-window-dot"></span>
+                  <span class="preview-topbar-label">Fluxo fiscal</span>
+                  <span class="preview-concept-label">Ilustrativo</span>
+                </div>
+                <div class="preview-flow">
+                  <div class="preview-step">
+                    <span class="preview-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M12 18v-6m-3 3 3-3 3 3"></path></svg></span>
+                    <span class="preview-step-copy"><strong>Arquivos fiscais</strong><small>Envio por upload</small></span>
+                    <span class="preview-step-index">01</span>
+                  </div>
+                  <span class="preview-flow-line"></span>
+                  <div class="preview-step">
+                    <span class="preview-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16M4 10h11M4 15h8"></path><circle cx="18" cy="16" r="3"></circle><path d="m20.2 18.2 1.3 1.3"></path></svg></span>
+                    <span class="preview-step-copy"><strong>Leitura especializada</strong><small>Organização das informações</small></span>
+                    <span class="preview-step-index">02</span>
+                  </div>
+                  <span class="preview-flow-line"></span>
+                  <div class="preview-step">
+                    <span class="preview-step-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4M8 11h6M8 14h4"></path></svg></span>
+                    <span class="preview-step-copy"><strong>Consulta inteligente</strong><small>Acesso às informações</small></span>
+                    <span class="preview-step-index">03</span>
+                  </div>
+                </div>
+                <div class="preview-footnote">Representação ilustrativa do fluxo do NotaSync.</div>
+              </div>
             </div>
             <div class="card-details">
               <h4>Conheça o NotaSync</h4>
@@ -1600,17 +1977,46 @@
             </div>
           </div>
 
-          <div class="card reveal" data-category="integracao" data-id="integracao-ia-banco-de-dados" data-name="Integração de IA com banco de dados">
+          <div class="card reveal system-showcase-card" data-category="integracao" data-id="integracao-ia-banco-de-dados" data-name="Integração de IA com banco de dados">
             <span class="card-badge">Integração com IA</span>
             <button class="card-video-btn" type="button" data-video-open data-video-src="logos/explicação_ia.mp4" data-video-title="Integração de IA com banco de dados" data-video-description="Assista ao resumo de como funciona a integração de IA com banco de dados." aria-label="Assistir exemplo de integração com IA">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 10 6-10 6z"></path></svg>
             </button>
-            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path><path d="M9 9.5h.01M15 9.5h.01"></path></svg></div>
-            <h3>Integração de IA com banco de dados</h3>
-            <p class="desc">Projetos personalizados que conectam inteligência artificial aos dados e sistemas da empresa.</p>
-            <div class="card-footer">
-              <div class="price">Sob orçamento <small>escopo avaliado com a equipe</small></div>
-              <a class="buy-btn" href="https://wa.me/554936740176?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20integra%C3%A7%C3%A3o%20de%20IA%20com%20banco%20de%20dados%20e%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Solicitar orçamento</a>
+            <div class="system-showcase-main">
+              <div class="system-showcase-copy">
+                <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path><path d="M9 9.5h.01M15 9.5h.01"></path></svg></div>
+                <span class="system-eyebrow">Inteligência conectada</span>
+                <h3>IA conectada aos seus dados</h3>
+                <p class="desc">Transforme os dados da sua empresa em informações estratégicas com inteligência artificial.</p>
+                <div class="card-footer">
+                  <div class="price">Sob orçamento <small>Escopo avaliado com a equipe</small></div>
+                  <a class="buy-btn system-action" href="https://wa.me/554936740176?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20integra%C3%A7%C3%A3o%20de%20IA%20com%20banco%20de%20dados%20e%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener">Explorar integração com IA</a>
+                </div>
+              </div>
+              <div class="system-preview system-preview--ai" role="img" aria-label="Representação conceitual de dados empresariais conectados à inteligência artificial para gerar informações estratégicas">
+                <div class="preview-topbar">
+                  <span class="preview-window-dot"></span><span class="preview-window-dot"></span><span class="preview-window-dot"></span>
+                  <span class="preview-topbar-label">Fluxo de dados</span>
+                  <span class="preview-concept-label">Conceitual</span>
+                </div>
+                <div class="ai-flow-diagram">
+                  <div class="ai-flow-node">
+                    <span class="ai-flow-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path></svg></span>
+                    <strong>Dados da empresa</strong>
+                  </div>
+                  <span class="ai-flow-connector"></span>
+                  <div class="ai-flow-node ai-flow-node--core">
+                    <span class="ai-flow-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.7 5.3L19 10l-5.3 1.7L12 17l-1.7-5.3L5 10l5.3-1.7L12 3z"></path><path d="m19 15 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15z"></path></svg></span>
+                    <strong>Inteligência artificial</strong>
+                  </div>
+                  <span class="ai-flow-connector"></span>
+                  <div class="ai-flow-node">
+                    <span class="ai-flow-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5M4 19h17"></path><rect x="7" y="12" width="3" height="5" rx="1"></rect><rect x="13" y="9" width="3" height="8" rx="1"></rect><rect x="19" y="6" width="2" height="11" rx="1"></rect></svg></span>
+                    <strong>Informações estratégicas</strong>
+                  </div>
+                </div>
+                <div class="preview-footnote">Representação conceitual — integração definida conforme o escopo.</div>
+              </div>
             </div>
             <div class="card-details">
               <h4>Integração personalizada</h4>
@@ -1620,7 +2026,7 @@
                 <div><span>Modelo</span><strong>Sob medida</strong></div>
                 <div><span>Contratação</span><strong>Sob orçamento</strong></div>
               </div>
-              <p>O escopo é definido conforme os dados, sistemas e necessidades da empresa. Assista ao vídeo explicativo disponível no ícone de reprodução.</p>
+              <p>O escopo é definido conforme os dados, sistemas e necessidades da empresa. Assista à demonstração pelo ícone de reprodução.</p>
             </div>
           </div>
 
@@ -1950,6 +2356,7 @@
       toggleProductCard(card);
     });
     card.addEventListener('keydown', e => {
+      if(e.target !== card) return;
       if(e.key === 'Enter' || e.key === ' '){
         e.preventDefault();
         toggleProductCard(card);
