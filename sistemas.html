@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistemas Contábeis | GCONT</title>
-<meta name="description" content="Sistemas e soluções com Inteligência Artificial desenvolvidos pela GCONT para simplificar a rotina dos escritórios de contabilidade.">
+<title>Sistemas e Desenvolvimento Digital | GCONT TECH</title>
+<meta name="description" content="Desenvolvimento de sites, sistemas personalizados, automações e integrações com inteligência artificial pela GCONT TECH.">
 <style>
   :root{
     --bg: #131214;
@@ -1562,6 +1562,83 @@
   }
   .cta-sub-link:hover { color:var(--gold-2); }
   .cta-sub-link span { color:var(--gold-2); }
+/* GCONT TECH: portfolio visual for Systems */
+:root{--bg:#111112;--bg-panel:#19191b;--bg-card:#1d1d20;--border:rgba(255,255,255,.11);--border-soft:rgba(255,255,255,.065);--gold-1:#ffd66b;--gold-2:#f4b72c;--gold-3:#d88b14;--text:#f4f1ea;--text-dim:#b9b6af;--text-faint:#85817a;--shadow-lg:0 24px 70px rgba(0,0,0,.42)}
+body{background:#111112;color:var(--text)}
+body::before{background:radial-gradient(ellipse at 15% 0,rgba(216,139,20,.1),transparent 38rem),radial-gradient(ellipse at 95% 40%,rgba(216,139,20,.05),transparent 40rem)}
+body::after{opacity:.3;background-size:56px 56px}
+.container,.nav{max-width:1180px}
+.nav{min-height:72px}.nav-links{gap:clamp(16px,2.5vw,32px)}.nav-cta{font-size:12px}
+.tech-shell{width:min(1180px,calc(100% - 48px));margin:0 auto}
+.tech-hero{padding:58px 0 84px}
+.tech-hero-grid{display:grid;grid-template-columns:minmax(0,.92fr) minmax(440px,1.08fr);align-items:center;gap:clamp(28px,5vw,68px);min-height:450px}
+.tech-copy{position:relative;z-index:2;max-width:580px}
+.tech-kicker,.tech-tag{display:inline-flex;align-items:center;gap:9px;color:var(--gold-1);font-size:10px;font-weight:750;letter-spacing:.15em;text-transform:uppercase}
+.tech-kicker{padding:8px 12px;border:1px solid rgba(244,183,44,.23);border-radius:99px;background:rgba(244,183,44,.055)}
+.tech-kicker:before{width:6px;height:6px;border-radius:50%;content:"";background:var(--gold-2);box-shadow:0 0 13px var(--gold-2)}
+.tech-copy h1{max-width:620px;margin:22px 0 17px;font-size:clamp(48px,6vw,74px);line-height:.99;letter-spacing:-.065em;font-weight:660}
+.tech-copy h1 span,.tech-gold{color:var(--gold-1)}
+.tech-copy>p{max-width:490px;margin:0;color:var(--text-dim);font-size:16px;line-height:1.72}
+.tech-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}
+.tech-button{display:inline-flex;min-height:46px;align-items:center;justify-content:center;gap:9px;padding:0 20px;border:1px solid transparent;border-radius:99px;font-size:13px;font-weight:650;transition:transform .2s,background .2s,border-color .2s,box-shadow .2s}
+.tech-button:hover{transform:translateY(-2px)}.tech-button svg{width:16px;height:16px}
+.tech-primary{color:#211907;background:linear-gradient(115deg,var(--gold-1),var(--gold-2));box-shadow:0 9px 24px rgba(221,155,30,.14)}
+.tech-primary:hover{box-shadow:0 13px 30px rgba(221,155,30,.24)}
+.tech-secondary{border-color:var(--border);background:rgba(255,255,255,.025)}.tech-secondary:hover{border-color:rgba(244,183,44,.5);background:rgba(244,183,44,.06)}
+.tech-note{display:flex;align-items:center;gap:8px;margin-top:24px;color:var(--text-faint);font-size:11px}.tech-note svg{width:15px;height:15px;color:var(--gold-2)}
+.tech-art{position:relative;isolation:isolate;display:grid;min-height:425px;place-items:center;overflow:hidden;border:1px solid rgba(255,255,255,.08);border-radius:22px;background:radial-gradient(ellipse at 52% 48%,rgba(204,143,28,.11),transparent 55%),linear-gradient(145deg,rgba(255,255,255,.04),rgba(255,255,255,.008));box-shadow:inset 0 1px rgba(255,255,255,.035),0 28px 78px rgba(0,0,0,.2)}
+.tech-art:before{position:absolute;z-index:-1;inset:0;content:"";opacity:.56;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:36px 36px;mask-image:radial-gradient(ellipse,black 8%,transparent 78%)}
+.tech-art-caption{position:absolute;top:18px;left:20px;color:#a5a19a;font-size:9px;font-weight:700;letter-spacing:.15em}.tech-art-caption b{color:var(--gold-1)}
+.tech-orbit{position:absolute;z-index:0;width:72%;aspect-ratio:1;border:1px solid rgba(244,183,44,.1);border-radius:50%;transform:rotate(-28deg) scaleY(.47)}
+.tech-orbit:after{position:absolute;top:2%;right:23%;width:5px;height:5px;content:"";border-radius:50%;background:var(--gold-1);box-shadow:0 0 14px 4px rgba(244,183,44,.38)}
+.tech-window{position:relative;z-index:2;width:min(77%,390px);overflow:hidden;border:1px solid rgba(255,255,255,.15);border-radius:13px;background:rgba(20,20,22,.97);box-shadow:0 25px 60px rgba(0,0,0,.5),0 0 42px rgba(214,151,32,.06)}
+.tech-windowbar{display:flex;height:36px;align-items:center;gap:8px;padding:0 12px;border-bottom:1px solid var(--border-soft);color:#8f8b84;font-size:9px}
+.tech-dots{display:flex;gap:4px;margin-right:4px}.tech-dots i{width:5px;height:5px;border-radius:50%;background:#5d5a55}.tech-dots i:first-child{background:var(--gold-2)}.tech-status{margin-left:auto;color:#b9b3a5}
+.tech-windowbody{display:grid;grid-template-columns:45px 1fr;min-height:260px}
+.tech-rail{display:flex;flex-direction:column;align-items:center;gap:15px;padding:17px 0;border-right:1px solid var(--border-soft)}.tech-rail b{display:grid;width:20px;height:20px;place-items:center;border-radius:6px;color:var(--gold-1);background:rgba(244,183,44,.15);font-size:10px}.tech-rail i{width:13px;height:13px;border:1px solid rgba(255,255,255,.2);border-radius:4px}
+.tech-workspace{padding:19px 17px 15px}.tech-workspace small{color:var(--text-faint);font-size:8px;letter-spacing:.13em}.tech-workspace h2{margin:7px 0 3px;font-size:18px;font-weight:600;letter-spacing:-.035em}.tech-workspace p{margin:0;color:#98948c;font-size:9px}
+.tech-diagram{display:grid;grid-template-columns:1fr 28px 1fr;align-items:center;margin:18px 0 14px}
+.tech-node{display:grid;min-height:59px;place-items:center;padding:6px 4px;border:1px solid rgba(255,255,255,.09);border-radius:9px;background:#1b1b1e;text-align:center}.tech-node strong{font-size:9px}.tech-node small{margin-top:3px;color:#8d8981;font-size:8px;letter-spacing:0}.tech-node.highlight{border-color:rgba(244,183,44,.3);background:rgba(244,183,44,.065)}.tech-connector{height:1px;background:linear-gradient(90deg,rgba(244,183,44,.2),var(--gold-2),rgba(244,183,44,.2))}
+.tech-windowfoot{display:flex;justify-content:space-between;padding:9px 10px;border:1px solid var(--border-soft);border-radius:7px;color:#c8c3b8;font-size:8px}.tech-windowfoot span:last-child{color:var(--gold-1)}
+.tech-float{position:absolute;z-index:3;display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid rgba(255,255,255,.12);border-radius:10px;background:rgba(27,27,29,.95);box-shadow:0 14px 34px rgba(0,0,0,.34);animation:techfloat 6s ease-in-out infinite}.tech-float svg{width:16px;height:16px;color:var(--gold-1)}.tech-float strong,.tech-float small{display:block}.tech-float strong{font-size:8px}.tech-float small{margin-top:2px;color:#96928b;font-size:7px}.tech-float.one{top:17%;right:4%}.tech-float.two{bottom:12%;left:4%;animation-delay:-2.4s}.tech-art-foot{position:absolute;right:18px;bottom:14px;color:#79766f;font-size:8px}
+@keyframes techfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.tech-steps{display:grid;grid-template-columns:repeat(3,1fr);margin-top:38px;border-top:1px solid var(--border)}
+.tech-step{display:flex;min-height:58px;align-items:center;gap:11px;padding:10px 16px;color:#c5c1b8;font-size:11px}.tech-step:first-child{padding-left:0}.tech-step+.tech-step{border-left:1px solid var(--border-soft)}.tech-step b{color:var(--gold-1);font-size:9px;letter-spacing:.08em}
+.tech-section{padding:100px 0}.tech-capabilities{border-top:1px solid var(--border-soft);background:linear-gradient(180deg,rgba(255,255,255,.012),transparent 48%)}
+.tech-heading{max-width:700px;margin:0 0 38px}.tech-heading h2{margin:14px 0 11px;font-size:clamp(32px,4.2vw,49px);line-height:1.08;letter-spacing:-.045em;font-weight:630}.tech-heading>p{max-width:570px;margin:0;color:var(--text-dim);font-size:15px}
+.tech-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--border)}
+.tech-capability{display:grid;grid-template-columns:40px 1fr;gap:17px;min-height:164px;padding:26px 30px 26px 0;border-bottom:1px solid var(--border)}.tech-capability:nth-child(even){padding-left:27px;border-left:1px solid var(--border)}
+.tech-icon{display:grid;width:39px;height:39px;place-items:center;border:1px solid rgba(244,183,44,.18);border-radius:11px;color:var(--gold-1);background:rgba(244,183,44,.045);transition:background .2s,transform .2s,box-shadow .2s}.tech-icon svg{width:19px;height:19px}.tech-capability:hover .tech-icon{transform:translateY(-2px);background:rgba(244,183,44,.1);box-shadow:0 0 22px rgba(244,183,44,.08)}
+.tech-capability small{color:var(--text-faint);font-size:9px;letter-spacing:.12em}.tech-capability h3{margin:6px 0;font-size:18px;font-weight:600;letter-spacing:-.02em}.tech-capability p{max-width:420px;margin:0;color:var(--text-dim);font-size:13px;line-height:1.65}
+.tech-solutions{padding-top:96px}.tech-solution-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:24px}.tech-solution-head .tech-heading{margin:0}.tech-count{padding-bottom:7px;color:var(--text-faint);font-size:10px;letter-spacing:.13em}.tech-count b{color:var(--gold-1)}
+.tech-project{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:clamp(32px,6vw,76px);padding:38px 0;border-top:1px solid var(--border)}.tech-project+.tech-project{padding-top:48px}.tech-project-copy{padding:7px 0}
+.tech-project-index{color:var(--gold-1);font-size:9px;font-weight:750;letter-spacing:.15em;text-transform:uppercase}.tech-project-category{display:block;margin-top:15px;color:var(--text-faint);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.tech-project h3{margin:8px 0 12px;font-size:clamp(30px,3.5vw,40px);line-height:1.08;letter-spacing:-.045em;font-weight:620}.tech-project-copy>p{max-width:470px;margin:0;color:var(--text-dim);font-size:14px;line-height:1.7}
+.tech-points{display:grid;gap:9px;margin:19px 0 0;padding:0;list-style:none}.tech-points li{display:flex;gap:9px;color:#d5d1c9;font-size:12px}.tech-points svg{flex:0 0 auto;width:14px;height:14px;margin-top:3px;color:var(--gold-2)}
+.tech-project-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 17px;margin-top:22px}.tech-textlink{display:inline-flex;align-items:center;gap:7px;padding:0;border:0;color:var(--gold-1);background:none;font-size:12px;font-weight:650;cursor:pointer}.tech-textlink svg{width:15px;height:15px;transition:transform .2s}.tech-textlink:hover svg{transform:translateX(3px)}.tech-price{color:var(--text-faint);font-size:10px}
+.tech-visual{position:relative;display:grid;min-height:320px;place-items:center;overflow:hidden;border:1px solid var(--border);border-radius:15px;background:radial-gradient(ellipse at 50% 45%,rgba(205,143,29,.09),transparent 57%),#151516}
+.tech-visual:before{position:absolute;inset:0;content:"";opacity:.4;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(ellipse,black,transparent 76%)}
+.tech-visual-label{position:absolute;z-index:2;top:16px;left:18px;color:var(--text-faint);font-size:8px;font-weight:700;letter-spacing:.13em}
+.tech-fiscal-ui{position:relative;z-index:1;width:min(78%,410px);padding:15px;border:1px solid rgba(255,255,255,.11);border-radius:11px;background:rgba(25,25,27,.97);box-shadow:0 22px 50px rgba(0,0,0,.4)}
+.tech-fiscal-head{display:flex;justify-content:space-between;padding-bottom:11px;border-bottom:1px solid var(--border-soft)}.tech-fiscal-head strong{font-size:11px}.tech-fiscal-head span{color:#8e8b84;font-size:8px}
+.tech-upload{display:grid;place-items:center;margin:12px 0;padding:13px 8px;border:1px dashed rgba(244,183,44,.27);border-radius:8px;background:rgba(244,183,44,.025);text-align:center}.tech-upload svg{width:19px;height:19px;margin-bottom:5px;color:var(--gold-1)}.tech-upload strong{font-size:9px;font-weight:600}.tech-upload small{margin-top:2px;color:#8c8880;font-size:7px}
+.tech-data-row{display:grid;grid-template-columns:1fr auto;gap:8px;padding:8px 1px;border-top:1px solid var(--border-soft);color:#b5b1a8;font-size:8px}.tech-data-row span:last-child{color:var(--gold-1)}
+.tech-project.reverse .tech-project-copy{order:2}.tech-project.reverse .tech-visual{order:1}.tech-ai-visual{padding:26px}
+.tech-ai-flow{position:relative;z-index:1;display:grid;width:min(94%,500px);grid-template-columns:1fr 27px 1fr 27px 1fr;align-items:center}
+.tech-ai-node{display:flex;min-height:118px;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:12px 5px;border:1px solid rgba(255,255,255,.11);border-radius:11px;background:rgba(25,25,27,.95);text-align:center}.tech-ai-node svg{width:21px;height:21px;color:var(--gold-1)}.tech-ai-node strong{max-width:100px;font-size:9px;line-height:1.3}.tech-ai-node small{color:#8c8880;font-size:7px;line-height:1.35}.tech-ai-node.focus{border-color:rgba(244,183,44,.34);background:linear-gradient(145deg,rgba(244,183,44,.09),rgba(25,25,27,.96))}
+.tech-ai-link{height:1px;background:linear-gradient(90deg,rgba(244,183,44,.2),var(--gold-2),rgba(244,183,44,.2))}.tech-ai-link:after{display:block;width:5px;height:5px;margin:-2px 0 0 auto;content:"";border-radius:50%;background:var(--gold-1);box-shadow:0 0 9px var(--gold-2)}
+.tech-custom{padding:78px 0}.tech-custom-panel{position:relative;display:grid;grid-template-columns:1fr auto;align-items:center;gap:28px;overflow:hidden;padding:clamp(30px,5vw,55px);border:1px solid rgba(244,183,44,.2);border-radius:19px;background:radial-gradient(ellipse at 82% 20%,rgba(215,151,27,.14),transparent 31rem),linear-gradient(125deg,#19191b,#141415 66%)}
+.tech-custom-panel:after{position:absolute;right:10%;bottom:-140px;width:300px;height:300px;content:"";border:1px solid rgba(244,183,44,.13);border-radius:50%;box-shadow:0 0 0 34px rgba(244,183,44,.025),0 0 0 68px rgba(244,183,44,.018);pointer-events:none}
+.tech-custom-copy{position:relative;z-index:1;max-width:650px}.tech-custom-copy h2{margin:13px 0 9px;font-size:clamp(32px,4vw,47px);line-height:1.08;letter-spacing:-.05em;font-weight:620}.tech-custom-copy p{max-width:570px;margin:0;color:var(--text-dim);font-size:14px}
+.tech-custom-action{position:relative;z-index:1}.tech-custom-action small{display:block;margin-top:9px;color:var(--text-faint);font-size:9px;text-align:center}
+.tech-faq{padding-top:68px}.tech-faq-layout{display:grid;grid-template-columns:minmax(220px,.75fr) minmax(0,1.25fr);gap:clamp(32px,7vw,82px)}
+.tech-faq-title h2{max-width:360px;margin:13px 0;font-size:clamp(30px,4vw,42px);line-height:1.08;letter-spacing:-.045em;font-weight:620}.tech-faq-title p{max-width:300px;margin:0;color:var(--text-dim);font-size:13px}
+.tech-faq .faq-list{max-width:none;gap:0;border-top:1px solid var(--border)}.tech-faq .faq-item{border-color:var(--border);border-radius:0;background:transparent}.tech-faq .faq-q{padding:16px 0;font-size:13px}.tech-faq .faq-q svg{width:16px}.tech-faq .faq-a p{padding:0 34px 17px 0;font-size:12px;line-height:1.7}
+@media(max-width:900px){.tech-shell{width:calc(100% - 40px)}.tech-hero{padding-top:43px}.tech-hero-grid{grid-template-columns:minmax(0,.9fr) minmax(340px,1.1fr);gap:22px;min-height:405px}.tech-art{min-height:375px}.tech-copy h1{font-size:clamp(46px,6.4vw,61px)}}
+@media(max-width:720px){.tech-shell{width:min(100% - 36px,560px)}.tech-hero{padding:32px 0 54px}.tech-hero-grid{grid-template-columns:1fr;gap:25px;min-height:0}.tech-copy h1{max-width:540px;margin:18px 0 14px;font-size:clamp(40px,10vw,56px);line-height:1.02}.tech-copy>p{font-size:16px;line-height:1.65}.tech-actions{gap:9px;margin-top:20px}.tech-actions .tech-button{min-height:45px;padding:0 16px;font-size:12px}.tech-note{margin-top:17px;font-size:10px}.tech-art{min-height:370px;border-radius:17px}.tech-window{width:min(76%,390px)}.tech-windowbody{min-height:238px}.tech-workspace{padding:17px 14px 13px}.tech-workspace h2{font-size:16px}.tech-float.one{top:12%;right:3%}.tech-float.two{bottom:10%;left:3%}.tech-step{min-height:55px;padding:8px 9px;font-size:9px}.tech-step:first-child{padding-left:0}.tech-section{padding:74px 0}.tech-heading{margin-bottom:29px}.tech-heading h2{font-size:clamp(32px,8vw,43px)}.tech-heading>p{font-size:14px}.tech-capability{min-height:152px;gap:13px;padding:22px 18px 22px 0}.tech-capability:nth-child(even){padding-left:18px}.tech-capability h3{font-size:16px}.tech-capability p{font-size:12px}.tech-solutions{padding-top:68px}.tech-solution-head{align-items:flex-start;margin-bottom:18px}.tech-count{display:none}.tech-project{grid-template-columns:1fr;gap:22px;padding:29px 0}.tech-project+.tech-project{padding-top:35px}.tech-project.reverse .tech-project-copy,.tech-project.reverse .tech-visual{order:initial}.tech-project h3{font-size:32px}.tech-project-copy>p{font-size:13px}.tech-visual{min-height:290px}.tech-ai-visual{min-height:270px;padding:17px}.tech-ai-flow{grid-template-columns:1fr 17px 1fr 17px 1fr;width:100%}.tech-ai-node{min-height:106px;padding:9px 4px}.tech-custom{padding:56px 0}.tech-custom-panel{grid-template-columns:1fr;gap:20px;padding:27px 21px}.tech-custom-copy h2{font-size:35px}.tech-custom-copy p{font-size:13px}.tech-custom-action{justify-self:start}.tech-custom-action small{text-align:left}.tech-faq-layout{grid-template-columns:1fr;gap:23px}.tech-faq-title h2{font-size:34px}.tech-faq-title p{font-size:13px}}
+@media(max-width:430px){.tech-shell{width:calc(100% - 32px)}.tech-copy h1{font-size:clamp(39px,10.5vw,47px)}.tech-copy>p{font-size:15.5px}.tech-actions{display:grid;grid-template-columns:1fr}.tech-actions .tech-button{width:100%}.tech-art{min-height:330px}.tech-art-caption{top:13px;left:13px;font-size:8px}.tech-window{width:79%}.tech-windowbody{grid-template-columns:37px 1fr;min-height:222px}.tech-rail{gap:13px}.tech-workspace{padding:14px 10px 11px}.tech-workspace h2{font-size:14px}.tech-workspace p{font-size:8px}.tech-diagram{grid-template-columns:1fr 20px 1fr;margin:14px 0 11px}.tech-node{min-height:53px}.tech-node strong{font-size:8px}.tech-node small{font-size:7px}.tech-windowfoot{font-size:7px}.tech-float{gap:6px;padding:8px 9px}.tech-float svg{width:14px;height:14px}.tech-float strong{font-size:7px}.tech-float small{font-size:6px}.tech-art-foot{right:11px;bottom:9px;max-width:130px;text-align:right}.tech-steps{grid-template-columns:1fr;margin-top:25px}.tech-step,.tech-step:first-child{min-height:41px;padding:6px 0;font-size:10px}.tech-step+.tech-step{border-top:1px solid var(--border-soft);border-left:0}.tech-grid{grid-template-columns:1fr}.tech-capability,.tech-capability:nth-child(even){min-height:0;padding:19px 0;border-left:0}.tech-capability h3{font-size:17px}.tech-capability p{font-size:13px}.tech-visual{min-height:260px}.tech-fiscal-ui{width:84%;padding:12px}.tech-ai-visual{min-height:238px;padding:11px}.tech-ai-node{min-height:96px;gap:6px}.tech-ai-node strong{font-size:7px}.tech-ai-node small{font-size:6px}}
+@media(prefers-reduced-motion:reduce){.tech-float{animation:none}.tech-button,.tech-icon,.tech-textlink svg,.reveal{transition:none}.reveal{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
@@ -1574,26 +1651,26 @@
       </a>
       <nav class="nav-links">
         <a href="/">Loja Digital</a>
-        <a href="/sistemas" class="active">Sistemas Contábeis</a>
+        <a href="/sistemas" class="active">Sistemas</a>
         <a href="/#vantagens">Por que a GCONT</a>
         <a href="#contato">Contato</a>
       </nav>
       <div class="nav-actions">
         <a class="nav-cta" href="https://wa.me/554936740176?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GCONT%20e%20gostaria%20de%20falar%20com%20um%20especialista%20sobre%20os%20sistemas.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener">Falar com especialista</a>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu-panel">
       <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fechar menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
       <a href="/">Loja Digital</a>
-      <a href="/sistemas">Sistemas Contábeis</a>
+      <a href="/sistemas">Sistemas</a>
       <a href="/#vantagens">Por que a GCONT</a>
       <a href="#contato">Contato</a>
       <a class="nav-cta" href="https://wa.me/554936740176?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GCONT%20e%20gostaria%20de%20falar%20com%20um%20especialista%20sobre%20os%20sistemas.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener" style="justify-content:center;">Falar com especialista</a>
@@ -1601,183 +1678,211 @@
   </div>
 
   <main id="topo">
-
-    <!-- HERO -->
-    <section class="hero container">
-      <div class="hero-top">
-        <div class="hero-text">
-          <span class="eyebrow">
-            <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
-            Sistemas GCONT
-          </span>
-          <h1><span class="hero-title-desktop">Sistemas inteligentes para <span class="accent">simplificar</span> sua rotina contábil</span><span class="hero-title-mobile">Simplifique sua <span class="accent">rotina contábil</span></span></h1>
-          <p class="lead"><span class="hero-description-desktop">Reduza atividades manuais, organize informações e ganhe produtividade com soluções desenvolvidas para os desafios reais dos escritórios de contabilidade.</span><span class="hero-description-mobile">Automatize tarefas e ganhe tempo no escritório.</span></p>
+  <section class="tech-hero tech-shell" aria-labelledby="techHeroTitle">
+    <div class="tech-hero-grid">
+      <div class="tech-copy">
+        <span class="tech-kicker">GCONT TECH <span aria-hidden="true">·</span> Desenvolvimento digital</span>
+        <h1 id="techHeroTitle">Transformamos ideias em <span>soluções digitais.</span></h1>
+        <p>Desenvolvemos sites, sistemas e tecnologias personalizadas para conectar processos, automatizar tarefas e impulsionar negócios.</p>
+        <div class="tech-actions">
+          <a class="tech-button tech-primary" href="#solucoes">Explorar nossas soluções
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+          </a>
+          <a class="tech-button tech-secondary" href="https://wa.me/554936740176?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20Sistemas%20da%20GCONT%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Solicitar um projeto</a>
         </div>
-        <div class="hero-visual">
-          <img src="logos/mockup-sistemas.png" alt="Computador, tablet e nuvem com ferramentas digitais e automa&#231;&#227;o GCONT">
-        </div>
-      </div>
-
-      <div class="hero-ctas">
-        <a href="#sistemas" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
-          Conhecer os sistemas
-        </a>
-        <a href="https://wa.me/554936740176?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GCONT%20e%20gostaria%20de%20falar%20com%20um%20especialista%20sobre%20os%20sistemas.%20Pode%20me%20ajudar%3F" class="btn btn-ghost" target="_blank" rel="noopener">Falar com especialista</a>
-      </div>
-
-      <div class="trust">
-        <div class="trust-item">
-          <span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span>
-          <span>Soluções sob medida</span>
-        </div>
-        <div class="trust-item">
-          <span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg></span>
-          <span>Implantação assistida</span>
-        </div>
-        <div class="trust-item">
-          <span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></span>
-          <span>Suporte da equipe GCONT</span>
+        <div class="tech-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+          Soluções desenvolvidas com acompanhamento da equipe GCONT
         </div>
       </div>
-    </section>
 
-    <!-- SISTEMAS -->
-    <section class="section" id="sistemas">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-tag">Soluções GCONT</span>
-          <h2>Sistemas desenvolvidos para a rotina contábil</h2>
-          <p>Conheça as soluções que a equipe GCONT desenvolveu para simplificar processos, reduzir trabalho manual e apoiar escritórios de contabilidade.</p>
+      <div class="tech-art" role="img" aria-label="Diagrama conceitual de interfaces, dados e sistemas conectados">
+        <span class="tech-art-caption">GCONT <b>/</b> DIGITAL STUDIO</span>
+        <div class="tech-orbit" aria-hidden="true"></div>
+        <div class="tech-float one" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M8 21h8M12 18v3"></path></svg>
+          <span><strong>Experiências web</strong><small>Sites e plataformas</small></span>
         </div>
-
-        <div class="sys-grid">
-
-          <!-- NotaSync -->
-          <div class="sys-card sys-card--featured reveal">
-            <div class="sys-card-left">
-              <div class="sys-icon">
-                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+        <div class="tech-float two" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19 15a2 2 0 0 0 1 2l-2 3a2 2 0 0 0-2 0h-4a2 2 0 0 0-2-1l-2-3a2 2 0 0 0 1-2v-4a2 2 0 0 0-1-2l2-3a2 2 0 0 0 2 1h4a2 2 0 0 0 2 0l2 3a2 2 0 0 0-1 2z"></path></svg>
+          <span><strong>Processos conectados</strong><small>Integração sob medida</small></span>
+        </div>
+        <div class="tech-window" aria-hidden="true">
+          <div class="tech-windowbar"><span class="tech-dots"><i></i><i></i><i></i></span>gcont.tech / workspace<span class="tech-status">CONCEITO</span></div>
+          <div class="tech-windowbody">
+            <div class="tech-rail"><b>G</b><i></i><i></i><i></i></div>
+            <div class="tech-workspace">
+              <small>ARQUITETURA DIGITAL</small>
+              <h2>Uma ideia. Várias conexões.</h2>
+              <p>Interfaces, sistemas e informação trabalhando juntos.</p>
+              <div class="tech-diagram">
+                <div class="tech-node"><strong>Site</strong><small>Presença digital</small></div><i class="tech-connector"></i>
+                <div class="tech-node highlight"><strong>Sistema</strong><small>Processos</small></div>
               </div>
-              <span class="sys-tag">Automação fiscal</span>
-              <h3>NotaSync — Leitura e Análise de Arquivos Fiscais</h3>
-              <div class="price">Projeto sob orçamento <small>Implantação assistida sob medida</small></div>
-              <button class="buy-btn" onclick="saibaMaisNotaSync()">Conhecer o NotaSync</button>
-            </div>
-            <div class="sys-card-right">
-              <p class="desc">Simplifique a análise de documentos fiscais com leitores especializados. Envie seus arquivos por upload e utilize as ferramentas disponíveis para consultar e analisar informações fiscais de maneira prática e organizada.</p>
-              <ul class="sys-features">
-                <li>
-                  <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
-                  Leitura especializada de arquivos fiscais
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
-                  Análise de documentos por upload
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
-                  Interface prática e organizada
-                </li>
-              </ul>
+              <div class="tech-windowfoot"><span>Integrações personalizadas</span><span>em construção ↗</span></div>
             </div>
           </div>
-
-          <!-- IA -->
-          <div class="sys-card sys-card--featured reveal">
-            <div class="sys-card-left">
-              <div class="sys-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v1a3 3 0 0 0-3 3v2a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3v1a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3v-1a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3V9a3 3 0 0 0-3-3V5a3 3 0 0 0-3-3Z"></path><circle cx="9" cy="10" r="1"></circle><circle cx="15" cy="10" r="1"></circle><path d="M9 15c1 .8 2.3 1.2 3 .4.7.8 2 1.1 3-.4"></path></svg>
-              </div>
-              <span class="sys-tag">Inteligência Artificial</span>
-              <h3>Inteligência Artificial integrada aos dados da sua empresa</h3>
-              <div class="price">Projeto sob orçamento <small>Avaliação e proposta sob medida</small></div>
-              <button class="buy-btn" onclick="saibaMaisIA()">Solicitar uma avaliação</button>
-              <button class="sys-video-btn" type="button" data-video-open>
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M10 8.5 16 12l-6 3.5z"></path></svg>
-                Assistir vídeo explicativo
-              </button>
-            </div>
-            <div class="sys-card-right">
-              <p class="desc">Desenvolvemos integrações personalizadas de Inteligência Artificial com bancos de dados para facilitar consultas, organizar informações e apoiar a automação de processos empresariais.</p>
-              <p class="desc">Cada implantação é desenvolvida de forma personalizada, considerando os sistemas e processos específicos da sua empresa.</p>
-              <ul class="sys-features">
-                <li>
-                  <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
-                  Integração personalizada com seu banco de dados
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
-                  Automação de consultas e processos internos
-                </li>
-                <li>
-                  <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></svg>
-                  Implantação assistida pela equipe GCONT
-                </li>
-              </ul>
-            </div>
-          </div>
-
         </div>
+        <span class="tech-art-foot">Composição visual ilustrativa</span>
       </div>
-    </section>
+    </div>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-tag">Dúvidas frequentes</span>
-          <h2>Perguntas sobre os sistemas GCONT</h2>
-        </div>
-        <div class="faq-list">
-          <div class="faq-item reveal">
-            <button class="faq-q">Como funciona a contratação da Integração de Inteligência Artificial com Banco de Dados?
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            </button>
-            <div class="faq-a"><p>O primeiro passo é falar com a nossa equipe. Fazemos uma análise dos sistemas que a sua empresa já utiliza, entendemos o banco de dados disponível e definimos o melhor formato de implantação da IA, que funciona como uma conexão inteligente com a operação do cliente.</p></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">Como é definido o valor do projeto?
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            </button>
-            <div class="faq-a"><p>O investimento é negociado caso a caso, porque depende dos sistemas que a empresa possui, da complexidade da integração e do escopo da implantação. Depois do contato inicial, nossa equipe apresenta a proposta mais adequada.</p></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">Como funciona o NotaSync?
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            </button>
-            <div class="faq-a"><p>O NotaSync é uma solução para leitura e análise de arquivos fiscais. Você envia os arquivos por upload e utiliza os leitores disponíveis para consultar e analisar as informações fiscais de forma prática. Para saber mais detalhes sobre as funcionalidades disponíveis, entre em contato com nossa equipe.</p></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">Como funcionam os produtos com implementação assistida?
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            </button>
-            <div class="faq-a"><p>O cliente entra em contato conosco para fornecer os dados necessários de acesso ao sistema. Em seguida, nossa equipe acessa o sistema do cliente remotamente e realiza toda a implementação de forma assistida, configura as rotinas conforme a necessidade e testa antes de liberar o uso. Prazo e valor variam conforme a complexidade de cada sistema.</p></div>
-          </div>
-          <div class="faq-item reveal">
-            <button class="faq-q">Quanto tempo leva a implantação?
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-            </button>
-            <div class="faq-a"><p>O prazo varia conforme a complexidade de cada projeto. Após a análise inicial e aprovação da proposta, a equipe GCONT apresenta um cronograma detalhado de implantação. Entre em contato para receber uma estimativa mais precisa para o seu caso.</p></div>
-          </div>
-        </div>
+    <div class="tech-steps" aria-label="Etapas de desenvolvimento">
+      <div class="tech-step"><b>01</b> Entendimento do desafio</div>
+      <div class="tech-step"><b>02</b> Desenvolvimento sob medida</div>
+      <div class="tech-step"><b>03</b> Acompanhamento da equipe</div>
+    </div>
+  </section>
+
+  <section class="tech-section tech-capabilities" id="atuacao" aria-labelledby="techCapabilitiesTitle">
+    <div class="tech-shell">
+      <div class="tech-heading reveal">
+        <span class="tech-tag">O que desenvolvemos</span>
+        <h2 id="techCapabilitiesTitle">Tecnologia a serviço do seu <span class="tech-gold">negócio.</span></h2>
+        <p>Da presença digital à integração de processos, criamos soluções alinhadas às necessidades de cada empresa.</p>
       </div>
-    </section>
+      <div class="tech-grid">
+        <article class="tech-capability reveal">
+          <span class="tech-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"></rect><path d="M8 21h8M12 18v3M7 8h4"></path></svg></span>
+          <div><small>01 / WEB</small><h3>Desenvolvimento de sites</h3><p>Sites responsivos e personalizados para apresentar empresas e fortalecer sua presença digital.</p></div>
+        </article>
+        <article class="tech-capability reveal">
+          <span class="tech-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M3 9h18M9 21V9M6 6h.01M12 6h.01"></path></svg></span>
+          <div><small>02 / SISTEMAS</small><h3>Sistemas personalizados</h3><p>Soluções web pensadas para organizar processos e atender às necessidades de cada operação.</p></div>
+        </article>
+        <article class="tech-capability reveal">
+          <span class="tech-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="6" height="6" rx="1"></rect><rect x="14" y="14" width="6" height="6" rx="1"></rect><path d="M10 7h4a2 2 0 0 1 2 2v5M14 17h-4a2 2 0 0 1-2-2v-5"></path></svg></span>
+          <div><small>03 / PROCESSOS</small><h3>Automações e integrações</h3><p>Conexões entre ferramentas e informações para reduzir tarefas manuais do dia a dia.</p></div>
+        </article>
+        <article class="tech-capability reveal">
+          <span class="tech-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 0-4 4v1a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3v1a4 4 0 0 0 8 0v-1a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3V7a4 4 0 0 0-4-4Z"></path><path d="M9 11h.01M15 11h.01M9 15h6"></path></svg></span>
+          <div><small>04 / INTELIGÊNCIA ARTIFICIAL</small><h3>Integrações com IA</h3><p>Projetos personalizados que conectam inteligência artificial aos dados e sistemas da empresa.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-    <!-- CTA BAND -->
-    <section class="cta-band container" id="contato">
-      <div class="cta-box reveal">
-        <h2>Pronto para conhecer os sistemas?</h2>
-        <p>Fale com nossa equipe e descubra como as soluções da GCONT podem transformar a rotina do seu escritório.</p>
-        <a class="btn btn-primary" href="https://wa.me/554936740176?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GCONT%20e%20tenho%20interesse%20nos%20sistemas%20e%20solu%C3%A7%C3%B5es.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-          Falar no WhatsApp
+  <section class="tech-section tech-solutions" id="solucoes" aria-labelledby="techSolutionsTitle">
+    <div class="tech-shell">
+      <div class="tech-solution-head">
+        <div class="tech-heading reveal">
+          <span class="tech-tag">Portfólio GCONT TECH</span>
+          <h2 id="techSolutionsTitle">Soluções que já estão <span class="tech-gold">em operação.</span></h2>
+          <p>Conheça os sistemas próprios e os projetos personalizados desenvolvidos pela equipe.</p>
+        </div>
+        <span class="tech-count"><b>02</b> SOLUÇÕES</span>
+      </div>
+
+      <article class="tech-project reveal" aria-labelledby="notaSyncTitle">
+        <div class="tech-project-copy">
+          <span class="tech-project-index">Projeto 01</span>
+          <span class="tech-project-category">Leitura e análise fiscal</span>
+          <h3 id="notaSyncTitle">NotaSync</h3>
+          <p>Ferramenta para leitura e análise de arquivos fiscais. Envie os arquivos por upload e consulte as informações com leitores especializados.</p>
+          <ul class="tech-points">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"></path></svg>Leitura de arquivos fiscais</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"></path></svg>Envio por upload e consulta das informações</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"></path></svg>Implantação acompanhada pela equipe</li>
+          </ul>
+          <div class="tech-project-actions">
+            <button class="tech-textlink" type="button" onclick="saibaMaisNotaSync()">Conhecer o NotaSync <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+            <span class="tech-price">Projeto sob orçamento</span>
+          </div>
+        </div>
+        <div class="tech-visual" role="img" aria-label="Representação conceitual do envio e da análise de arquivos fiscais">
+          <span class="tech-visual-label">NOTASYNC / REPRESENTAÇÃO ILUSTRATIVA</span>
+          <div class="tech-fiscal-ui" aria-hidden="true">
+            <div class="tech-fiscal-head"><strong>Arquivos fiscais</strong><span>NotaSync</span></div>
+            <div class="tech-upload"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0L7 9m5-5 5 5"></path><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"></path></svg><strong>Envio de arquivos por upload</strong><small>Área demonstrativa da ferramenta</small></div>
+            <div class="tech-data-row"><span>Leitura especializada</span><span>Disponível</span></div>
+            <div class="tech-data-row"><span>Consulta de informações</span><span>NotaSync</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="tech-project reverse reveal" aria-labelledby="aiTitle">
+        <div class="tech-project-copy">
+          <span class="tech-project-index">Projeto 02</span>
+          <span class="tech-project-category">Inteligência artificial</span>
+          <h3 id="aiTitle">IA conectada à sua operação</h3>
+          <p>Integrações personalizadas entre inteligência artificial, bancos de dados e sistemas empresariais para apoiar consultas e processos internos.</p>
+          <ul class="tech-points">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"></path></svg>Integração avaliada conforme os sistemas da empresa</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"></path></svg>Automação de consultas e processos internos</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"></path></svg>Implantação assistida pela equipe GCONT</li>
+          </ul>
+          <div class="tech-project-actions">
+            <button class="tech-textlink" type="button" onclick="saibaMaisIA()">Conversar sobre uma integração <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+            <button class="tech-textlink" type="button" data-video-open><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m10 8 6 4-6 4z"></path></svg>Assistir ao vídeo</button>
+          </div>
+          <span class="tech-price">Projeto personalizado sob orçamento</span>
+        </div>
+        <div class="tech-visual tech-ai-visual" role="img" aria-label="Diagrama conceitual conectando os dados da empresa à inteligência artificial">
+          <span class="tech-visual-label">INTEGRAÇÃO / FLUXO CONCEITUAL</span>
+          <div class="tech-ai-flow" aria-hidden="true">
+            <div class="tech-ai-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path></svg><strong>Dados da empresa</strong><small>Base existente</small></div>
+            <i class="tech-ai-link"></i>
+            <div class="tech-ai-node focus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a4 4 0 0 0-4 4v1a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3v1a4 4 0 0 0 8 0v-1a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3V7a4 4 0 0 0-4-4Z"></path><path d="M9 11h.01M15 11h.01M9 15h6"></path></svg><strong>Integração IA</strong><small>Desenvolvimento sob medida</small></div>
+            <i class="tech-ai-link"></i>
+            <div class="tech-ai-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4M8 11h6M11 8v6"></path></svg><strong>Consultas e processos</strong><small>Na operação da empresa</small></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="tech-custom tech-shell reveal" id="contato" aria-labelledby="techCustomTitle">
+    <div class="tech-custom-panel">
+      <div class="tech-custom-copy">
+        <span class="tech-tag">Desenvolvimento personalizado</span>
+        <h2 id="techCustomTitle">Sua ideia. Nossa <span class="tech-gold">tecnologia.</span></h2>
+        <p>Cada empresa tem desafios diferentes. Desenvolvemos soluções digitais pensadas para as necessidades de cada operação.</p>
+      </div>
+      <div class="tech-custom-action">
+        <a class="tech-button tech-primary" href="https://wa.me/554936740176?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20Sistemas%20da%20GCONT%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">Solicitar um orçamento
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
         </a>
-        <a href="/" class="cta-sub-link">Ver também: <span>→ Loja de ferramentas digitais</span></a>
+        <small>Converse com a equipe GCONT</small>
       </div>
-    </section>
+    </div>
+  </section>
 
-  </main>
+  <section class="tech-section tech-faq" id="faq" aria-labelledby="techFaqTitle">
+    <div class="tech-shell tech-faq-layout">
+      <div class="tech-faq-title reveal">
+        <span class="tech-tag">Perguntas frequentes</span>
+        <h2 id="techFaqTitle">Vamos tirar sua dúvida?</h2>
+        <p>Se quiser conversar sobre um cenário específico, nossa equipe pode ajudar.</p>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqAnswer1">Que tipo de projeto a GCONT desenvolve?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
+          </button>
+          <div class="faq-a" id="faqAnswer1"><p>Desenvolvemos sites, sistemas web personalizados, automações e integrações com inteligência artificial, conforme a necessidade de cada empresa.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqAnswer2">Como funciona um projeto personalizado?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
+          </button>
+          <div class="faq-a" id="faqAnswer2"><p>Conversamos sobre a necessidade, avaliamos os sistemas e processos envolvidos e apresentamos uma proposta e um cronograma adequados ao escopo.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqAnswer3">Como funciona o NotaSync?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
+          </button>
+          <div class="faq-a" id="faqAnswer3"><p>O NotaSync permite enviar arquivos fiscais por upload e usar leitores especializados para consultar e analisar as informações. A equipe GCONT explica as condições e os detalhes disponíveis.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqAnswer4">A integração com IA é igual para todas as empresas?
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
+          </button>
+          <div class="faq-a" id="faqAnswer4"><p>Não. A integração é avaliada conforme os dados, sistemas e processos de cada empresa. O escopo e o investimento são definidos em uma proposta personalizada.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
 
   <footer>
     <div class="container">
@@ -1789,7 +1894,7 @@
         <div class="footer-col">
           <h4>Navegação</h4>
           <a href="/">Loja Digital</a>
-          <a href="/sistemas">Sistemas Contábeis</a>
+          <a href="/sistemas">Sistemas</a>
           <a href="/#vantagens">Por que a GCONT</a>
           <a href="#contato">Contato</a>
         </div>
@@ -1885,10 +1990,14 @@
     const videoOpen = videoOverlay.classList.contains('open');
     document.body.style.overflow = (menuOpen || videoOpen) ? 'hidden' : '';
   }
-  function closeMobileMenu(){ mobileMenu.classList.remove('open'); hamburgerBtn.classList.remove('open'); updateBodyScrollLock(); }
+  function closeMobileMenu(){ mobileMenu.classList.remove('open'); mobileMenu.setAttribute('aria-hidden', 'true'); hamburgerBtn.classList.remove('open'); hamburgerBtn.setAttribute('aria-expanded', 'false'); hamburgerBtn.setAttribute('aria-label', 'Abrir menu'); updateBodyScrollLock(); hamburgerBtn.focus(); }
   hamburgerBtn.addEventListener('click', () => {
     const isOpen = mobileMenu.classList.toggle('open');
     hamburgerBtn.classList.toggle('open', isOpen);
+    mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+    hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+    hamburgerBtn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    if(isOpen) mobileMenuClose.focus();
     updateBodyScrollLock();
   });
   mobileMenuClose.addEventListener('click', closeMobileMenu);
@@ -1931,7 +2040,10 @@
     if(e.target === videoOverlay) closeVideoOverlay();
   });
   document.addEventListener('keydown', e => {
-    if(e.key === 'Escape') closeVideoOverlay();
+    if(e.key === 'Escape'){
+      closeVideoOverlay();
+      if(mobileMenu.classList.contains('open')) closeMobileMenu();
+    }
   });
 
   /* ---------- FAQ accordion ---------- */
@@ -1941,9 +2053,9 @@
     q.addEventListener('click', () => {
       const isOpen = item.classList.contains('open');
       document.querySelectorAll('.faq-item.open').forEach(other => {
-        if(other !== item){ other.classList.remove('open'); other.querySelector('.faq-a').style.maxHeight = null; }
+        if(other !== item){ other.classList.remove('open'); other.querySelector('.faq-q').setAttribute('aria-expanded','false'); other.querySelector('.faq-a').style.maxHeight = null; }
       });
-      item.classList.toggle('open', !isOpen);
+      item.classList.toggle('open', !isOpen); q.setAttribute('aria-expanded', String(!isOpen));
       a.style.maxHeight = isOpen ? null : a.scrollHeight + 'px';
     });
   });
