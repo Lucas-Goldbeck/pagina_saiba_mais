@@ -530,9 +530,9 @@
     color: var(--gold-2);
     box-shadow: 0 10px 22px rgba(0,0,0,0.28);
     backdrop-filter: blur(6px);
-    opacity: 0;
-    transform: translateY(-4px) scale(.98);
-    pointer-events:none;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events:auto;
     transition: opacity .2s ease, transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
     z-index: 3;
   }
@@ -542,11 +542,6 @@
     stroke: currentColor;
     display:block;
     margin:0;
-  }
-  .card.expanded .card-video-btn{
-    opacity: 1;
-    transform: translateY(0) scale(1);
-    pointer-events:auto;
   }
   .card-video-btn:hover{
     border-color: rgba(245,166,35,0.7);
@@ -1583,6 +1578,9 @@
         <div class="grid system-catalog-grid">
           <div class="card reveal" data-category="sistema" data-id="notasync" data-name="NotaSync">
             <span class="card-badge">Sistema</span>
+            <button class="card-video-btn" type="button" data-video-open data-video-src="logos/notasync-demo.mp4" data-video-title="Demonstração do NotaSync" data-video-description="Assista à gravação de demonstração do NotaSync." aria-label="Assistir demonstração do NotaSync">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 10 6-10 6z"></path></svg>
+            </button>
             <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8M12 17v4M7 9h4m-4 4h7"></path></svg></div>
             <h3>NotaSync</h3>
             <p class="desc">Envie arquivos fiscais por upload e consulte as informações com leitores especializados.</p>
@@ -1604,7 +1602,7 @@
 
           <div class="card reveal" data-category="integracao" data-id="integracao-ia-banco-de-dados" data-name="Integração de IA com banco de dados">
             <span class="card-badge">Integração com IA</span>
-            <button class="card-video-btn" type="button" data-video-open aria-label="Assistir exemplo de integração com IA">
+            <button class="card-video-btn" type="button" data-video-open data-video-src="logos/explicação_ia.mp4" data-video-title="Integração de IA com banco de dados" data-video-description="Assista ao resumo de como funciona a integração de IA com banco de dados." aria-label="Assistir exemplo de integração com IA">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 10 6-10 6z"></path></svg>
             </button>
             <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path><path d="M9 9.5h.01M15 9.5h.01"></path></svg></div>
@@ -1763,7 +1761,7 @@
             <button class="faq-q">Posso ver um exemplo da integração com IA?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
             </button>
-            <div class="faq-a"><p>Sim. Abra os detalhes do card de integração com IA e use o ícone de reprodução para assistir ao vídeo explicativo.</p></div>
+            <div class="faq-a"><p>Use o ícone de reprodução em cada card para assistir à demonstração correspondente ao NotaSync ou à integração com IA.</p></div>
           </div>
         </div>
     </section>
@@ -1834,7 +1832,7 @@
     <div class="video-head">
       <div>
         <h3 id="videoOverlayTitle">Vídeo explicativo</h3>
-        <p>Assista ao resumo de como funciona a integração de IA com banco de dados.</p>
+        <p id="videoOverlayDescription">Assista ao resumo de como funciona a integração de IA com banco de dados.</p>
       </div>
       <button class="video-close" type="button" data-video-close aria-label="Fechar vídeo">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="M6 6 18 18"></path></svg>
@@ -1877,6 +1875,9 @@
   const mobileMenuClose = document.getElementById('mobileMenuClose');
   const videoOverlay = document.getElementById('videoOverlay');
   const productExplainerVideo = document.getElementById('productExplainerVideo');
+  const productExplainerSource = productExplainerVideo.querySelector('source');
+  const videoOverlayTitle = document.getElementById('videoOverlayTitle');
+  const videoOverlayDescription = document.getElementById('videoOverlayDescription');
   const videoCloseBtn = document.querySelector('[data-video-close]');
   let lastVideoTrigger = null;
   function updateBodyScrollLock(){
@@ -1903,11 +1904,6 @@
     card.setAttribute('aria-expanded', String(!isOpen));
     const hint = card.querySelector('.details-hint');
     if(hint) hint.hidden = !isOpen ? true : false;
-    const videoBtn = card.querySelector('[data-video-open]');
-    if(videoBtn){
-      videoBtn.tabIndex = isOpen ? -1 : 0;
-      videoBtn.setAttribute('aria-hidden', String(isOpen));
-    }
   }
   productCards.forEach(card => {
     card.setAttribute('tabindex', '0');
@@ -1924,12 +1920,20 @@
     hint.hidden = false;
     const videoBtn = card.querySelector('[data-video-open]');
     if(videoBtn){
-      videoBtn.tabIndex = -1;
-      videoBtn.setAttribute('aria-hidden', 'true');
+      videoBtn.tabIndex = 0;
+      videoBtn.removeAttribute('aria-hidden');
       videoBtn.addEventListener('click', e => {
         e.preventDefault();
         e.stopPropagation();
         lastVideoTrigger = videoBtn;
+        const nextSource = videoBtn.dataset.videoSrc;
+        if(nextSource && productExplainerSource.getAttribute('src') !== nextSource){
+          productExplainerVideo.pause();
+          productExplainerSource.setAttribute('src', nextSource);
+          productExplainerVideo.load();
+        }
+        if(videoOverlayTitle) videoOverlayTitle.textContent = videoBtn.dataset.videoTitle || 'Vídeo explicativo';
+        if(videoOverlayDescription) videoOverlayDescription.textContent = videoBtn.dataset.videoDescription || '';
         videoOverlay.classList.add('open');
         videoOverlay.setAttribute('aria-hidden', 'false');
         updateBodyScrollLock();
