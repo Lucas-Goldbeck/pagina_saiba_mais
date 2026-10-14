@@ -1639,6 +1639,129 @@ body::after{opacity:.3;background-size:56px 56px}
 @media(max-width:430px){.tech-shell{width:calc(100% - 32px)}.tech-copy h1{font-size:clamp(39px,10.5vw,47px)}.tech-copy>p{font-size:15.5px}.tech-actions{display:grid;grid-template-columns:1fr}.tech-actions .tech-button{width:100%}.tech-art{min-height:330px}.tech-art-caption{top:13px;left:13px;font-size:8px}.tech-window{width:79%}.tech-windowbody{grid-template-columns:37px 1fr;min-height:222px}.tech-rail{gap:13px}.tech-workspace{padding:14px 10px 11px}.tech-workspace h2{font-size:14px}.tech-workspace p{font-size:8px}.tech-diagram{grid-template-columns:1fr 20px 1fr;margin:14px 0 11px}.tech-node{min-height:53px}.tech-node strong{font-size:8px}.tech-node small{font-size:7px}.tech-windowfoot{font-size:7px}.tech-float{gap:6px;padding:8px 9px}.tech-float svg{width:14px;height:14px}.tech-float strong{font-size:7px}.tech-float small{font-size:6px}.tech-art-foot{right:11px;bottom:9px;max-width:130px;text-align:right}.tech-steps{grid-template-columns:1fr;margin-top:25px}.tech-step,.tech-step:first-child{min-height:41px;padding:6px 0;font-size:10px}.tech-step+.tech-step{border-top:1px solid var(--border-soft);border-left:0}.tech-grid{grid-template-columns:1fr}.tech-capability,.tech-capability:nth-child(even){min-height:0;padding:19px 0;border-left:0}.tech-capability h3{font-size:17px}.tech-capability p{font-size:13px}.tech-visual{min-height:260px}.tech-fiscal-ui{width:84%;padding:12px}.tech-ai-visual{min-height:238px;padding:11px}.tech-ai-node{min-height:96px;gap:6px}.tech-ai-node strong{font-size:7px}.tech-ai-node small{font-size:6px}}
 @media(prefers-reduced-motion:reduce){.tech-float{animation:none}.tech-button,.tech-icon,.tech-textlink svg,.reveal{transition:none}.reveal{opacity:1;transform:none}}
 
+/* Commercial catalog: mobile-first, with the approved GCONT graphite and gold palette. */
+.system-catalog{padding:58px 0 12px}
+.system-catalog-heading{margin-bottom:23px}
+.system-catalog-heading .tech-tag{margin-bottom:12px}
+.system-catalog-heading h2{margin:0 0 9px;font-size:clamp(32px,8vw,46px);line-height:1.08;letter-spacing:-.045em;font-weight:630}
+.system-catalog-heading p{max-width:580px;margin:0;color:var(--text-dim);font-size:14px;line-height:1.6}
+.system-feature-card{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;overflow:hidden;padding:14px;border:1px solid rgba(244,183,44,.22);border-radius:18px;background:linear-gradient(135deg,rgba(244,183,44,.045),transparent 48%),#171719;box-shadow:0 20px 55px rgba(0,0,0,.18)}
+.system-feature-copy{order:0;min-width:0;padding:5px 3px 3px}
+.system-feature-visual{order:1;min-width:0}
+.system-eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--gold-1);font-size:10px;font-weight:750;letter-spacing:.13em;text-transform:uppercase}
+.system-eyebrow:before{width:7px;height:7px;border-radius:50%;background:var(--gold-2);content:"";box-shadow:0 0 12px rgba(244,183,44,.6)}
+.system-category{display:block;margin-top:13px;color:var(--text-faint);font-size:11px;letter-spacing:.07em;text-transform:uppercase}
+.system-feature-copy h3{margin:5px 0 9px;font-size:clamp(34px,8vw,46px);line-height:1.05;letter-spacing:-.05em;font-weight:650}
+.system-feature-copy>p{max-width:510px;margin:0;color:var(--text-dim);font-size:14px;line-height:1.65}
+.system-feature-points{display:grid;gap:9px;margin:18px 0 0;padding:0;list-style:none}
+.system-feature-points li{display:flex;align-items:flex-start;gap:9px;color:#e5e1d9;font-size:13px;line-height:1.45}
+.system-check{flex:none;width:17px;height:17px;margin-top:1px;color:var(--gold-2)}
+.system-commercial-line{display:flex;flex-wrap:wrap;align-items:center;gap:8px 11px;margin-top:18px}
+.system-commercial-badge{display:inline-flex;min-height:29px;align-items:center;padding:5px 10px;border:1px solid rgba(244,183,44,.25);border-radius:99px;color:#ffd15f;background:rgba(244,183,44,.08);font-size:11px;font-weight:650}
+.system-commercial-note{color:var(--text-faint);font-size:11px;line-height:1.45}
+.system-feature-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.system-action{display:inline-flex;min-height:44px;align-items:center;justify-content:center;gap:8px;padding:0 17px;border:1px solid transparent;border-radius:99px;font-size:12px;font-weight:700;text-align:center;transition:transform .18s ease,border-color .18s ease,background .18s ease}
+.system-action svg{width:16px;height:16px;flex:none}
+.system-action-primary{color:#241900;background:linear-gradient(120deg,var(--gold-1),var(--gold-3));box-shadow:0 8px 22px rgba(223,155,24,.17)}
+.system-action-secondary{border-color:var(--border);color:#eee9df;background:rgba(255,255,255,.025)}
+.system-action:hover{transform:translateY(-2px)}
+.system-action:focus-visible,.system-video-link:focus-visible,.system-load-more:focus-visible,.system-controls input:focus-visible,.system-controls select:focus-visible{outline:2px solid var(--gold-1);outline-offset:3px}
+.system-preview{position:relative;display:grid;min-height:188px;aspect-ratio:1.48/1;place-items:center;overflow:hidden;padding:15px;border:1px solid rgba(255,255,255,.075);border-radius:13px;background:radial-gradient(ellipse at 50% 105%,rgba(241,169,32,.18),transparent 50%),linear-gradient(145deg,#202023,#111113 74%)}
+.system-preview:before,.system-preview:after{position:absolute;width:220px;height:220px;border:1px solid rgba(244,183,44,.12);border-radius:50%;content:"";pointer-events:none}
+.system-preview:before{right:-120px;top:-150px;box-shadow:0 0 0 24px rgba(244,183,44,.025),0 0 0 49px rgba(244,183,44,.018)}
+.system-preview:after{left:-165px;bottom:-190px;width:280px;height:280px}
+.system-preview-surface{position:relative;z-index:1;width:min(100%,430px);overflow:hidden;border:1px solid rgba(255,255,255,.11);border-radius:10px;background:#111113;box-shadow:0 16px 38px rgba(0,0,0,.44);transform:rotate(-1deg)}
+.system-preview-top{display:flex;min-height:28px;align-items:center;gap:7px;padding:0 9px;border-bottom:1px solid rgba(255,255,255,.08);color:#d7d2c9;font-size:8px}
+.system-preview-dots{display:flex;gap:3px}.system-preview-dots i{width:5px;height:5px;border-radius:50%;background:#585651}.system-preview-dots i:first-child{background:var(--gold-2)}
+.system-preview-brand{margin-left:auto;color:#a7a197;font-size:7px;letter-spacing:.08em}
+.system-preview-layout{display:grid;grid-template-columns:27px 1fr;min-height:115px}
+.system-preview-rail{display:flex;flex-direction:column;align-items:center;gap:9px;padding:10px 0;border-right:1px solid rgba(255,255,255,.075)}
+.system-preview-rail i{width:10px;height:7px;border:1px solid #615d55;border-radius:3px}.system-preview-rail i:first-child{border-color:var(--gold-2);background:rgba(244,183,44,.18)}
+.system-preview-main{padding:10px 10px 8px}
+.system-preview-kicker{color:var(--gold-1);font-size:6px;font-weight:700;letter-spacing:.14em}
+.system-preview-title{display:block;margin-top:4px;color:#efede8;font-size:10px;font-weight:600}
+.system-preview-upload{display:flex;align-items:center;gap:7px;margin-top:8px;padding:7px;border:1px dashed rgba(244,183,44,.33);border-radius:5px;color:#ddd8cf;background:rgba(244,183,44,.04);font-size:7px}
+.system-preview-upload svg{width:12px;height:12px;color:var(--gold-1)}
+.system-preview-data{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:6px}
+.system-preview-data span{height:17px;padding:5px 6px;border:1px solid rgba(255,255,255,.065);border-radius:4px;color:#99958e;background:#1a1a1c;font-size:6px}
+.system-preview-label{position:absolute;z-index:2;right:10px;bottom:8px;color:#aaa59a;font-size:7px;letter-spacing:.1em}
+.system-preview-image{position:relative;z-index:1;width:100%;height:100%;max-height:300px;object-fit:contain}
+.system-more{margin-top:44px}
+.system-more-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:16px}
+.system-more-heading h3{margin:5px 0 0;font-size:23px;line-height:1.15;letter-spacing:-.03em}
+.system-results{color:var(--text-faint);font-size:11px;white-space:nowrap}
+.system-controls{display:grid;grid-template-columns:1fr;gap:9px;margin:0 0 17px}
+.system-search,.system-select-label{position:relative;display:flex;min-width:0;min-height:42px;align-items:center;border:1px solid var(--border);border-radius:9px;background:#171719}
+.system-search svg{flex:none;width:17px;height:17px;margin-left:12px;color:var(--text-faint)}
+.system-search input,.system-select-label select{width:100%;min-width:0;height:40px;padding:0 12px;border:0;outline:none;color:var(--text);background:transparent;font:inherit;font-size:12px}
+.system-search input{padding-left:9px}.system-search input::placeholder{color:#89857d}
+.system-select-label select{appearance:none;padding-right:31px;cursor:pointer}
+.system-select-label:after{position:absolute;right:13px;width:7px;height:7px;border-right:1px solid var(--text-dim);border-bottom:1px solid var(--text-dim);content:"";pointer-events:none;transform:rotate(45deg) translateY(-2px)}
+.system-select-label option{color:#f5f2ea;background:#171719}
+.system-card-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:14px}
+.system-card{display:flex;min-width:0;flex-direction:column;gap:14px;padding:12px;border:1px solid var(--border);border-radius:15px;background:linear-gradient(160deg,rgba(255,255,255,.025),transparent 40%),#171719;transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.system-card .system-preview{width:100%;min-height:145px;aspect-ratio:1.72/1;padding:11px}
+.system-card .system-preview-layout{min-height:86px}
+.system-card .system-preview-main{padding:7px}.system-card .system-preview-upload{margin-top:6px;padding:5px}.system-card .system-preview-data{margin-top:4px}.system-card .system-preview-data span{height:14px;padding:4px}.system-card .system-preview-top{min-height:23px;font-size:7px}
+.system-card-copy{display:flex;min-width:0;flex:1;flex-direction:column;padding:1px 2px 2px}
+.system-card-category{color:var(--text-faint);font-size:9px;font-weight:650;letter-spacing:.1em;text-transform:uppercase}
+.system-card h4{margin:5px 0 7px;font-size:20px;line-height:1.2;letter-spacing:-.025em}
+.system-card-copy>p{margin:0;color:var(--text-dim);font-size:12px;line-height:1.55}
+.system-card-points{display:grid;gap:5px;margin:11px 0 14px;padding:0;list-style:none}
+.system-card-points li{display:flex;align-items:flex-start;gap:7px;color:#d8d3ca;font-size:11px;line-height:1.4}
+.system-card-points .system-check{width:14px;height:14px}
+.system-card-bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:9px;margin-top:auto;padding-top:11px;border-top:1px solid var(--border-soft)}
+.system-card-bottom .system-commercial-badge{min-height:26px;padding:4px 8px;font-size:10px}
+.system-card-bottom .system-action{min-height:39px;padding:0 13px;font-size:11px}
+.system-no-results,.system-empty{margin:18px 0 0;color:var(--text-dim);font-size:13px;line-height:1.6}
+.system-load-more{display:flex;min-height:43px;align-items:center;justify-content:center;margin:18px auto 0;padding:0 19px;border:1px solid var(--border);border-radius:99px;color:var(--text);background:#1a1a1c;font:inherit;font-size:12px;font-weight:650;cursor:pointer}
+.system-load-more:hover{border-color:rgba(244,183,44,.45)}
+.system-custom-panel{padding:23px 19px}
+.system-custom-panel .tech-custom-copy h2{max-width:600px;margin-top:9px;font-size:clamp(27px,7vw,39px)}
+.system-custom-panel .tech-custom-copy p{font-size:13px;line-height:1.6}
+.system-video-link{display:inline-flex;align-items:center;gap:7px;margin-top:13px;padding:0;border:0;color:var(--gold-1);background:transparent;font:inherit;font-size:12px;font-weight:650;cursor:pointer}
+.system-video-link span{font-size:14px}
+.system-custom-panel .tech-custom-action{justify-self:start}
+.system-custom-panel .tech-custom-action small{text-align:left}
+.system-detail{padding-top:34px;padding-bottom:64px}
+.system-detail[hidden],.system-more[hidden],.system-controls[hidden],#systemCategoryWrap[hidden],.system-empty[hidden],.system-no-results[hidden],.system-load-more[hidden]{display:none!important}
+.system-detail-crumbs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;color:var(--text-faint);font-size:11px}
+.system-detail-crumbs a{color:var(--gold-1)}
+.system-detail-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}
+.system-detail-copy{min-width:0}
+.system-detail-copy h1{margin:8px 0 11px;font-size:clamp(38px,9vw,58px);line-height:1;letter-spacing:-.055em;font-weight:650}
+.system-detail-description{max-width:590px;margin:0;color:var(--text-dim);font-size:15px;line-height:1.7}
+.system-detail-audience{margin:15px 0 0;color:#d5d0c6;font-size:12px;line-height:1.55}
+.system-detail-audience b{color:var(--text)}
+.system-detail-visual{min-width:0;width:100%}
+.system-detail-visual .system-preview{width:100%;min-width:0;min-height:230px;aspect-ratio:1.34/1}
+.system-detail-section{margin-top:24px}
+.system-detail-section h2{margin:0 0 12px;font-size:18px;letter-spacing:-.02em}
+.system-detail-benefits{display:grid;gap:9px;margin:0;padding:0;list-style:none}
+.system-detail-benefits li{display:flex;gap:9px;color:#d8d3ca;font-size:13px;line-height:1.5}
+.system-detail-commercial{display:grid;grid-template-columns:1fr;gap:13px;margin-top:25px;padding:17px;border:1px solid rgba(244,183,44,.22);border-radius:13px;background:rgba(244,183,44,.045)}
+.system-detail-commercial strong{display:block;margin-bottom:4px;font-size:14px}
+.system-detail-commercial p{margin:0;color:var(--text-dim);font-size:12px;line-height:1.5}
+.system-detail-commercial .system-action{width:100%}
+.system-plan-list{display:grid;gap:9px;margin-top:13px}
+.system-plan{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px;border:1px solid var(--border-soft);border-radius:9px;background:rgba(0,0,0,.12)}
+.system-plan strong{font-size:12px}
+.system-plan p{margin:3px 0 0;color:var(--text-dim);font-size:11px}
+.system-detail-not-found{max-width:600px;padding:25px 0 50px}
+.system-detail-not-found h1{margin:14px 0 9px;font-size:clamp(34px,8vw,48px);letter-spacing:-.05em}
+.system-detail-not-found p{margin:0 0 20px;color:var(--text-dim);font-size:14px}
+.system-detail-back{display:inline-flex;align-items:center;gap:7px;margin-top:22px;color:var(--gold-1);font-size:12px;font-weight:650}
+.system-detail-mode .tech-hero,.system-detail-mode .tech-capabilities,.system-detail-mode .system-catalog,.system-detail-mode #contato{display:none!important}
+.system-detail-mode .system-detail{display:block}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:900px){.float-wpp{display:none}}
+.float-wpp.is-obscured{visibility:hidden;pointer-events:none}
+@media(min-width:600px){.system-controls{grid-template-columns:minmax(180px,1fr) minmax(150px,.65fr);align-items:center}.system-search{grid-column:1/-1}.system-card-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.system-feature-card{padding:18px}.system-preview{min-height:220px}.system-custom-panel{padding:28px 25px}}
+@media(min-width:760px){.system-catalog{padding-top:76px}.system-catalog-heading{margin-bottom:28px}.system-feature-card{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);align-items:center;gap:26px;padding:22px}.system-feature-copy{grid-column:1;grid-row:1}.system-feature-visual{grid-column:2;grid-row:1}.system-feature-visual .system-preview{min-height:280px}.system-more{margin-top:54px}.system-card-grid{gap:18px}.system-detail{padding-top:48px}.system-detail-layout{grid-template-columns:minmax(0,1fr) minmax(0,.9fr);align-items:start;gap:35px}.system-detail-visual{grid-column:2;grid-row:1 / span 3}.system-detail-visual .system-preview{min-height:310px}.system-detail-copy{grid-column:1;grid-row:1}.system-detail-extras{grid-column:1;grid-row:2}.system-detail-commercial{grid-column:1 / -1;grid-template-columns:1fr auto;align-items:center;padding:20px 23px}.system-detail-commercial .system-action{width:auto;min-width:205px}}
+@media(min-width:960px){.system-card-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.system-controls{grid-template-columns:minmax(220px,1fr) minmax(175px,.5fr) minmax(175px,.5fr)}.system-search{grid-column:auto}.system-feature-card{gap:clamp(30px,5vw,64px);padding:27px}.system-preview{min-height:260px}.system-feature-visual .system-preview{min-height:320px}.system-detail-layout{gap:52px}.system-detail-visual .system-preview{min-height:350px}}
+@media(max-width:359px){.system-feature-card{padding:11px}.system-feature-copy h3{font-size:33px}.system-feature-copy>p{font-size:13px}.system-feature-points li{font-size:12px}.system-feature-actions{display:grid}.system-feature-actions .system-action{width:100%}.system-card{padding:10px}.system-card-bottom{align-items:flex-start;flex-direction:column}.system-card-bottom .system-action{width:100%}.system-detail-commercial .system-action{width:100%}}
+@media(prefers-reduced-motion:reduce){.system-action,.system-card{transition:none}}
+
 </style>
 </head>
 <body>
@@ -1647,7 +1770,7 @@ body::after{opacity:.3;background-size:56px 56px}
   <header class="nav">
     <div class="nav-inner">
       <a href="/" class="brand">
-        <img src="logos/logo2.png" alt="GCONT - Gestão Contábil e Empresarial">
+        <img src="/logos/logo2.png" alt="GCONT - Gestão Contábil e Empresarial">
       </a>
       <nav class="nav-links">
         <a href="/">Loja Digital</a>
@@ -1762,134 +1885,63 @@ body::after{opacity:.3;background-size:56px 56px}
     </div>
   </section>
 
-  <section class="tech-section tech-solutions" id="solucoes" aria-labelledby="techSolutionsTitle">
+  <section class="system-catalog" id="solucoes" aria-labelledby="techSolutionsTitle">
     <div class="tech-shell">
-      <div class="tech-solution-head">
-        <div class="tech-heading reveal">
-          <span class="tech-tag">Portfólio GCONT TECH</span>
-          <h2 id="techSolutionsTitle">Soluções que já estão <span class="tech-gold">em operação.</span></h2>
-          <p>Conheça os sistemas próprios e os projetos personalizados desenvolvidos pela equipe.</p>
+      <div class="system-catalog-heading">
+        <div>
+          <span class="tech-tag">Catálogo GCONT TECH</span>
+          <h2 id="techSolutionsTitle">Explore nossos <span class="tech-gold">sistemas.</span></h2>
+          <p>Conheça as funcionalidades e as condições de cada solução.</p>
         </div>
-        <span class="tech-count"><b>02</b> SOLUÇÕES</span>
       </div>
-
-      <article class="tech-project reveal" aria-labelledby="notaSyncTitle">
-        <div class="tech-project-copy">
-          <span class="tech-project-index">Projeto 01</span>
-          <span class="tech-project-category">Leitura e análise fiscal</span>
-          <h3 id="notaSyncTitle">NotaSync</h3>
-          <p>Ferramenta para leitura e análise de arquivos fiscais. Envie os arquivos por upload e consulte as informações com leitores especializados.</p>
-          <ul class="tech-points">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"></path></svg>Leitura de arquivos fiscais</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"></path></svg>Envio por upload e consulta das informações</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"></path></svg>Implantação acompanhada pela equipe</li>
-          </ul>
-          <div class="tech-project-actions">
-            <button class="tech-textlink" type="button" onclick="saibaMaisNotaSync()">Conhecer o NotaSync <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
-            <span class="tech-price">Projeto sob orçamento</span>
+      <div id="featuredSystemMount"></div>
+      <section class="system-more" id="systemMore" hidden aria-labelledby="systemMoreTitle">
+        <div class="system-more-heading">
+          <div>
+            <span class="system-eyebrow">Mais soluções</span>
+            <h3 id="systemMoreTitle">Outros sistemas</h3>
           </div>
+          <span class="system-results" id="systemResults" aria-live="polite"></span>
         </div>
-        <div class="tech-visual" role="img" aria-label="Representação conceitual do envio e da análise de arquivos fiscais">
-          <span class="tech-visual-label">NOTASYNC / REPRESENTAÇÃO ILUSTRATIVA</span>
-          <div class="tech-fiscal-ui" aria-hidden="true">
-            <div class="tech-fiscal-head"><strong>Arquivos fiscais</strong><span>NotaSync</span></div>
-            <div class="tech-upload"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0L7 9m5-5 5 5"></path><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"></path></svg><strong>Envio de arquivos por upload</strong><small>Área demonstrativa da ferramenta</small></div>
-            <div class="tech-data-row"><span>Leitura especializada</span><span>Disponível</span></div>
-            <div class="tech-data-row"><span>Consulta de informações</span><span>NotaSync</span></div>
-          </div>
+        <div class="system-controls" id="systemControls" hidden>
+          <label class="system-search"><span class="sr-only">Pesquisar por nome</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input id="systemSearch" type="search" placeholder="Pesquisar sistemas" autocomplete="off"></label>
+          <label class="system-select-label" id="systemCategoryWrap" hidden><span class="sr-only">Filtrar por categoria</span><select id="systemCategory"><option value="">Todas as categorias</option></select></label>
+          <label class="system-select-label"><span class="sr-only">Ordenar sistemas</span><select id="systemSort"><option value="order">Ordem do catálogo</option><option value="name-asc">Nome: A a Z</option><option value="name-desc">Nome: Z a A</option></select></label>
         </div>
-      </article>
-
-      <article class="tech-project reverse reveal" aria-labelledby="aiTitle">
-        <div class="tech-project-copy">
-          <span class="tech-project-index">Projeto 02</span>
-          <span class="tech-project-category">Inteligência artificial</span>
-          <h3 id="aiTitle">IA conectada à sua operação</h3>
-          <p>Integrações personalizadas entre inteligência artificial, bancos de dados e sistemas empresariais para apoiar consultas e processos internos.</p>
-          <ul class="tech-points">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"></path></svg>Integração avaliada conforme os sistemas da empresa</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"></path></svg>Automação de consultas e processos internos</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"></path></svg>Implantação assistida pela equipe GCONT</li>
-          </ul>
-          <div class="tech-project-actions">
-            <button class="tech-textlink" type="button" onclick="saibaMaisIA()">Conversar sobre uma integração <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
-            <button class="tech-textlink" type="button" data-video-open><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="m10 8 6 4-6 4z"></path></svg>Assistir ao vídeo</button>
-          </div>
-          <span class="tech-price">Projeto personalizado sob orçamento</span>
-        </div>
-        <div class="tech-visual tech-ai-visual" role="img" aria-label="Diagrama conceitual conectando os dados da empresa à inteligência artificial">
-          <span class="tech-visual-label">INTEGRAÇÃO / FLUXO CONCEITUAL</span>
-          <div class="tech-ai-flow" aria-hidden="true">
-            <div class="tech-ai-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="12" cy="5" rx="8" ry="3"></ellipse><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"></path></svg><strong>Dados da empresa</strong><small>Base existente</small></div>
-            <i class="tech-ai-link"></i>
-            <div class="tech-ai-node focus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a4 4 0 0 0-4 4v1a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3v1a4 4 0 0 0 8 0v-1a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3V7a4 4 0 0 0-4-4Z"></path><path d="M9 11h.01M15 11h.01M9 15h6"></path></svg><strong>Integração IA</strong><small>Desenvolvimento sob medida</small></div>
-            <i class="tech-ai-link"></i>
-            <div class="tech-ai-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4M8 11h6M11 8v6"></path></svg><strong>Consultas e processos</strong><small>Na operação da empresa</small></div>
-          </div>
-        </div>
-      </article>
+        <div class="system-card-grid" id="systemCardGrid"></div>
+        <p class="system-no-results" id="systemNoResults" hidden>Nenhum sistema corresponde à busca.</p>
+        <button class="system-load-more" id="systemLoadMore" type="button" hidden>Carregar mais sistemas</button>
+      </section>
+      <p class="system-empty" id="systemEmpty" hidden>Estamos preparando novas soluções. Fale com a equipe para contar o que sua empresa precisa.</p>
     </div>
   </section>
 
-  <section class="tech-custom tech-shell reveal" id="contato" aria-labelledby="techCustomTitle">
-    <div class="tech-custom-panel">
+  <section class="tech-custom tech-shell" id="contato" aria-labelledby="techCustomTitle">
+    <div class="tech-custom-panel system-custom-panel">
       <div class="tech-custom-copy">
-        <span class="tech-tag">Desenvolvimento personalizado</span>
-        <h2 id="techCustomTitle">Sua ideia. Nossa <span class="tech-gold">tecnologia.</span></h2>
-        <p>Cada empresa tem desafios diferentes. Desenvolvemos soluções digitais pensadas para as necessidades de cada operação.</p>
+        <span class="tech-tag">Desenvolvimento sob medida</span>
+        <h2 id="techCustomTitle">Precisa de uma solução <span class="tech-gold">personalizada?</span></h2>
+        <p>Desenvolvemos sites, sistemas e integrações com IA adaptados aos processos do seu negócio.</p>
+        <button class="system-video-link" type="button" data-video-open>Ver exemplo de integração com IA <span aria-hidden="true">↗</span></button>
       </div>
       <div class="tech-custom-action">
-        <a class="tech-button tech-primary" href="https://wa.me/554936740176?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20Sistemas%20da%20GCONT%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener">Solicitar um orçamento
+        <a class="tech-button tech-primary" href="https://wa.me/554936740176?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20de%20Sistemas%20da%20GCONT%20e%20quero%20solicitar%20um%20or%C3%A7amento%20para%20um%20projeto%20personalizado." target="_blank" rel="noopener">Solicitar orçamento
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
         </a>
-        <small>Converse com a equipe GCONT</small>
+        <small>Projeto avaliado conforme a necessidade</small>
       </div>
     </div>
   </section>
 
-  <section class="tech-section tech-faq" id="faq" aria-labelledby="techFaqTitle">
-    <div class="tech-shell tech-faq-layout">
-      <div class="tech-faq-title reveal">
-        <span class="tech-tag">Perguntas frequentes</span>
-        <h2 id="techFaqTitle">Vamos tirar sua dúvida?</h2>
-        <p>Se quiser conversar sobre um cenário específico, nossa equipe pode ajudar.</p>
-      </div>
-      <div class="faq-list reveal">
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqAnswer1">Que tipo de projeto a GCONT desenvolve?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
-          </button>
-          <div class="faq-a" id="faqAnswer1"><p>Desenvolvemos sites, sistemas web personalizados, automações e integrações com inteligência artificial, conforme a necessidade de cada empresa.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqAnswer2">Como funciona um projeto personalizado?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
-          </button>
-          <div class="faq-a" id="faqAnswer2"><p>Conversamos sobre a necessidade, avaliamos os sistemas e processos envolvidos e apresentamos uma proposta e um cronograma adequados ao escopo.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqAnswer3">Como funciona o NotaSync?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
-          </button>
-          <div class="faq-a" id="faqAnswer3"><p>O NotaSync permite enviar arquivos fiscais por upload e usar leitores especializados para consultar e analisar as informações. A equipe GCONT explica as condições e os detalhes disponíveis.</p></div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" type="button" aria-expanded="false" aria-controls="faqAnswer4">A integração com IA é igual para todas as empresas?
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"></path></svg>
-          </button>
-          <div class="faq-a" id="faqAnswer4"><p>Não. A integração é avaliada conforme os dados, sistemas e processos de cada empresa. O escopo e o investimento são definidos em uma proposta personalizada.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="system-detail tech-shell" id="systemDetail" hidden aria-live="polite"></section>
 </main>
 
   <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/"><img src="logos/logo.png" alt="GCONT"></a>
-          <p>Gestão contábil e empresarial. Agora também com sistemas inteligentes e soluções com IA para simplificar a rotina dos escritórios de contabilidade.</p>
+          <a href="/"><img src="/logos/logo.png" alt="GCONT"></a>
+          <p>Sistemas, sites e soluções digitais desenvolvidos pela GCONT TECH.</p>
         </div>
         <div class="footer-col">
           <h4>Navegação</h4>
@@ -1946,7 +1998,7 @@ body::after{opacity:.3;background-size:56px 56px}
     </div>
     <div class="video-frame">
       <video id="productExplainerVideo" controls playsinline preload="metadata">
-        <source src="logos/explicação_ia.mp4" type="video/mp4">
+        <source src="/logos/explicação_ia.mp4" type="video/mp4">
         Seu navegador não suporta vídeo HTML5.
       </video>
     </div>
@@ -1954,13 +2006,269 @@ body::after{opacity:.3;background-size:56px 56px}
 </div>
 
 <script>
+(() => {
+  // Cadastre aqui apenas softwares publicáveis; serviços personalizados ficam na chamada ao final da vitrine.
+  const SYSTEMS = [
+    {
+      slug: 'notasync',
+      name: 'NotaSync',
+      category: 'Leitura e análise fiscal',
+      summary: 'Envie arquivos fiscais por upload e consulte as informações com leitores especializados.',
+      description: 'Ferramenta para leitura e análise de arquivos fiscais. Envie os arquivos por upload e consulte as informações com leitores especializados.',
+      features: [
+        'Leitura de arquivos fiscais',
+        'Envio por upload',
+        'Consulta das informações com leitores especializados'
+      ],
+      benefits: [
+        'Envie arquivos fiscais por upload.',
+        'Consulte as informações com leitores especializados.',
+        'Conte com implantação acompanhada pela equipe GCONT.'
+      ],
+      preview: { type: 'fiscal' },
+      commercial: {
+        mode: 'quote',
+        label: 'Projeto sob orçamento',
+        note: 'Valores e condições são apresentados pela equipe GCONT.'
+      },
+      contactAction: 'saibaMaisNotaSync'
+    }
+  ];
+
+  // Troque o slug abaixo para destacar outro item do catálogo.
+  const featuredSystemSlug = 'notasync';
+  const PAGE_SIZE = 9;
+  const activeSystems = SYSTEMS.filter(system => system.published !== false);
+  const featuredSystem = activeSystems.find(system => system.slug === featuredSystemSlug) || activeSystems[0];
+  const remainingSystems = activeSystems.filter(system => system !== featuredSystem);
+  const featuredMount = document.getElementById('featuredSystemMount');
+  const moreSection = document.getElementById('systemMore');
+  const cardGrid = document.getElementById('systemCardGrid');
+  const searchInput = document.getElementById('systemSearch');
+  const categorySelect = document.getElementById('systemCategory');
+  const categoryWrap = document.getElementById('systemCategoryWrap');
+  const sortSelect = document.getElementById('systemSort');
+  const controls = document.getElementById('systemControls');
+  const resultsLabel = document.getElementById('systemResults');
+  const noResults = document.getElementById('systemNoResults');
+  const loadMoreButton = document.getElementById('systemLoadMore');
+  const emptyMessage = document.getElementById('systemEmpty');
+  const detailMount = document.getElementById('systemDetail');
+  let visibleCount = PAGE_SIZE;
+
+  const escapeHtml = value => String(value ?? '').replace(/[&<>"']/g, character => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[character]);
+  const systemUrl = system => `/sistemas/${encodeURIComponent(system.slug)}`;
+  const checkIcon = '<svg class="system-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>';
+  const arrowIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>';
+
+  function renderPreview(system, label = 'Prévia ilustrativa') {
+    const name = escapeHtml(system.name);
+    const ariaLabel = `${label} do ${name}`;
+    if (system.preview?.image) {
+      return `<div class="system-preview" role="img" aria-label="${escapeHtml(ariaLabel)}"><img class="system-preview-image" src="${escapeHtml(system.preview.image)}" alt="" loading="lazy" decoding="async"></div>`;
+    }
+
+    if (system.preview?.type === 'fiscal') {
+      return `<div class="system-preview" role="img" aria-label="${escapeHtml(ariaLabel)}: tela conceitual de envio e consulta de arquivos fiscais">
+        <div class="system-preview-surface" aria-hidden="true">
+          <div class="system-preview-top"><span class="system-preview-dots"><i></i><i></i><i></i></span>Área de trabalho <span class="system-preview-brand">NOTASYNC</span></div>
+          <div class="system-preview-layout"><div class="system-preview-rail"><i></i><i></i><i></i><i></i></div><div class="system-preview-main">
+            <span class="system-preview-kicker">ARQUIVOS FISCAIS</span><strong class="system-preview-title">Envio e consulta</strong>
+            <div class="system-preview-upload"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0L7 9m5-5 5 5"></path><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"></path></svg>Enviar arquivo por upload</div>
+            <div class="system-preview-data"><span>Leitura especializada</span><span>Consulta de dados</span></div>
+          </div></div>
+        </div><span class="system-preview-label">REPRESENTAÇÃO ILUSTRATIVA</span>
+      </div>`;
+    }
+
+    return `<div class="system-preview" role="img" aria-label="${escapeHtml(ariaLabel)}">
+      <div class="system-preview-surface" aria-hidden="true"><div class="system-preview-top"><span class="system-preview-dots"><i></i><i></i><i></i></span>GCONT TECH <span class="system-preview-brand">${name.toUpperCase()}</span></div><div class="system-preview-main"><span class="system-preview-kicker">SISTEMA DIGITAL</span><strong class="system-preview-title">${name}</strong><div class="system-preview-data"><span>Funcionalidades</span><span>Área de trabalho</span></div></div></div>
+      <span class="system-preview-label">PRÉVIA DO SISTEMA</span>
+    </div>`;
+  }
+
+  function renderFeature(system) {
+    const features = (system.features || []).slice(0, 3);
+    return `<article class="system-feature-card" aria-labelledby="featuredSystemTitle">
+      <div class="system-feature-visual">${renderPreview(system, 'Representação visual')}</div>
+      <div class="system-feature-copy">
+        <span class="system-eyebrow">Sistema em destaque</span>
+        <span class="system-category">${escapeHtml(system.category || 'Sistema GCONT TECH')}</span>
+        <h3 id="featuredSystemTitle">${escapeHtml(system.name)}</h3>
+        <p>${escapeHtml(system.summary)}</p>
+        <ul class="system-feature-points">${features.map(feature => `<li>${checkIcon}<span>${escapeHtml(feature)}</span></li>`).join('')}</ul>
+        <div class="system-commercial-line"><span class="system-commercial-badge">${escapeHtml(system.commercial?.label || 'Consulte condições')}</span><span class="system-commercial-note">${escapeHtml(system.commercial?.note || 'Converse com a equipe GCONT.')}</span></div>
+        <div class="system-feature-actions"><a class="system-action system-action-primary" href="${systemUrl(system)}">Conhecer sistema ${arrowIcon}</a></div>
+      </div>
+    </article>`;
+  }
+
+  function renderSystemCard(system) {
+    const features = (system.features || []).slice(0, 3);
+    return `<article class="system-card" aria-labelledby="system-${escapeHtml(system.slug)}-title">
+      ${renderPreview(system, 'Prévia ilustrativa')}
+      <div class="system-card-copy">
+        <span class="system-card-category">${escapeHtml(system.category || 'Sistema GCONT TECH')}</span>
+        <h4 id="system-${escapeHtml(system.slug)}-title">${escapeHtml(system.name)}</h4>
+        <p>${escapeHtml(system.summary)}</p>
+        ${features.length ? `<ul class="system-card-points">${features.map(feature => `<li>${checkIcon}<span>${escapeHtml(feature)}</span></li>`).join('')}</ul>` : ''}
+        <div class="system-card-bottom"><span class="system-commercial-badge">${escapeHtml(system.commercial?.label || 'Consulte condições')}</span><a class="system-action system-action-secondary" href="${systemUrl(system)}">Conhecer ${arrowIcon}</a></div>
+      </div>
+    </article>`;
+  }
+
+  function renderPlanOptions(system) {
+    const plans = system.commercial?.plans;
+    if (!Array.isArray(plans) || !plans.length) return '';
+    return `<div class="system-plan-list">${plans.map(plan => {
+      const action = plan.checkoutUrl
+        ? `<a class="system-action system-action-primary" href="${escapeHtml(plan.checkoutUrl)}">${escapeHtml(plan.actionLabel || 'Ver opção')} ${arrowIcon}</a>`
+        : '';
+      return `<div class="system-plan"><div><strong>${escapeHtml(plan.name)}</strong><p>${escapeHtml(plan.priceLabel || 'Consulte condições')}</p></div>${action}</div>`;
+    }).join('')}</div>`;
+  }
+
+  function renderQuoteAction(system) {
+    const label = 'Solicitar informações';
+    if (system.contactAction) return `<button class="system-action system-action-primary" type="button" data-system-contact="${escapeHtml(system.slug)}">${label} ${arrowIcon}</button>`;
+    const message = encodeURIComponent(`Olá! Tenho interesse no sistema ${system.name} e gostaria de receber informações sobre funcionalidades e condições comerciais.`);
+    return `<a class="system-action system-action-primary" href="https://wa.me/554936740176?text=${message}" target="_blank" rel="noopener">${label} ${arrowIcon}</a>`;
+  }
+
+  function renderDetail(system) {
+    const features = system.features || [];
+    const benefits = system.benefits || [];
+    const hasPlans = Array.isArray(system.commercial?.plans) && system.commercial.plans.length > 0;
+    const hasCheckout = hasPlans && system.commercial.plans.some(plan => Boolean(plan.checkoutUrl));
+    return `<nav class="system-detail-crumbs" aria-label="Trilha de navegação"><a href="/sistemas#solucoes">Sistemas</a><span aria-hidden="true">/</span><span>${escapeHtml(system.name)}</span></nav>
+      <div class="system-detail-layout">
+        <div class="system-detail-copy">
+          <span class="system-eyebrow">${escapeHtml(system.category || 'Sistema GCONT TECH')}</span>
+          <h1>${escapeHtml(system.name)}</h1>
+          <p class="system-detail-description">${escapeHtml(system.description || system.summary)}</p>
+          ${system.audience ? `<p class="system-detail-audience"><b>Indicado para:</b> ${escapeHtml(system.audience)}</p>` : ''}
+        </div>
+        <div class="system-detail-visual">${renderPreview(system, 'Representação visual')}</div>
+        <div class="system-detail-extras">
+          ${features.length ? `<section class="system-detail-section"><h2>Funcionalidades</h2><ul class="system-detail-benefits">${features.map(feature => `<li>${checkIcon}<span>${escapeHtml(feature)}</span></li>`).join('')}</ul></section>` : ''}
+          ${benefits.length ? `<section class="system-detail-section"><h2>Como pode ajudar</h2><ul class="system-detail-benefits">${benefits.map(benefit => `<li>${checkIcon}<span>${escapeHtml(benefit)}</span></li>`).join('')}</ul></section>` : ''}
+        </div>
+        <section class="system-detail-commercial" aria-label="Condições comerciais">
+          <div><strong>${escapeHtml(system.commercial?.label || 'Consulte condições')}</strong><p>${escapeHtml(system.commercial?.note || 'A equipe GCONT pode explicar as opções disponíveis.')}</p>${hasPlans ? renderPlanOptions(system) : ''}</div>
+          ${!hasCheckout ? renderQuoteAction(system) : ''}
+        </section>
+      </div>
+      <a class="system-detail-back" href="/sistemas#solucoes">← Voltar ao catálogo</a>`;
+  }
+
+  function matchingSystems() {
+    const query = (searchInput?.value || '').trim().toLocaleLowerCase('pt-BR');
+    const category = categorySelect?.value || '';
+    const sort = sortSelect?.value || 'order';
+    const matched = remainingSystems.filter(system => {
+      const matchesName = !query || system.name.toLocaleLowerCase('pt-BR').includes(query);
+      return matchesName && (!category || system.category === category);
+    });
+    if (sort === 'name-asc') matched.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
+    if (sort === 'name-desc') matched.sort((a, b) => b.name.localeCompare(a.name, 'pt-BR'));
+    return matched;
+  }
+
+  function updateCatalog() {
+    const matched = matchingSystems();
+    const visible = matched.slice(0, visibleCount);
+    cardGrid.innerHTML = visible.map(renderSystemCard).join('');
+    const systemWord = matched.length === 1 ? 'sistema' : 'sistemas';
+    resultsLabel.textContent = matched.length > PAGE_SIZE ? `${visible.length} de ${matched.length} ${systemWord}` : `${matched.length} ${systemWord}`;
+    noResults.hidden = matched.length !== 0;
+    loadMoreButton.hidden = visible.length >= matched.length;
+  }
+
+  if (featuredSystem) featuredMount.innerHTML = renderFeature(featuredSystem);
+  if (!activeSystems.length) emptyMessage.hidden = false;
+  if (remainingSystems.length) {
+    moreSection.hidden = false;
+    const uniqueCategories = [...new Set(remainingSystems.map(system => system.category).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+    if (remainingSystems.length > 5) {
+      controls.hidden = false;
+      categoryWrap.hidden = uniqueCategories.length < 2;
+      uniqueCategories.forEach(category => categorySelect.insertAdjacentHTML('beforeend', `<option value="${escapeHtml(category)}">${escapeHtml(category)}</option>`));
+    }
+    updateCatalog();
+  }
+
+  [searchInput, categorySelect, sortSelect].forEach(control => control?.addEventListener('input', () => {
+    visibleCount = PAGE_SIZE;
+    updateCatalog();
+  }));
+  sortSelect?.addEventListener('change', updateCatalog);
+  loadMoreButton.addEventListener('click', () => {
+    visibleCount += PAGE_SIZE;
+    updateCatalog();
+  });
+  document.addEventListener('click', event => {
+    const contactButton = event.target.closest('[data-system-contact]');
+    if (!contactButton) return;
+    const system = activeSystems.find(item => item.slug === contactButton.dataset.systemContact);
+    if (system?.contactAction && typeof window[system.contactAction] === 'function') window[system.contactAction]();
+  });
+
+  const pathParts = location.pathname.replace(/\/+$/, '').split('/').filter(Boolean);
+  const detailSlug = pathParts.length > 1 && pathParts[pathParts.length - 2] === 'sistemas' ? decodeURIComponent(pathParts[pathParts.length - 1]) : null;
+  if (detailSlug) {
+    document.body.classList.add('system-detail-mode');
+    detailMount.hidden = false;
+    const system = activeSystems.find(item => item.slug === detailSlug);
+    if (system) {
+      document.title = `${system.name} | GCONT TECH`;
+      const descriptionMeta = document.querySelector('meta[name="description"]');
+      if (descriptionMeta) descriptionMeta.content = system.summary;
+      detailMount.innerHTML = renderDetail(system);
+    } else {
+      document.title = 'Sistema não encontrado | GCONT TECH';
+      detailMount.innerHTML = `<div class="system-detail-not-found"><span class="system-eyebrow">Catálogo GCONT TECH</span><h1>Sistema não encontrado</h1><p>Este endereço não corresponde a um sistema publicado.</p><a class="system-action system-action-primary" href="/sistemas#solucoes">Voltar ao catálogo ${arrowIcon}</a></div>`;
+    }
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      const target = link.getAttribute('href').slice(1);
+      if (target) link.href = `/sistemas#${encodeURIComponent(target)}`;
+    });
+  }
+
+  const floatingContact = document.querySelector('.float-wpp');
+  let overlapFrame = 0;
+  function updateFloatingContact() {
+    if (!floatingContact) return;
+    const floatingRect = floatingContact.getBoundingClientRect();
+    const overlapsAction = [...document.querySelectorAll('.system-action, .tech-button, .nav-cta, [data-video-open]')].some(action => {
+      const actionRect = action.getBoundingClientRect();
+      return actionRect.width > 0 && actionRect.height > 0 && floatingRect.left < actionRect.right && floatingRect.right > actionRect.left && floatingRect.top < actionRect.bottom && floatingRect.bottom > actionRect.top;
+    });
+    floatingContact.classList.toggle('is-obscured', overlapsAction);
+  }
+  function scheduleFloatingContactCheck() {
+    if (overlapFrame) return;
+    overlapFrame = requestAnimationFrame(() => { overlapFrame = 0; updateFloatingContact(); });
+  }
+  window.addEventListener('scroll', scheduleFloatingContactCheck, { passive: true });
+  window.addEventListener('resize', scheduleFloatingContactCheck);
+  scheduleFloatingContactCheck();
+})();
+</script>
+
+<script>
   if('scrollRestoration' in history){
     history.scrollRestoration = 'manual';
   }
-  if(location.hash){
-    history.replaceState(null, '', location.pathname + location.search);
-  }
   function scrollToTop(){
+    if(location.hash){
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if(target){
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY, left: 0, behavior: 'instant' });
+        return;
+      }
+    }
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }
   window.addEventListener('DOMContentLoaded', scrollToTop);
@@ -1973,6 +2281,7 @@ body::after{opacity:.3;background-size:56px 56px}
     requestAnimationFrame(scrollToTop);
   });
   setTimeout(scrollToTop, 150);
+  setTimeout(scrollToTop, 500);
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
