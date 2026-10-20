@@ -17,7 +17,7 @@ Site estático servido por Nginx. Não há framework, etapa de build, banco de d
 
 Use a configuração Nginx do projeto para testar as rotas amigáveis. O `Dockerfile` prepara a imagem local de homologação; a publicação em produção não faz parte desta alteração.
 
-O pacote inclui o logo aprovado e as fotografias locais do Pexels documentadas em [`docs/image-sources.md`](docs/image-sources.md). Não inclui as ilustrações antigas de interface nem as gravações de demonstração. As fotos têm legendas que deixam claro que são imagens de contexto, sem relação com pessoas, escritórios ou telas GCONT.
+A imagem inclui somente o logo e a ilustração usados pela loja. Gravações de demonstração e outros ativos antigos ficam fora do pacote até a equipe confirmar autorização e remover informações internas, se necessário.
 
 ## Contato e métricas
 

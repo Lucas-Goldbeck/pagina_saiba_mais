@@ -14,6 +14,7 @@ COPY robots.txt sitemap.xml /usr/share/nginx/html/
 COPY sistemas.html /usr/share/nginx/html/sistemas.html
 COPY assets /usr/share/nginx/html/assets
 COPY logos/gcont-tech.png /usr/share/nginx/html/logos/gcont-tech.png
+COPY logos/mockup-produtos.png /usr/share/nginx/html/logos/mockup-produtos.png
 
 EXPOSE 80
 

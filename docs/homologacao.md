@@ -7,7 +7,7 @@
 - A loja está em `sistemas.html`; seus produtos, preços, chamadas JavaScript e quatro destinos Hotmart foram mantidos. O endereço `/sistemas` continua disponível e `/loja` é o endereço preferencial novo.
 - O número de WhatsApp e o e-mail foram reutilizados a partir do conteúdo existente: `+55 49 3674-0176` e `gcont@contabilsg.com.br`. A equipe deve reconfirmar esses dados antes da publicação.
 - O logo enviado nesta conversa substituiu o ativo usado pelas páginas novas e pela loja. O recorte mantém transparência e remove as margens vazias.
-- O Dockerfile copia o logo aprovado e os ativos necessários em `assets`, incluindo a folha de estilos da loja e as fotografias locais WebP. Gravações, ilustrações antigas de interface e demais arquivos da pasta `logos` ficam fora da imagem de homologação.
+- O Dockerfile copia apenas os dois arquivos gráficos usados pelas páginas servidas. Gravações de demonstração e demais arquivos antigos da pasta `logos` ficam fora da imagem de homologação.
 
 ## Conteúdo e limites comerciais
 
@@ -18,7 +18,7 @@
 - Ponte Contábil aparece como escopo em validação. O rascunho `ponte-contabil-preview.html` não é copiado para o diretório público da imagem Docker.
 - A área de conteúdo não foi criada: não há calendário, publicações ou estrutura editorial no repositório.
 - Os documentos `GERALDO.docx` e `GERALDO CONFIS.docx` citados no prompt não estão presentes no repositório nem entre os arquivos desta tarefa. A documentação comercial e técnica precisa ser conferida antes de ampliar afirmações de produto.
-- O mockup antigo com interfaces e números conceituais foi removido da loja e não é incluído no pacote. As fotografias Pexels são usadas apenas como contexto e recebem legendas que esclarecem que não representam a equipe, o escritório ou as telas dos produtos. Fontes, fotógrafos, dimensões e licença estão registrados em [`image-sources.md`](image-sources.md). As gravações antigas não são servidas; uma delas exibe um nome de usuário e outra mostra dados de operação. Confirmar autorização e higienização antes de reutilizá-las.
+- A imagem `mockup-produtos.png` é uma ilustração conceitual, não uma captura da interface. A loja identifica telas e valores como ilustrativos, sem apresentá-los como resultados reais. As gravações antigas não são servidas nem têm controles ativos; uma delas exibe um nome de usuário e outra mostra dados de operação. Confirmar autorização e higienização antes de reutilizá-las.
 - A página de privacidade e os termos descrevem o fluxo criado, mas permanecem pendentes de revisão jurídica e validação das práticas internas de tratamento de dados.
 
 ## Conversão, privacidade e mensuração
@@ -45,4 +45,4 @@
 5. Revisar privacidade, termos, proteção antispam e o fluxo WhatsApp com as áreas responsáveis.
 6. Avaliar e autorizar imagens e gravações de demonstração antes de disponibilizá-las.
 7. Confirmar domínio, redirects de URLs antigas e eventuais configurações de analytics/consentimento.
-8. Revisar esta composição visual e a identidade das fotos na homologação; comparar o checkout com a oferta publicada.
+8. Executar a validação visual e funcional no ambiente de homologação e comparar o checkout com a oferta publicada.
