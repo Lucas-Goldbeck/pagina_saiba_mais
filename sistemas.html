@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Loja Digital GCONT | Ferramentas para simplificar sua gestão</title>
 <meta name="description" content="Planilhas inteligentes, calculadoras e materiais digitais desenvolvidos pela GCONT para organizar processos, facilitar decisões e trazer mais praticidade à rotina empresarial.">
+<meta name="theme-color" content="#0b0b0c">
+<link rel="canonical" href="https://www.gcontvendas.com/loja">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Loja de Ferramentas GCONT">
+<meta property="og:description" content="Planilhas, calculadoras e ferramentas digitais para apoiar a gestão empresarial.">
+<meta property="og:url" content="https://www.gcontvendas.com/loja">
+<meta property="og:image" content="https://www.gcontvendas.com/logos/gcont-tech.png">
+<script src="/assets/site-config.js" defer></script>
+<script src="/assets/site.js" defer></script>
+<title>Loja Digital GCONT | Ferramentas para simplificar sua gestão</title>
 <style>
   :root{
     --bg: #131214;
@@ -119,7 +128,7 @@
   .nav-links a:hover::after, .nav-links a.active::after{ right:0; }
   .nav-links a.active{ color: var(--gold-2); }
   .brand{ display:flex; align-items:center; }
-  .brand img{ height:26px; width:auto; }
+  .brand img{ height:34px; width:auto; }
   .nav-actions{ display:flex; align-items:center; gap:10px; margin-left:auto; }
   .nav-cta{
     display:inline-flex;
@@ -135,6 +144,9 @@
     transition: transform .18s ease, box-shadow .18s ease;
   }
   .nav-cta:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(245,166,35,0.3); }
+  .skip-link{ position:absolute; z-index:1000; top:-60px; left:16px; padding:12px 16px; border-radius:10px; background:var(--gold-2); color:#17130a; font-weight:800; }
+  .skip-link:focus{ top:12px; }
+  :focus-visible{ outline:3px solid var(--gold-2); outline-offset:3px; }
 
   .cart-btn{
     position:relative;
@@ -326,6 +338,7 @@
     height:auto;
     filter: drop-shadow(0 34px 46px rgba(0,0,0,0.6)) drop-shadow(0 12px 20px rgba(0,0,0,0.45));
   }
+  .visual-caption{ margin:10px 4px 0; color:var(--text-faint); font-size:11px; line-height:1.5; text-align:center; }
   @media (max-width: 480px){
     .hero-top{ gap: 2px; }
     .hero-text{ flex-basis: 44%; }
@@ -1116,7 +1129,7 @@
     gap: 32px;
     margin-bottom: 32px;
   }
-  .footer-brand img{ height:26px; margin-bottom:14px; }
+  .footer-brand img{ height:34px; margin-bottom:14px; }
   .footer-brand p{ color: var(--text-faint); font-size: 13px; max-width: 280px; }
   .footer-col h4{
     font-size: 12px;
@@ -1489,41 +1502,53 @@
       text-align: center;
     }
   }
+  @media (max-width: 600px){
+    .hero-top{ flex-direction:column; gap:18px; }
+    .hero-text{ flex:0 0 auto; width:100%; }
+    .hero-text p.lead{ padding-right:0; font-size:15px; }
+    .hero-visual{ flex:0 0 auto; width:100%; margin:0; align-self:center; }
+    .hero-ctas{ display:grid; grid-template-columns:minmax(0,1fr); gap:12px; }
+    .hero-ctas .btn{ width:100%; justify-content:center; white-space:normal; }
+    .trust{ display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); row-gap:18px; }
+  }
 </style>
 </head>
-<body>
+<body data-page="store">
+<a class="skip-link" href="#topo">Pular para o conteúdo</a>
 <div class="wrap">
 
   <header class="nav">
     <div class="nav-inner">
       <a href="/" class="brand">
-        <img src="logos/gcont-tech.png" alt="GCONT Tech - Desenvolvimento de Sistemas">
+        <img src="logos/gcont-tech.png" alt="GCONT TECH — Soluções Tecnológicas">
       </a>
       <nav class="nav-links">
-        <a href="/#produtos">Sistemas Contábeis</a>
+        <a href="/">Início</a>
+        <a href="/solucoes">Soluções</a>
         <a href="#produtos" class="active">Loja Digital</a>
-        <a href="/sistemas#vantagens">Por que a GCONT</a>
-        <a href="#contato">Contato</a>
+        <a href="/sobre">Sobre</a>
+        <a href="/contato">Contato</a>
       </nav>
       <div class="nav-actions">
-        <a class="nav-cta" href="#produtos">Ver ferramentas</a>
-        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu">
+        <a class="nav-cta" href="/contato?solucao=demonstracao">Falar com a equipe</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
 
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
     <div class="mobile-menu-panel">
       <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fechar menu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
-      <a href="/#produtos">Sistemas Contábeis</a>
+      <a href="/">Início</a>
+      <a href="/solucoes">Soluções</a>
       <a href="#produtos">Loja Digital</a>
-      <a href="/sistemas#vantagens">Por que a GCONT</a>
-      <a href="#contato">Contato</a>
-      <a class="nav-cta" href="#produtos" style="justify-content:center;">Ver ferramentas</a>
+      <a href="/sobre">Sobre</a>
+      <a href="/contato">Contato</a>
+      <a class="nav-cta" href="/contato?solucao=demonstracao" style="justify-content:center;">Falar com a equipe</a>
     </div>
   </div>
 
@@ -1540,7 +1565,8 @@
           <p class="lead">Planilhas inteligentes, calculadoras e materiais digitais para organizar processos, facilitar decisões e trazer mais praticidade à rotina empresarial.</p>
         </div>
         <div class="hero-visual">
-          <img src="logos/mockup-produtos.png" alt="Soluções GCONT: planilhas inteligentes, sistemas de automação e integração com IA">
+          <img src="logos/mockup-produtos.png" alt="Ilustração conceitual de materiais digitais e um painel financeiro; não representa uma interface real">
+          <p class="visual-caption">Ilustração conceitual. As telas e os valores exibidos são ilustrativos e não representam uma interface ou resultados reais.</p>
         </div>
       </div>
       <div class="hero-ctas">
@@ -1558,7 +1584,7 @@
         </div>
         <div class="trust-item">
           <span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg></span>
-          <span>Entrega digital imediata</span>
+          <span>Materiais digitais para download</span>
         </div>
         <div class="trust-item">
           <span class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
@@ -1779,7 +1805,7 @@
             <button class="faq-q">Como recebo meu produto após a compra?
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
             </button>
-            <div class="faq-a"><p>As planilhas são entregues por download imediato após a confirmação do pagamento, diretamente pela plataforma Hotmart. Você recebe o arquivo no e-mail cadastrado e pode acessá-lo pelo painel do comprador. Os produtos com implantação assistida — como o NotaSync e a Integração de IA — são entregues após o agendamento com a equipe GCONT.</p></div>
+            <div class="faq-a"><p>As planilhas são entregues por download após a confirmação do pagamento, diretamente pela plataforma Hotmart. Você recebe o arquivo no e-mail cadastrado e pode acessá-lo pelo painel do comprador. Produtos com implantação assistida são combinados com a equipe GCONT antes da contratação; confirme escopo, disponibilidade e condições no atendimento.</p></div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-q">As planilhas são compatíveis com Excel ou Google Sheets?
@@ -1819,14 +1845,18 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="logos/gcont-tech.png" alt="GCONT Tech - Desenvolvimento de Sistemas">
-          <p>Gestão contábil e empresarial. Agora também com produtos digitais para simplificar a rotina da sua empresa.</p>
+          <img src="logos/gcont-tech.png" alt="GCONT TECH — Soluções Tecnológicas">
+          <p>Ferramentas digitais desenvolvidas pela GCONT para apoiar processos e a gestão empresarial.</p>
         </div>
         <div class="footer-col">
           <h4>Navegação</h4>
-          <a href="#produtos">Produtos</a>
-          <a href="#vantagens">Por que a GCONT</a>
-          <a href="#contato">Contato</a>
+          <a href="/">Início</a>
+          <a href="/solucoes">Soluções</a>
+          <a href="#produtos">Loja de ferramentas</a>
+          <a href="/sobre">Sobre a GCONT TECH</a>
+          <a href="/contato">Contato</a>
+          <a href="/privacidade">Privacidade</a>
+          <a href="/termos">Termos de uso</a>
         </div>
         <div class="footer-col">
           <h4>Contato</h4>
@@ -1861,27 +1891,7 @@
 
 <a class="float-wpp" href="https://wa.me/554936740176?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GCONT%20e%20fiquei%20com%20algumas%20d%C3%BAvidas%20sobre%20os%20materiais%20dispon%C3%ADveis.%20Poderiam%20me%20ajudar%3F" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-</a>
-<div class="video-overlay" id="videoOverlay" aria-hidden="true">
-  <div class="video-modal" role="dialog" aria-modal="true" aria-labelledby="videoOverlayTitle">
-    <div class="video-head">
-      <div>
-        <h3 id="videoOverlayTitle">Vídeo explicativo</h3>
-        <p>Assista ao resumo de como funciona a integração de IA com banco de dados.</p>
-      </div>
-      <button class="video-close" type="button" data-video-close aria-label="Fechar vídeo">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="M6 6 18 18"></path></svg>
-      </button>
-    </div>
-    <div class="video-frame">
-      <video id="productExplainerVideo" controls playsinline preload="metadata">
-        <source src="logos/explicação_ia.mp4" type="video/mp4">
-        Seu navegador não suporta vídeo HTML5.
-      </video>
-    </div>
-  </div>
-</div>
-<script>
+</a><script>
   if('scrollRestoration' in history){
     history.scrollRestoration = 'manual';
   }
@@ -1908,19 +1918,18 @@
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const mobileMenu = document.getElementById('mobileMenu');
   const mobileMenuClose = document.getElementById('mobileMenuClose');
-  const videoOverlay = document.getElementById('videoOverlay');
-  const productExplainerVideo = document.getElementById('productExplainerVideo');
-  const videoCloseBtn = document.querySelector('[data-video-close]');
-  let lastVideoTrigger = null;
   function updateBodyScrollLock(){
     const menuOpen = mobileMenu.classList.contains('open');
-    const videoOpen = videoOverlay.classList.contains('open');
-    document.body.style.overflow = (menuOpen || videoOpen) ? 'hidden' : '';
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
   }
-  function closeMobileMenu(){ mobileMenu.classList.remove('open'); hamburgerBtn.classList.remove('open'); updateBodyScrollLock(); }
+  function closeMobileMenu(){ mobileMenu.classList.remove('open'); mobileMenu.setAttribute('aria-hidden', 'true'); hamburgerBtn.classList.remove('open'); hamburgerBtn.setAttribute('aria-expanded', 'false'); hamburgerBtn.setAttribute('aria-label', 'Abrir menu'); updateBodyScrollLock(); }
   hamburgerBtn.addEventListener('click', () => {
     const isOpen = mobileMenu.classList.toggle('open');
     hamburgerBtn.classList.toggle('open', isOpen);
+    mobileMenu.setAttribute('aria-hidden', String(!isOpen));
+    hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+    hamburgerBtn.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    if(isOpen) mobileMenuClose.focus();
     updateBodyScrollLock();
   });
   mobileMenuClose.addEventListener('click', closeMobileMenu);
@@ -1936,11 +1945,6 @@
     card.setAttribute('aria-expanded', String(!isOpen));
     const hint = card.querySelector('.details-hint');
     if(hint) hint.hidden = !isOpen ? true : false;
-    const videoBtn = card.querySelector('[data-video-open]');
-    if(videoBtn){
-      videoBtn.tabIndex = isOpen ? -1 : 0;
-      videoBtn.setAttribute('aria-hidden', String(isOpen));
-    }
   }
   productCards.forEach(card => {
     card.setAttribute('tabindex', '0');
@@ -1955,27 +1959,8 @@
       else card.appendChild(hint);
     }
     hint.hidden = false;
-    const videoBtn = card.querySelector('[data-video-open]');
-    if(videoBtn){
-      videoBtn.tabIndex = -1;
-      videoBtn.setAttribute('aria-hidden', 'true');
-      videoBtn.addEventListener('click', e => {
-        e.preventDefault();
-        e.stopPropagation();
-        lastVideoTrigger = videoBtn;
-        videoOverlay.classList.add('open');
-        videoOverlay.setAttribute('aria-hidden', 'false');
-        updateBodyScrollLock();
-        productExplainerVideo.currentTime = 0;
-        const playPromise = productExplainerVideo.play();
-        if(playPromise && typeof playPromise.catch === 'function'){
-          playPromise.catch(() => {});
-        }
-        if(videoCloseBtn) videoCloseBtn.focus();
-      });
-    }
     card.addEventListener('click', e => {
-      if(e.target.closest('.buy-btn') || e.target.closest('.card-details') || e.target.closest('[data-video-open]')) return;
+      if(e.target.closest('.buy-btn') || e.target.closest('.card-details')) return;
       toggleProductCard(card);
     });
     card.addEventListener('keydown', e => {
@@ -1985,23 +1970,8 @@
       }
     });
   });
-  function closeVideoOverlay(){
-    if(!videoOverlay.classList.contains('open')) return;
-    videoOverlay.classList.remove('open');
-    videoOverlay.setAttribute('aria-hidden', 'true');
-    productExplainerVideo.pause();
-    productExplainerVideo.currentTime = 0;
-    updateBodyScrollLock();
-    if(lastVideoTrigger) lastVideoTrigger.focus();
-  }
-  if(videoCloseBtn){
-    videoCloseBtn.addEventListener('click', closeVideoOverlay);
-  }
-  videoOverlay.addEventListener('click', e => {
-    if(e.target === videoOverlay) closeVideoOverlay();
-  });
   document.addEventListener('keydown', e => {
-    if(e.key === 'Escape') closeVideoOverlay();
+    if(e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMobileMenu();
   });
   if(categoryFilters){
     categoryFilters.addEventListener('click', e => {
@@ -2043,15 +2013,19 @@
 
   window.HOTMART_CHECKOUT_URL = 'https://pay.hotmart.com/D107135598O';
   window.buyNow = function(){
+    if(window.GCONTTrack) window.GCONTTrack('checkout_start', {product:'Produto em destaque'});
     window.location.href = window.HOTMART_CHECKOUT_URL;
   };
   window.buyPrecificacaoInteligente = function(){
+    if(window.GCONTTrack) window.GCONTTrack('checkout_start', {product:'Precificação Inteligente'});
     window.location.href = 'https://pay.hotmart.com/E107402436S';
   };
   window.buyCalculadoraPrecificacaoTributaria = function(){
+    if(window.GCONTTrack) window.GCONTTrack('checkout_start', {product:'Calculadora de Precificação Tributária'});
     window.location.href = 'https://pay.hotmart.com/G107402649U';
   };
   window.buyControleFerias13Salario = function(){
+    if(window.GCONTTrack) window.GCONTTrack('checkout_start', {product:'Controle de Férias e 13º Salário'});
     window.location.href = 'https://pay.hotmart.com/X107403028M';
   };
   function openConsultaWhatsApp(message){
@@ -2061,7 +2035,8 @@
     openConsultaWhatsApp('Olá! Tudo bem? Tenho interesse na conexão de IA com banco de dados e gostaria de receber mais informações, como valores, condições de pagamento e como funciona. Poderia me passar mais detalhes, por favor?');
   };
   window.saibaMaisNotaSync = function(){
-    openConsultaWhatsApp('Olá! Tudo bem? Tenho interesse no NotaSync — Busca e Sincronização de NF-e e NFS-e e gostaria de receber mais informações, como valores, condições de pagamento e como funciona. Poderia me passar mais detalhes, por favor?');
+    var fiscalProductName = window.GCONT_SITE_CONFIG && window.GCONT_SITE_CONFIG.fiscalProductName || 'solução fiscal';
+    openConsultaWhatsApp('Olá! Tudo bem? Tenho interesse na ' + fiscalProductName + ' e gostaria de confirmar o escopo atual, disponibilidade e condições comerciais.');
   };
 
   /* ---------- Scroll reveal ---------- */
