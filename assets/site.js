@@ -17,7 +17,6 @@
       demonstracao: "Demonstração das soluções",
       notasync: "Solução fiscal",
       "gcont-ia": "GCONT IA",
-      "ponte-contabil": "Ponte Contábil",
       loja: "Loja de ferramentas"
     };
     if (requestedSolution && solutionMap[requestedSolution]) solutionField.value = solutionMap[requestedSolution];
