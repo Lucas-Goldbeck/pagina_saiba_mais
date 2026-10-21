@@ -406,53 +406,69 @@
     .security-item-text strong { display: block; font-size: 14.5px; font-weight: 700; margin-bottom: 4px; }
     .security-item-text p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-    /* ── Why GCONT ── */
+    /* ── Why GCONT — editorial mosaic ── */
     .why-section { padding: clamp(60px,7vw,104px) 0; }
-    .why-layout {
+    .why-head {
       display: grid;
-      grid-template-columns: 0.75fr 1.5fr;
-      gap: clamp(36px,5vw,68px);
-      align-items: flex-start;
-      margin-top: 44px;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(32px,5vw,64px);
+      align-items: end;
+      margin-bottom: 40px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
     }
-    .why-photo-col { position: sticky; top: 88px; }
-    .why-photo-frame {
+    .why-head-text .eyebrow { margin-bottom: 12px; }
+    .why-head-text h2 {
+      margin: 0;
+      font-size: clamp(26px,3vw,42px);
+      line-height: 1.1;
+      letter-spacing: -.04em;
+      font-weight: 800;
+      text-wrap: balance;
+    }
+    .why-lead {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.7;
+      align-self: end;
+      padding-bottom: 2px;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(255,255,255,.065);
       border-radius: 20px;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,.06);
-      box-shadow: 0 24px 60px rgba(0,0,0,.28);
+      border: 1px solid rgba(255,255,255,.065);
     }
-    .why-photo-frame img {
-      width: 100%;
-      display: block;
-      aspect-ratio: 2/3;
-      object-fit: cover;
-      object-position: center 20%;
+    .why-card {
+      padding: 26px 24px;
+      background: var(--bg-soft);
+      transition: background .22s ease;
+      min-width: 0;
     }
-    .why-benefits { display: grid; gap: 14px; }
-    .why-benefit {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      padding: 16px 18px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,.06);
-      background: rgba(255,255,255,.02);
-      transition: border-color .2s ease, background .2s ease;
-    }
-    .why-benefit:hover { border-color: rgba(246,185,28,.2); background: rgba(246,185,28,.03); }
-    .why-benefit-icon {
-      flex: 0 0 36px;
-      height: 36px;
-      border-radius: 10px;
-      background: rgba(246,185,28,.09);
-      display: grid; place-items: center;
+    .why-card:hover { background: rgba(246,185,28,.04); }
+    .why-card-label {
+      font-size: 10.5px;
+      font-weight: 800;
       color: var(--gold-light);
-      flex-shrink: 0;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .why-benefit-icon svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .why-benefit-text strong { display: block; font-size: 14px; font-weight: 700; margin-bottom: 3px; }
-    .why-benefit-text p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .why-card-label::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: rgba(246,185,28,.22);
+    }
+    .why-card strong { display: block; font-size: 14.5px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+    .why-card p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.62; }
 
     /* ── Institutional ── */
     .institutional-section {
@@ -462,38 +478,30 @@
       border-bottom: 1px solid rgba(255,255,255,.05);
     }
     .institutional-panel {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: clamp(32px,5vw,68px);
-      align-items: center;
-      padding: clamp(28px,4vw,52px);
+      max-width: 720px;
+      margin-inline: auto;
+      text-align: center;
+      padding: clamp(36px,5vw,60px) clamp(24px,4vw,52px);
       border-radius: 24px;
       background:
-        radial-gradient(ellipse at 88% 0%, rgba(246,185,28,.09), transparent 42%),
+        radial-gradient(ellipse at 50% 0%, rgba(246,185,28,.09), transparent 65%),
         rgba(255,255,255,.022);
-      border: 1px solid rgba(246,185,28,.16);
+      border: 1px solid rgba(246,185,28,.14);
     }
-    .institutional-text .eyebrow { margin-bottom: 12px; }
-    .institutional-text h2 {
-      margin: 0 0 14px;
-      font-size: clamp(22px,2.8vw,36px);
-      line-height: 1.14;
-      letter-spacing: -.035em;
+    .institutional-panel .eyebrow { margin-bottom: 16px; }
+    .institutional-panel h2 {
+      margin: 0 0 16px;
+      font-size: clamp(24px,3vw,38px);
+      line-height: 1.12;
+      letter-spacing: -.04em;
       text-wrap: balance;
     }
-    .institutional-text p { margin: 0; color: var(--muted); font-size: 15px; line-height: 1.65; }
-    .institutional-photo {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.06);
-      box-shadow: 0 18px 50px rgba(0,0,0,.25);
-    }
-    .institutional-photo img {
-      width: 100%;
-      display: block;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      object-position: center 20%;
+    .institutional-panel p {
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.7;
+      max-width: 540px;
     }
 
     /* ── FAQ ── */
@@ -568,10 +576,9 @@
       .how-steps::before { display: none; }
       .security-grid { grid-template-columns: 1fr; }
       .security-photo { max-width: 500px; }
-      .why-layout { grid-template-columns: 1fr; margin-top: 32px; }
-      .why-photo-col { position: static; }
-      .why-photo-frame img { aspect-ratio: 16/9; object-position: center 30%; }
-      .institutional-panel { grid-template-columns: 1fr; gap: 24px; }
+      .why-head { grid-template-columns: 1fr; gap: 16px; }
+      .why-lead { align-self: auto; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); border-radius: 16px; }
       .final-cta-panel { grid-template-columns: 1fr; gap: 24px; }
       .final-cta-actions { flex-direction: row; flex-wrap: wrap; }
     }
@@ -591,6 +598,7 @@
       .shop-card h3 { font-size: 17px; }
       .security-section .section-head h2 { font-size: clamp(20px,5vw,30px); }
       .how-steps { gap: 18px; }
+      .why-card { padding: 20px 18px; }
     }
 
     /* ── Responsive 520px ── */
@@ -602,6 +610,7 @@
       .shop-btn { justify-content: center; width: 100%; }
       .loja-trust-strip { gap: 10px; }
       .shop-card-badge { font-size: 9px; padding: 3px 8px; }
+      .why-grid { grid-template-columns: 1fr; border-radius: 14px; }
       .final-cta-actions { flex-direction: column; }
       .final-cta-actions .button { text-align: center; justify-content: center; }
       .faq-list summary { font-size: 13.5px; }
@@ -622,7 +631,8 @@
       .shop-card-icon { width: 36px; height: 36px; }
       .shop-card h3 { font-size: 16px; }
       .faq-list summary { font-size: 13px; min-height: 52px; }
-      .institutional-panel { padding: 22px 18px; }
+      .why-card { padding: 18px 16px; }
+      .institutional-panel { padding: 28px 20px; }
       .final-cta-panel { padding: 24px 20px; }
     }
 
@@ -995,83 +1005,43 @@
     <!-- POR QUE A GCONT -->
     <section class="why-section" id="vantagens" aria-labelledby="why-title">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Por que a GCONT</span>
-          <h2 id="why-title">Ferramentas desenvolvidas por quem conhece os desafios da gestão.</h2>
-          <p>Por trás de cada solução está a experiência prática da GCONT no acompanhamento de empresas, na organização de processos e na busca por uma gestão mais eficiente.</p>
-        </div>
-        <div class="why-layout">
-          <div class="why-photo-col">
-            <div class="why-photo-frame">
-              <img
-                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=700&h=1050&dpr=1"
-                srcset="
-                  https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=480&h=720&dpr=1 480w,
-                  https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=700&h=1050&dpr=1 700w,
-                  https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1000&h=1500&dpr=1 1000w
-                "
-                sizes="(max-width: 900px) calc(100vw - 40px), 33vw"
-                alt="Equipe analisando dados e resultados de gestão empresarial"
-                loading="lazy"
-                width="700" height="1050"
-              >
-            </div>
+        <div class="why-head">
+          <div class="why-head-text">
+            <span class="eyebrow">Por que a GCONT</span>
+            <h2 id="why-title">Ferramentas desenvolvidas por quem conhece os desafios da gestão.</h2>
           </div>
-          <div class="why-benefits">
-            <div class="why-benefit">
-              <div class="why-benefit-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-              </div>
-              <div class="why-benefit-text">
-                <strong>Conhecimento aplicado</strong>
-                <p>Materiais desenvolvidos a partir de necessidades reais de gestão, identificadas no acompanhamento diário de empresas.</p>
-              </div>
-            </div>
-            <div class="why-benefit">
-              <div class="why-benefit-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-              </div>
-              <div class="why-benefit-text">
-                <strong>Praticidade imediata</strong>
-                <p>Ferramentas prontas para uso, sem necessidade de montar fórmulas ou estruturas do zero.</p>
-              </div>
-            </div>
-            <div class="why-benefit">
-              <div class="why-benefit-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              </div>
-              <div class="why-benefit-text">
-                <strong>Economia de tempo</strong>
-                <p>Menos esforço com controles e cálculos repetitivos. Foco no que realmente importa para sua empresa.</p>
-              </div>
-            </div>
-            <div class="why-benefit">
-              <div class="why-benefit-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h6M3 15h6"/></svg>
-              </div>
-              <div class="why-benefit-text">
-                <strong>Organização eficiente</strong>
-                <p>Informações mais acessíveis e processos estruturados para apoiar decisões com mais clareza.</p>
-              </div>
-            </div>
-            <div class="why-benefit">
-              <div class="why-benefit-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-              </div>
-              <div class="why-benefit-text">
-                <strong>Linguagem acessível</strong>
-                <p>Soluções pensadas para empresários e profissionais de diferentes áreas, com linguagem clara e objetiva.</p>
-              </div>
-            </div>
-            <div class="why-benefit">
-              <div class="why-benefit-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-              </div>
-              <div class="why-benefit-text">
-                <strong>Suporte da equipe</strong>
-                <p>Canal de atendimento via WhatsApp para dúvidas sobre a utilização das ferramentas adquiridas.</p>
-              </div>
-            </div>
+          <p class="why-lead">Por trás de cada solução está a experiência prática da GCONT no acompanhamento de empresas, na organização de processos e na busca por uma gestão mais eficiente.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-card-label" aria-hidden="true">01</div>
+            <strong>Conhecimento aplicado</strong>
+            <p>Materiais desenvolvidos a partir de necessidades reais de gestão, identificadas no acompanhamento diário de empresas.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-label" aria-hidden="true">02</div>
+            <strong>Praticidade imediata</strong>
+            <p>Ferramentas prontas para uso, sem necessidade de montar fórmulas ou estruturas do zero.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-label" aria-hidden="true">03</div>
+            <strong>Economia de tempo</strong>
+            <p>Menos esforço com controles e cálculos repetitivos. Foco no que realmente importa para sua empresa.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-label" aria-hidden="true">04</div>
+            <strong>Organização eficiente</strong>
+            <p>Informações acessíveis e processos estruturados para apoiar decisões com mais clareza.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-label" aria-hidden="true">05</div>
+            <strong>Linguagem acessível</strong>
+            <p>Soluções para empresários de diferentes áreas, com linguagem clara e objetiva.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-card-label" aria-hidden="true">06</div>
+            <strong>Suporte da equipe</strong>
+            <p>Canal de atendimento via WhatsApp para dúvidas sobre as ferramentas adquiridas.</p>
           </div>
         </div>
       </div>
@@ -1081,25 +1051,9 @@
     <section class="institutional-section">
       <div class="container">
         <div class="institutional-panel">
-          <div class="institutional-text">
-            <span class="eyebrow">GCONT TECH</span>
-            <h2>Da experiência na gestão à tecnologia que facilita decisões.</h2>
-            <p>A GCONT TECH desenvolve ferramentas e soluções tecnológicas com foco nos desafios enfrentados pelas empresas. Nossa proposta é transformar conhecimento prático em recursos digitais acessíveis, úteis e eficientes.</p>
-          </div>
-          <div class="institutional-photo">
-            <img
-              src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&dpr=1"
-              srcset="
-                https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&dpr=1 400w,
-                https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&dpr=1 700w,
-                https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1000&h=750&dpr=1 1000w
-              "
-              sizes="(max-width: 900px) calc(100vw - 40px), 40vw"
-              alt="Profissional analisando dados em ambiente corporativo"
-              loading="lazy"
-              width="700" height="525"
-            >
-          </div>
+          <span class="eyebrow">GCONT TECH</span>
+          <h2>Da experiência na gestão à tecnologia que facilita decisões.</h2>
+          <p>A GCONT TECH desenvolve ferramentas e soluções tecnológicas com foco nos desafios enfrentados pelas empresas. Nossa proposta é transformar conhecimento prático em recursos digitais acessíveis, úteis e eficientes.</p>
         </div>
       </div>
     </section>
