@@ -8,7 +8,7 @@
   <link rel="canonical" href="https://www.gcontvendas.com/loja">
   <link rel="icon" href="/logos/gcont-tech.png" type="image/png">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Loja de Ferramentas GCONT">
+  <meta property="og:title" content="Loja Digital GCONT — Ferramentas para simplificar sua gestão">
   <meta property="og:description" content="Planilhas, calculadoras e ferramentas digitais para apoiar a gestão empresarial.">
   <meta property="og:url" content="https://www.gcontvendas.com/loja">
   <meta property="og:image" content="https://www.gcontvendas.com/logos/gcont-tech.png">
@@ -21,59 +21,255 @@
   <title>Loja Digital GCONT | Ferramentas para simplificar sua gestão</title>
 
   <style>
-    /* ── Loja: estilos específicos ─────────────────────────── */
+    /* ── Loja: hero split ─── */
+    .loja-hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(60px,8vw,104px) 0 clamp(64px,8vw,108px);
+      background:
+        radial-gradient(ellipse at 90% 10%, rgba(52,91,126,.2), transparent 40%),
+        linear-gradient(135deg, #08111d 0%, #0c1a2b 55%, #101927 100%);
+    }
+    .loja-hero::before {
+      content: "";
+      position: absolute;
+      width: 520px; height: 520px;
+      right: -210px; bottom: -310px;
+      border: 1px solid rgba(246,185,28,.08);
+      border-radius: 50%;
+      box-shadow: 0 0 0 55px rgba(246,185,28,.018), 0 0 0 120px rgba(246,185,28,.012);
+      pointer-events: none;
+    }
+    .loja-hero-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(36px,6vw,80px);
+      align-items: center;
+    }
+    .loja-hero-copy .eyebrow { margin-bottom: 20px; }
+    .loja-hero-copy h1 {
+      max-width: 520px;
+      margin: 0 0 18px;
+      font-size: clamp(34px,4.2vw,54px);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      font-weight: 800;
+    }
+    .loja-hero-copy h1 span { color: var(--gold-light); }
+    .loja-hero-copy > p {
+      max-width: 460px;
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: clamp(15px,1.35vw,17px);
+      line-height: 1.68;
+    }
+    .loja-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .loja-trust-strip {
+      display: flex;
+      gap: clamp(14px,3vw,26px);
+      flex-wrap: wrap;
+      margin-top: 26px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+    .loja-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+    .loja-trust-item svg {
+      width: 13px; height: 13px;
+      stroke: var(--gold-light);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+    .loja-hero-visual { position: relative; }
+    .loja-hero-visual-frame {
+      position: relative;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(246,185,28,.14);
+      box-shadow: 0 28px 68px rgba(0,0,0,.38), 0 0 0 1px rgba(255,255,255,.04);
+    }
+    .loja-hero-visual-frame img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+    .loja-hero-badge {
+      position: absolute;
+      bottom: 18px; left: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 13px;
+      background: rgba(8,17,29,.88);
+      border: 1px solid rgba(246,185,28,.22);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.32);
+    }
+    .loja-hero-badge-icon {
+      width: 32px; height: 32px;
+      border-radius: 9px;
+      background: rgba(246,185,28,.14);
+      display: grid; place-items: center;
+      color: var(--gold-light);
+      flex-shrink: 0;
+    }
+    .loja-hero-badge-icon svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .loja-hero-badge strong { display: block; font-size: 12.5px; font-weight: 700; }
+    .loja-hero-badge span { font-size: 11px; color: var(--muted); }
+
+    /* ── Proof band ── */
+    .proof-band {
+      padding: 17px 0;
+      background: rgba(10,18,28,.92);
+      border-block: 1px solid rgba(255,255,255,.055);
+    }
+    .proof-band-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(14px,3.5vw,36px);
+      flex-wrap: wrap;
+    }
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+    .proof-item svg {
+      width: 13px; height: 13px;
+      stroke: var(--gold-light);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+    .proof-sep { width: 1px; height: 16px; background: rgba(255,255,255,.1); }
+
+    /* ── Products ── */
+    .products-section {
+      padding: clamp(72px,8vw,104px) 0;
+      background: var(--bg-soft);
+      border-top: 1px solid rgba(255,255,255,.04);
+      border-bottom: 1px solid rgba(255,255,255,.04);
+    }
     .shop-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: 22px;
     }
     .shop-card {
+      position: relative;
       display: flex;
       flex-direction: column;
-      padding: 28px;
-      border: 1px solid var(--line);
+      border: 1px solid rgba(255,255,255,.08);
       border-radius: 20px;
-      background: rgba(255,255,255,.03);
-      transition: border-color .2s, transform .2s;
+      background: rgba(255,255,255,.022);
+      overflow: hidden;
+      transition: border-color .22s ease, transform .22s ease, box-shadow .22s ease;
     }
-    .shop-card:hover { border-color: rgba(246,185,28,.35); transform: translateY(-2px); }
+    .shop-card:hover {
+      border-color: rgba(246,185,28,.38);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 48px rgba(0,0,0,.3), 0 0 0 1px rgba(246,185,28,.07);
+    }
+    .shop-card-top {
+      padding: 24px 24px 18px;
+      background: linear-gradient(145deg, rgba(246,185,28,.055), rgba(255,255,255,.008));
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .shop-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
     .shop-card-badge {
       display: inline-flex;
-      align-self: flex-start;
-      padding: 3px 10px;
+      align-items: center;
+      padding: 4px 10px;
       border-radius: 999px;
-      background: rgba(246,185,28,.12);
+      background: rgba(246,185,28,.11);
+      border: 1px solid rgba(246,185,28,.2);
       color: var(--gold-light);
       font-size: 10px;
       font-weight: 800;
       letter-spacing: .07em;
       text-transform: uppercase;
-      margin-bottom: 16px;
+      white-space: nowrap;
     }
     .shop-card-icon {
-      width: 48px; height: 48px;
+      flex-shrink: 0;
+      width: 44px; height: 44px;
       display: grid; place-items: center;
-      border-radius: 14px;
+      border-radius: 12px;
       background: rgba(246,185,28,.1);
+      border: 1px solid rgba(246,185,28,.18);
       color: var(--gold-light);
-      margin-bottom: 14px;
     }
-    .shop-card-icon svg { width: 22px; height: 22px; stroke: currentColor; }
-    .shop-card h3 { margin: 0 0 10px; font-size: 18px; line-height: 1.25; letter-spacing: -.02em; color: var(--text); }
-    .shop-card .desc { flex: 1; font-size: 14px; color: var(--muted); line-height: 1.65; margin: 0 0 20px; }
+    .shop-card-icon svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .shop-card h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+      line-height: 1.25;
+      letter-spacing: -.025em;
+      font-weight: 700;
+    }
+    .shop-card .desc {
+      margin: 0;
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+    .shop-card-body { flex: 1; padding: 18px 24px 0; }
+    .shop-card-benefits {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+      display: grid;
+      gap: 7px;
+    }
+    .shop-card-benefits li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .shop-card-benefits li::before {
+      content: "";
+      flex: 0 0 15px;
+      height: 15px;
+      margin-top: 1px;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 15 15' fill='none' stroke='%23ffd35a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5 8l3.5 3.5 7-7'/%3E%3C/svg%3E") center/contain no-repeat;
+    }
     .shop-card-meta {
       display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
+      gap: 7px;
       flex-wrap: wrap;
+      padding-bottom: 18px;
     }
     .shop-meta-tag {
       display: inline-flex;
       align-items: center;
-      gap: 5px;
-      padding: 4px 10px;
-      border: 1px solid rgba(255,255,255,.09);
-      border-radius: 8px;
+      padding: 4px 9px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 7px;
       font-size: 11px;
       color: var(--faint);
     }
@@ -81,81 +277,286 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255,255,255,.06);
+      gap: 14px;
+      padding: 16px 24px;
+      border-top: 1px solid rgba(255,255,255,.055);
+      background: rgba(0,0,0,.1);
     }
     .shop-price { display: flex; flex-direction: column; }
-    .shop-price strong { font-size: 24px; font-weight: 800; color: var(--text); letter-spacing: -.03em; }
-    .shop-price small { font-size: 11px; color: var(--faint); }
+    .shop-price strong {
+      font-size: 25px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -.03em;
+      line-height: 1.1;
+    }
+    .shop-price small { font-size: 11px; color: var(--faint); margin-top: 2px; }
     .shop-btn {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 20px;
+      padding: 11px 20px;
       border: none;
-      border-radius: 10px;
+      border-radius: 11px;
       background: var(--gold);
       color: #1a1000;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
       cursor: pointer;
-      transition: opacity .15s, transform .15s;
+      transition: opacity .15s, transform .15s, box-shadow .15s;
       text-decoration: none;
       white-space: nowrap;
     }
-    .shop-btn:hover { opacity: .88; transform: translateY(-1px); }
+    .shop-btn:hover { opacity: .9; transform: translateY(-1px); box-shadow: 0 8px 22px rgba(246,185,28,.28); }
+    .shop-btn svg { flex-shrink: 0; }
 
-    /* Light-mode cards */
-    .section-light .shop-card { background: rgba(255,255,255,.8); border-color: rgba(0,0,0,.08); }
-    .section-light .shop-card:hover { border-color: rgba(194,138,0,.4); }
-    .section-light .shop-card h3 { color: #1a2637; }
-    .section-light .shop-card .desc { color: #4d6070; }
-    .section-light .shop-card-footer { border-color: rgba(0,0,0,.07); }
-    .section-light .shop-price strong { color: #1a2637; }
-    .section-light .shop-price small { color: #8098b0; }
-    .section-light .shop-meta-tag { border-color: rgba(0,0,0,.1); color: #8098b0; }
-
-    /* Why bento */
-    .why-bento {
+    /* ── How it works ── */
+    .how-section { padding: clamp(72px,8vw,104px) 0; }
+    .how-steps {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 52px;
+      position: relative;
+    }
+    .how-steps::before {
+      content: "";
+      position: absolute;
+      top: 27px;
+      left: 12.5%;
+      right: 12.5%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(246,185,28,.3) 15%, rgba(246,185,28,.3) 85%, transparent);
+      pointer-events: none;
+    }
+    .how-step { text-align: center; padding: 0 10px; }
+    .how-step-num {
+      position: relative;
+      z-index: 1;
+      width: 54px; height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, rgba(246,185,28,.16), rgba(246,185,28,.04));
+      border: 1px solid rgba(246,185,28,.28);
+      color: var(--gold-light);
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      display: grid; place-items: center;
+      margin: 0 auto 18px;
+    }
+    .how-step h3 { margin: 0 0 8px; font-size: 15px; font-weight: 700; line-height: 1.3; }
+    .how-step p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+    /* ── Security ── */
+    .security-section {
+      padding: clamp(72px,8vw,104px) 0;
+      background: linear-gradient(135deg, rgba(12,26,43,.7), rgba(8,17,29,.9));
+      border-top: 1px solid rgba(255,255,255,.055);
+      border-bottom: 1px solid rgba(255,255,255,.055);
+    }
+    .security-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px,6vw,80px);
+      align-items: center;
+    }
+    .security-photo {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(246,185,28,.11);
+      box-shadow: 0 24px 60px rgba(0,0,0,.35);
+    }
+    .security-photo img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+    .security-items { display: grid; gap: 22px; }
+    .security-item { display: flex; gap: 15px; align-items: flex-start; }
+    .security-item-icon {
+      flex: 0 0 42px;
+      height: 42px;
+      border-radius: 11px;
+      background: rgba(246,185,28,.09);
+      border: 1px solid rgba(246,185,28,.17);
+      display: grid; place-items: center;
+      color: var(--gold-light);
+    }
+    .security-item-icon svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+    .security-item-text strong { display: block; font-size: 14.5px; font-weight: 700; margin-bottom: 4px; }
+    .security-item-text p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+    /* ── Why GCONT ── */
+    .why-section { padding: clamp(72px,8vw,104px) 0; }
+    .why-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.5fr;
+      gap: clamp(40px,5vw,68px);
+      align-items: flex-start;
       margin-top: 48px;
     }
-    .why-card {
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: rgba(255,255,255,.03);
+    .why-photo-col {
+      position: sticky;
+      top: 96px;
     }
-    .why-icon {
-      width: 44px; height: 44px;
+    .why-photo-frame {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.06);
+      box-shadow: 0 24px 60px rgba(0,0,0,.28);
+    }
+    .why-photo-frame img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+    }
+    .why-benefits { display: grid; gap: 16px; }
+    .why-benefit {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 18px 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.06);
+      background: rgba(255,255,255,.02);
+      transition: border-color .2s ease, background .2s ease;
+    }
+    .why-benefit:hover { border-color: rgba(246,185,28,.2); background: rgba(246,185,28,.03); }
+    .why-benefit-icon {
+      flex: 0 0 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(246,185,28,.09);
       display: grid; place-items: center;
-      border-radius: 12px;
-      background: rgba(246,185,28,.1);
       color: var(--gold-light);
-      margin-bottom: 14px;
     }
-    .why-icon svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .why-card h3 { margin: 0 0 8px; font-size: 16px; color: var(--text); font-weight: 700; }
-    .why-card p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.65; }
+    .why-benefit-icon svg { width: 17px; height: 17px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .why-benefit-text strong { display: block; font-size: 14.5px; font-weight: 700; margin-bottom: 3px; }
+    .why-benefit-text p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
 
-    /* CTA band */
-    .shop-cta-band { text-align: center; padding: clamp(56px, 8vw, 88px) 0; }
-    .shop-cta-band h2 { font-size: clamp(26px, 3.5vw, 42px); margin: 0 0 14px; letter-spacing: -.035em; }
-    .shop-cta-band p { color: var(--muted); font-size: 17px; max-width: 540px; margin: 0 auto 32px; }
-    .shop-cta-actions { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    /* ── Institutional ── */
+    .institutional-section {
+      padding: clamp(64px,7vw,88px) 0;
+      background: var(--bg-soft);
+      border-top: 1px solid rgba(255,255,255,.05);
+      border-bottom: 1px solid rgba(255,255,255,.05);
+    }
+    .institutional-panel {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: clamp(36px,5.5vw,68px);
+      align-items: center;
+      padding: clamp(30px,4.5vw,52px);
+      border-radius: 24px;
+      background:
+        radial-gradient(ellipse at 88% 0%, rgba(246,185,28,.09), transparent 42%),
+        rgba(255,255,255,.022);
+      border: 1px solid rgba(246,185,28,.16);
+    }
+    .institutional-text h2 {
+      margin: 12px 0 14px;
+      font-size: clamp(24px,3vw,36px);
+      line-height: 1.14;
+      letter-spacing: -.035em;
+    }
+    .institutional-text p { margin: 0; color: var(--muted); font-size: 15.5px; line-height: 1.65; }
+    .institutional-photo {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.06);
+      box-shadow: 0 18px 50px rgba(0,0,0,.25);
+    }
+    .institutional-photo img { width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover; }
 
-    /* Responsive */
-    @media (max-width: 860px) {
+    /* ── FAQ ── */
+    .faq-section { padding: clamp(72px,8vw,104px) 0; }
+    .faq-list {
+      display: grid;
+      gap: 10px;
+      max-width: 760px;
+      margin: 40px auto 0;
+    }
+    .faq-list details {
+      padding: 0 22px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 14px;
+      background: rgba(255,255,255,.022);
+      transition: border-color .2s ease;
+    }
+    .faq-list details:hover { border-color: rgba(246,185,28,.18); }
+    .faq-list details[open] { border-color: rgba(246,185,28,.24); }
+    .faq-list summary {
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 600;
+      font-size: 14.5px;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { content: "+"; color: var(--gold-light); font-size: 22px; flex-shrink: 0; }
+    .faq-list details[open] summary::after { content: "−"; }
+    .faq-list details p { margin: 0; padding: 0 0 20px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+
+    /* ── Final CTA ── */
+    .final-cta { padding: clamp(72px,8vw,104px) 0; }
+    .final-cta-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: clamp(28px,5vw,56px);
+      align-items: center;
+      padding: clamp(36px,5vw,60px);
+      border-radius: 24px;
+      background:
+        radial-gradient(ellipse at 25% 100%, rgba(52,91,126,.22), transparent 48%),
+        radial-gradient(ellipse at 85% 5%, rgba(246,185,28,.09), transparent 40%),
+        linear-gradient(135deg, #0d1d30, #0a1521);
+      border: 1px solid rgba(246,185,28,.18);
+      box-shadow: 0 24px 60px rgba(0,0,0,.2);
+    }
+    .final-cta-text .eyebrow { margin-bottom: 14px; }
+    .final-cta-text h2 {
+      margin: 0 0 12px;
+      font-size: clamp(24px,3.3vw,40px);
+      line-height: 1.12;
+      letter-spacing: -.04em;
+    }
+    .final-cta-text p { margin: 0; color: var(--muted); font-size: 15.5px; max-width: 500px; }
+    .final-cta-actions { display: flex; flex-direction: column; gap: 11px; flex-shrink: 0; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .loja-hero-grid { grid-template-columns: 1fr; }
+      .loja-hero-copy h1, .loja-hero-copy > p { max-width: none; }
+      .loja-hero-visual { max-width: 520px; }
       .shop-grid { grid-template-columns: 1fr; }
-      .why-bento { grid-template-columns: 1fr 1fr; }
+      .how-steps { grid-template-columns: 1fr 1fr; }
+      .how-steps::before { display: none; }
+      .security-grid { grid-template-columns: 1fr; }
+      .security-photo { max-width: 480px; }
+      .why-layout { grid-template-columns: 1fr; }
+      .why-photo-col { position: static; }
+      .why-photo-frame img { aspect-ratio: 16/9; }
+      .institutional-panel { grid-template-columns: 1fr; }
+      .final-cta-panel { grid-template-columns: 1fr; }
+      .final-cta-actions { flex-direction: row; flex-wrap: wrap; }
     }
     @media (max-width: 560px) {
-      .why-bento { grid-template-columns: 1fr; }
-      .shop-card-footer { flex-direction: column; align-items: flex-start; }
+      .proof-sep { display: none; }
+      .how-steps { grid-template-columns: 1fr; gap: 20px; }
+      .shop-card-footer { flex-direction: column; align-items: stretch; }
+      .shop-btn { justify-content: center; }
+      .loja-trust-strip { gap: 10px; }
+      .shop-card-badge { font-size: 9px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .shop-card, .why-benefit { transition: none; }
+      .shop-card:hover, .why-benefit:hover { transform: none; }
     }
   </style>
 </head>
@@ -183,135 +584,233 @@
 
   <main id="conteudo">
 
-    <!-- Hero -->
-    <section class="hero" style="padding-bottom:clamp(48px,6vw,72px)">
-      <div class="container" style="max-width:780px;text-align:center">
-        <span class="eyebrow">Loja Digital GCONT</span>
-        <h1>Ferramentas práticas para uma gestão mais inteligente.</h1>
-        <p style="color:var(--muted);font-size:clamp(17px,1.6vw,20px);max-width:580px;margin:0 auto 36px">Planilhas, calculadoras e materiais digitais desenvolvidos para facilitar decisões, organizar processos e apoiar a gestão da sua empresa.</p>
-        <div class="hero-actions" style="justify-content:center">
-          <a class="button button-arrow" href="#produtos">Explorar ferramentas</a>
-          <a class="button button-secondary" href="/solucoes">Conhecer a GCONT TECH</a>
+    <!-- HERO -->
+    <section class="loja-hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="loja-hero-grid">
+          <div class="loja-hero-copy">
+            <span class="eyebrow">Loja Digital GCONT</span>
+            <h1 id="hero-title">Ferramentas inteligentes para <span>simplificar</span> a gestão da sua empresa.</h1>
+            <p>Planilhas, calculadoras e materiais digitais desenvolvidos por especialistas para ajudar você a organizar processos, economizar tempo e tomar decisões com mais segurança.</p>
+            <div class="loja-hero-actions">
+              <a class="button button-arrow" href="#produtos" data-track="hero_cta_primary">Explorar ferramentas</a>
+              <a class="button button-secondary" href="#como-funciona">Como funciona</a>
+            </div>
+            <div class="loja-trust-strip" aria-label="Destaques">
+              <span class="loja-trust-item">
+                <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+                Ferramentas prontas para usar
+              </span>
+              <span class="loja-trust-item">
+                <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Compra segura
+              </span>
+              <span class="loja-trust-item">
+                <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                Entrega digital imediata
+              </span>
+            </div>
+          </div>
+          <div class="loja-hero-visual">
+            <div class="loja-hero-visual-frame">
+              <img
+                src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&dpr=1"
+                alt="Profissional trabalhando em notebook em ambiente empresarial"
+                loading="eager"
+                width="800" height="600"
+              >
+              <div class="loja-hero-badge" aria-hidden="true">
+                <span class="loja-hero-badge-icon">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                </span>
+                <span>
+                  <strong>Desenvolvido por contadores</strong>
+                  <span>Experiência prática na gestão</span>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Proof band -->
-    <div class="proof-band">
+    <!-- PROOF BAND -->
+    <div class="proof-band" role="note" aria-label="Informações de confiança">
       <div class="container">
-        <p>Pagamento seguro via <strong>Hotmart</strong> · <strong>Download imediato</strong> após confirmação · Desenvolvido por contadores · Suporte via WhatsApp</p>
+        <div class="proof-band-inner">
+          <span class="proof-item">
+            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Pagamento seguro via <strong>&nbsp;Hotmart</strong>
+          </span>
+          <span class="proof-sep" aria-hidden="true"></span>
+          <span class="proof-item">
+            <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            <strong>Download imediato</strong>&nbsp;após confirmação
+          </span>
+          <span class="proof-sep" aria-hidden="true"></span>
+          <span class="proof-item">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Desenvolvido por contadores
+          </span>
+          <span class="proof-sep" aria-hidden="true"></span>
+          <span class="proof-item">
+            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            Suporte via WhatsApp
+          </span>
+        </div>
       </div>
     </div>
 
-    <!-- Produtos -->
-    <section class="section section-light" id="produtos">
+    <!-- PRODUTOS -->
+    <section class="products-section" id="produtos" aria-labelledby="products-title">
       <div class="container">
         <div class="section-head">
-          <span class="eyebrow" style="color:#9b6d00">Catálogo</span>
-          <h2 style="color:#1a2637">Ferramentas prontas para usar.</h2>
-          <p style="color:#4d6070">Planilhas inteligentes e calculadoras desenvolvidas com base em necessidades reais de gestão empresarial.</p>
+          <span class="eyebrow">Catálogo de Ferramentas</span>
+          <h2 id="products-title">Escolha a ferramenta certa para sua gestão.</h2>
+          <p>Planilhas inteligentes e calculadoras desenvolvidas a partir de necessidades reais de gestão empresarial, prontas para usar no dia a dia.</p>
         </div>
+
         <div class="shop-grid">
 
-          <!-- Produto 1: Preços e Ponto de Equilíbrio -->
+          <!-- Produto 1 -->
           <article class="shop-card">
-            <span class="shop-card-badge">Planilha</span>
-            <div class="shop-card-icon">
-              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+            <div class="shop-card-top">
+              <div class="shop-card-header">
+                <span class="shop-card-badge">Planilha · Gestão Financeira</span>
+                <div class="shop-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+                </div>
+              </div>
+              <h3>Preços e Ponto de Equilíbrio</h3>
+              <p class="desc">Entenda seus custos, defina preços de venda e descubra quanto sua empresa precisa faturar para atingir o equilíbrio financeiro.</p>
             </div>
-            <h3>Preços e Ponto de Equilíbrio</h3>
-            <p class="desc">Entenda quanto cobrar pelos seus produtos, calcule seus custos e identifique o volume de vendas necessário para alcançar o equilíbrio financeiro.</p>
-            <div class="shop-card-meta">
-              <span class="shop-meta-tag">Excel</span>
-              <span class="shop-meta-tag">Download imediato</span>
-              <span class="shop-meta-tag">Gestão financeira</span>
+            <div class="shop-card-body">
+              <ul class="shop-card-benefits">
+                <li>Define preços de venda com base em custos reais</li>
+                <li>Calcula o faturamento mínimo para o equilíbrio</li>
+                <li>Organiza mix de vendas e despesas fixas</li>
+                <li>Apoia decisões comerciais com mais segurança</li>
+              </ul>
+              <div class="shop-card-meta">
+                <span class="shop-meta-tag">Excel</span>
+                <span class="shop-meta-tag">Download imediato</span>
+              </div>
             </div>
-            <p style="font-size:13px;color:#4d6070;margin:0 0 18px">Ajuda a organizar o mix de vendas e as despesas fixas, calculando o faturamento mensal necessário para atingir o ponto de equilíbrio.</p>
             <div class="shop-card-footer">
               <div class="shop-price">
                 <strong>R$ 49,99</strong>
                 <small>pagamento único</small>
               </div>
               <button class="shop-btn" onclick="buyNow()" aria-label="Comprar Preços e Ponto de Equilíbrio por R$ 49,99">
-                Comprar
+                Comprar agora
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
           </article>
 
-          <!-- Produto 2: Controle de Férias e 13º -->
+          <!-- Produto 2 -->
           <article class="shop-card">
-            <span class="shop-card-badge">Planilha</span>
-            <div class="shop-card-icon">
-              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18M7 14h4M13 14h4M7 18h4"/></svg>
+            <div class="shop-card-top">
+              <div class="shop-card-header">
+                <span class="shop-card-badge">Planilha · Gestão Trabalhista</span>
+                <div class="shop-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18M7 14h4M13 14h4M7 18h4"/></svg>
+                </div>
+              </div>
+              <h3>Controle de Férias e 13º Salário</h3>
+              <p class="desc">Organize prazos, acompanhe obrigações trabalhistas e facilite o planejamento de férias e décimo terceiro salário.</p>
             </div>
-            <h3>Controle de Férias e 13º Salário</h3>
-            <p class="desc">Organize férias, prazos e valores de 13º salário em uma ferramenta prática para facilitar o acompanhamento das obrigações trabalhistas.</p>
-            <div class="shop-card-meta">
-              <span class="shop-meta-tag">Planilha de controle</span>
-              <span class="shop-meta-tag">Download imediato</span>
-              <span class="shop-meta-tag">Gestão trabalhista</span>
+            <div class="shop-card-body">
+              <ul class="shop-card-benefits">
+                <li>Acompanha prazos e vencimentos de férias</li>
+                <li>Painel com alertas de itens urgentes e vencidos</li>
+                <li>Facilita o planejamento do 13º salário</li>
+                <li>Reduz riscos com obrigações trabalhistas</li>
+              </ul>
+              <div class="shop-card-meta">
+                <span class="shop-meta-tag">Planilha de controle</span>
+                <span class="shop-meta-tag">Download imediato</span>
+              </div>
             </div>
-            <p style="font-size:13px;color:#4d6070;margin:0 0 18px">Painel com alertas para datas vencidas, urgentes e itens que exigem atenção, ajudando a reduzir riscos e facilitar o planejamento.</p>
             <div class="shop-card-footer">
               <div class="shop-price">
                 <strong>R$ 19,99</strong>
                 <small>pagamento único</small>
               </div>
               <button class="shop-btn" onclick="buyControleFerias13Salario()" aria-label="Comprar Controle de Férias e 13º Salário por R$ 19,99">
-                Comprar
+                Comprar agora
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
           </article>
 
-          <!-- Produto 3: Precificação Bares e Restaurantes -->
+          <!-- Produto 3 -->
           <article class="shop-card">
-            <span class="shop-card-badge">Planilha</span>
-            <div class="shop-card-icon">
-              <svg viewBox="0 0 24 24"><path d="M4 19h16M6 16V8M10 16V5M14 16v-4M18 16V9M5 5h14"/></svg>
+            <div class="shop-card-top">
+              <div class="shop-card-header">
+                <span class="shop-card-badge">Planilha · Bares e Restaurantes</span>
+                <div class="shop-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 19h16M6 16V8M10 16V5M14 16v-4M18 16V9M5 5h14"/></svg>
+                </div>
+              </div>
+              <h3>Precificação Inteligente para Bares e Restaurantes</h3>
+              <p class="desc">Simule preços de venda e analise os impactos da Reforma Tributária na precificação do seu bar ou restaurante.</p>
             </div>
-            <h3>Precificação Inteligente para Bares e Restaurantes</h3>
-            <p class="desc">Simule preços de venda e analise os impactos da Reforma Tributária na precificação do seu bar ou restaurante.</p>
-            <div class="shop-card-meta">
-              <span class="shop-meta-tag">Planilha inteligente</span>
-              <span class="shop-meta-tag">Download imediato</span>
-              <span class="shop-meta-tag">Bares e restaurantes</span>
+            <div class="shop-card-body">
+              <ul class="shop-card-benefits">
+                <li>Simula os novos tributos sobre preços de venda</li>
+                <li>Compara cenários antes e após a Reforma</li>
+                <li>Avalia margem e preço final com mais clareza</li>
+                <li>Apoia decisões comerciais para o setor</li>
+              </ul>
+              <div class="shop-card-meta">
+                <span class="shop-meta-tag">Planilha inteligente</span>
+                <span class="shop-meta-tag">Download imediato</span>
+              </div>
             </div>
-            <p style="font-size:13px;color:#4d6070;margin:0 0 18px">Entenda como os novos tributos impactam custos, margem e preços, com análise de cenários para apoiar suas decisões comerciais.</p>
             <div class="shop-card-footer">
               <div class="shop-price">
                 <strong>R$ 49,99</strong>
                 <small>pagamento único</small>
               </div>
               <button class="shop-btn" onclick="buyPrecificacaoInteligente()" aria-label="Comprar Precificação Inteligente para Bares e Restaurantes por R$ 49,99">
-                Comprar
+                Comprar agora
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
           </article>
 
-          <!-- Produto 4: Calculadora Reforma Tributária -->
+          <!-- Produto 4 -->
           <article class="shop-card">
-            <span class="shop-card-badge">Planilha</span>
-            <div class="shop-card-icon">
-              <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+            <div class="shop-card-top">
+              <div class="shop-card-header">
+                <span class="shop-card-badge">Planilha · Análise Tributária</span>
+                <div class="shop-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+                </div>
+              </div>
+              <h3>Reforma Tributária — Calculadora de Precificação</h3>
+              <p class="desc">Analise cenários tributários e simule os impactos dos novos tributos sobre a formação dos preços de venda.</p>
             </div>
-            <h3>Reforma Tributária — Calculadora de Precificação</h3>
-            <p class="desc">Analise cenários tributários e simule os impactos dos novos tributos sobre a formação dos preços de venda.</p>
-            <div class="shop-card-meta">
-              <span class="shop-meta-tag">Planilha com guia</span>
-              <span class="shop-meta-tag">Download imediato</span>
-              <span class="shop-meta-tag">Análise tributária</span>
+            <div class="shop-card-body">
+              <ul class="shop-card-benefits">
+                <li>Antecipa os efeitos da Reforma Tributária</li>
+                <li>Compara cenários de preço e analisa impacto</li>
+                <li>Inclui guia para facilitar a utilização</li>
+                <li>Apoia decisões de precificação com segurança</li>
+              </ul>
+              <div class="shop-card-meta">
+                <span class="shop-meta-tag">Planilha com guia</span>
+                <span class="shop-meta-tag">Download imediato</span>
+              </div>
             </div>
-            <p style="font-size:13px;color:#4d6070;margin:0 0 18px">Antecipe os efeitos da Reforma Tributária na precificação, compare cenários e avalie preço final e margem com mais segurança.</p>
             <div class="shop-card-footer">
               <div class="shop-price">
                 <strong>R$ 49,99</strong>
                 <small>pagamento único</small>
               </div>
               <button class="shop-btn" onclick="buyCalculadoraPrecificacaoTributaria()" aria-label="Comprar Reforma Tributária — Calculadora de Precificação por R$ 49,99">
-                Comprar
+                Comprar agora
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
@@ -321,123 +820,244 @@
       </div>
     </section>
 
-    <!-- Por que comprar com a GCONT -->
-    <section class="section section-soft" id="vantagens">
+    <!-- COMO FUNCIONA -->
+    <section class="how-section" id="como-funciona" aria-labelledby="how-title">
       <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Por que a GCONT</span>
-          <h2>Feito por quem entende de gestão empresarial.</h2>
-          <p>Cada ferramenta nasce da experiência prática da GCONT no acompanhamento de empresas e na solução de desafios reais de gestão.</p>
+        <div class="section-head" style="text-align:center;max-width:540px;margin-inline:auto">
+          <span class="eyebrow">Como funciona</span>
+          <h2 id="how-title">Do interesse à utilização em quatro passos.</h2>
+          <p>Um processo simples para você adquirir e começar a usar sua ferramenta de gestão.</p>
         </div>
-        <div class="why-bento">
-          <div class="why-card">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-            </div>
-            <h3>Conteúdo produzido por contadores</h3>
-            <p>Cada material é criado pela equipe que acompanha, todos os dias, a contabilidade de empresas como a sua.</p>
+        <div class="how-steps">
+          <div class="how-step">
+            <div class="how-step-num" aria-hidden="true">01</div>
+            <h3>Escolha sua ferramenta</h3>
+            <p>Explore o catálogo e encontre a solução mais adequada para sua necessidade de gestão.</p>
           </div>
-          <div class="why-card">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </div>
-            <h3>Aplicação imediata</h3>
-            <p>Materiais objetivos, pensados para uso direto no dia a dia da gestão, sem precisar montar fórmulas do zero.</p>
+          <div class="how-step">
+            <div class="how-step-num" aria-hidden="true">02</div>
+            <h3>Realize sua compra</h3>
+            <p>Finalize seu pedido no ambiente de pagamento seguro disponibilizado pela Hotmart.</p>
           </div>
-          <div class="why-card">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            </div>
-            <h3>Compra segura via Hotmart</h3>
-            <p>Pagamento processado pela Hotmart, com entrega digital imediata após a confirmação no e-mail cadastrado.</p>
+          <div class="how-step">
+            <div class="how-step-num" aria-hidden="true">03</div>
+            <h3>Receba seu material</h3>
+            <p>Após a confirmação do pagamento, acesse o download pelo e-mail e pelo painel da Hotmart.</p>
           </div>
-          <div class="why-card">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            </div>
-            <h3>Suporte direto com a equipe</h3>
-            <p>Ficou com dúvida? Fale com a equipe GCONT pelo WhatsApp e receba orientação de quem entende do assunto.</p>
-          </div>
-          <div class="why-card">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <h3>Economize tempo</h3>
-            <p>Planilhas já estruturadas com sistemas prontos para preencher e gerar resultados no mesmo dia.</p>
-          </div>
-          <div class="why-card">
-            <div class="why-icon">
-              <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
-            </div>
-            <h3>Para pequenas e médias empresas</h3>
-            <p>Linguagem simples e conteúdo pensado para os desafios reais de quem administra uma empresa no dia a dia.</p>
+          <div class="how-step">
+            <div class="how-step-num" aria-hidden="true">04</div>
+            <h3>Comece a utilizar</h3>
+            <p>Abra no Excel, insira seus dados e organize sua gestão com a ferramenta em mãos.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Diferença entre Loja e Soluções -->
-    <section class="section section-dark" id="gcont-tech">
+    <!-- COMPRA SEGURA -->
+    <section class="security-section" id="seguranca" aria-labelledby="security-title">
       <div class="container">
-        <div class="split">
-          <div class="split-copy">
-            <span class="eyebrow">Quer mais automação?</span>
-            <h2>A GCONT TECH também tem soluções para rotinas contábeis.</h2>
-            <p>A loja oferece ferramentas digitais para compra direta. Se sua operação precisa de mais estrutura — conferência fiscal, integração de IA com bases de dados — conheça as soluções consultivas.</p>
+        <div class="security-grid">
+          <div class="security-photo">
+            <img
+              src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=700&h=525&dpr=1"
+              alt="Profissional realizando compra digital com segurança"
+              loading="lazy"
+              width="700" height="525"
+            >
           </div>
-          <div class="quote-panel">
-            <blockquote>"Dois caminhos, a mesma origem: soluções desenvolvidas a partir da experiência prática da GCONT."</blockquote>
-            <a class="button button-secondary" href="/solucoes" style="margin-top:16px;display:inline-flex">Conhecer as soluções</a>
+          <div>
+            <div class="section-head" style="margin-bottom:30px">
+              <span class="eyebrow">Compra segura</span>
+              <h2 id="security-title">Uma experiência de compra simples, segura e transparente.</h2>
+              <p>Escolha a ferramenta ideal para sua empresa e realize sua compra com tranquilidade. O processo é realizado em ambiente protegido, com orientações claras sobre acesso e entrega do produto digital.</p>
+            </div>
+            <div class="security-items">
+              <div class="security-item">
+                <div class="security-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <div class="security-item-text">
+                  <strong>Pagamento processado pela Hotmart</strong>
+                  <p>O checkout é realizado diretamente no ambiente da Hotmart, plataforma especializada em produtos digitais com atuação consolidada no mercado.</p>
+                </div>
+              </div>
+              <div class="security-item">
+                <div class="security-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+                <div class="security-item-text">
+                  <strong>Entrega digital após confirmação</strong>
+                  <p>Assim que o pagamento é confirmado, você recebe o acesso ao download pelo e-mail cadastrado e pelo painel do comprador na Hotmart.</p>
+                </div>
+              </div>
+              <div class="security-item">
+                <div class="security-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </div>
+                <div class="security-item-text">
+                  <strong>Suporte GCONT TECH pelo WhatsApp</strong>
+                  <p>Dúvidas sobre a ferramenta adquirida? Fale com a equipe GCONT e receba orientação de quem conhece o produto.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUE A GCONT -->
+    <section class="why-section" id="vantagens" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Por que a GCONT</span>
+          <h2 id="why-title">Ferramentas desenvolvidas por quem conhece os desafios da gestão.</h2>
+          <p>Por trás de cada solução está a experiência prática da GCONT no acompanhamento de empresas, na organização de processos e na busca por uma gestão mais eficiente.</p>
+        </div>
+        <div class="why-layout">
+          <div class="why-photo-col">
+            <div class="why-photo-frame">
+              <img
+                src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&dpr=1"
+                alt="Equipe trabalhando no desenvolvimento de ferramentas de gestão"
+                loading="lazy"
+                width="600" height="800"
+              >
+            </div>
+          </div>
+          <div class="why-benefits">
+            <div class="why-benefit">
+              <div class="why-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              </div>
+              <div class="why-benefit-text">
+                <strong>Conhecimento aplicado</strong>
+                <p>Materiais desenvolvidos a partir de necessidades reais de gestão, identificadas no acompanhamento diário de empresas.</p>
+              </div>
+            </div>
+            <div class="why-benefit">
+              <div class="why-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+              </div>
+              <div class="why-benefit-text">
+                <strong>Praticidade imediata</strong>
+                <p>Ferramentas prontas para uso, sem necessidade de montar fórmulas ou estruturas do zero.</p>
+              </div>
+            </div>
+            <div class="why-benefit">
+              <div class="why-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <div class="why-benefit-text">
+                <strong>Economia de tempo</strong>
+                <p>Menos esforço com controles e cálculos repetitivos. Foco no que realmente importa para sua empresa.</p>
+              </div>
+            </div>
+            <div class="why-benefit">
+              <div class="why-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M3 9h6M3 15h6"/></svg>
+              </div>
+              <div class="why-benefit-text">
+                <strong>Organização eficiente</strong>
+                <p>Informações mais acessíveis e processos estruturados para apoiar decisões com mais clareza.</p>
+              </div>
+            </div>
+            <div class="why-benefit">
+              <div class="why-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div class="why-benefit-text">
+                <strong>Linguagem acessível</strong>
+                <p>Soluções pensadas para empresários e profissionais de diferentes áreas, com linguagem clara e objetiva.</p>
+              </div>
+            </div>
+            <div class="why-benefit">
+              <div class="why-benefit-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <div class="why-benefit-text">
+                <strong>Suporte da equipe</strong>
+                <p>Canal de atendimento via WhatsApp para dúvidas sobre a utilização das ferramentas adquiridas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTITUCIONAL -->
+    <section class="institutional-section">
+      <div class="container">
+        <div class="institutional-panel">
+          <div class="institutional-text">
+            <span class="eyebrow">GCONT TECH</span>
+            <h2>Da experiência na gestão à tecnologia que facilita decisões.</h2>
+            <p>A GCONT TECH desenvolve ferramentas e soluções tecnológicas com foco nos desafios enfrentados pelas empresas. Nossa proposta é transformar conhecimento prático em recursos digitais acessíveis, úteis e eficientes.</p>
+          </div>
+          <div class="institutional-photo">
+            <img
+              src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=500&h=375&dpr=1"
+              alt="Profissional analisando informações em ambiente de trabalho"
+              loading="lazy"
+              width="500" height="375"
+            >
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section class="section section-soft" id="faq">
+    <section class="faq-section" id="faq" aria-labelledby="faq-title">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" style="text-align:center;max-width:540px;margin-inline:auto">
           <span class="eyebrow">Dúvidas frequentes</span>
-          <h2>O que você precisa saber.</h2>
+          <h2 id="faq-title">O que você precisa saber antes de comprar.</h2>
         </div>
-        <div class="faq-list" style="max-width:760px;margin:0 auto">
+        <div class="faq-list">
           <details>
-            <summary>Posso comprar mais de uma ferramenta?</summary>
-            <p>Sim. Cada compra é realizada individualmente pela plataforma Hotmart. Se tiver dúvidas sobre qual ferramenta escolher, nossa equipe pode ajudar pelo WhatsApp.</p>
+            <summary>Como recebo o material após a compra?</summary>
+            <p>As planilhas são entregues por download após a confirmação do pagamento, diretamente pela Hotmart. Você recebe o arquivo no e-mail cadastrado e pode acessá-lo pelo painel do comprador na plataforma.</p>
           </details>
           <details>
-            <summary>Como recebo meu produto após a compra?</summary>
-            <p>As planilhas são entregues por download após a confirmação do pagamento, diretamente pela Hotmart. Você recebe o arquivo no e-mail cadastrado e pode acessá-lo pelo painel do comprador.</p>
+            <summary>O pagamento é seguro?</summary>
+            <p>Sim. O pagamento é processado pelo ambiente de checkout da Hotmart, plataforma especializada em produtos digitais. Seus dados são protegidos durante toda a transação.</p>
           </details>
           <details>
-            <summary>As planilhas são compatíveis com Excel ou Google Sheets?</summary>
+            <summary>Preciso instalar algum programa?</summary>
             <p>As planilhas são desenvolvidas e otimizadas para o Microsoft Excel. A compatibilidade com o Google Sheets pode variar conforme o uso de funções avançadas ou formatações específicas de cada planilha. Em caso de dúvida, entre em contato antes da compra.</p>
           </details>
           <details>
-            <summary>Os materiais servem para qualquer tipo de empresa?</summary>
-            <p>Os conteúdos foram criados com foco em pequenas e médias empresas. Os conceitos e as planilhas se adaptam a diferentes segmentos e portes.</p>
+            <summary>Posso utilizar a ferramenta imediatamente após a compra?</summary>
+            <p>Sim. Após a confirmação do pagamento pela Hotmart, você recebe acesso imediato ao download. O arquivo estará disponível no e-mail cadastrado e no painel do comprador da plataforma.</p>
           </details>
           <details>
-            <summary>Existe suporte após a compra?</summary>
-            <p>Sim. Após a compra, você pode tirar dúvidas com a equipe GCONT pelo WhatsApp. O suporte é voltado ao uso correto da ferramenta adquirida.</p>
+            <summary>Como entro em contato se tiver dúvidas?</summary>
+            <p>Você pode falar com a equipe GCONT pelo WhatsApp. O suporte é voltado ao uso correto da ferramenta adquirida e está disponível para orientar você durante a utilização.</p>
           </details>
           <details>
             <summary>Os produtos recebem atualizações?</summary>
             <p>A GCONT aprimora seus produtos continuamente. Quando uma nova versão de uma planilha adquirida for disponibilizada, o comprador será informado pela plataforma Hotmart.</p>
           </details>
+          <details>
+            <summary>Posso comprar mais de uma ferramenta?</summary>
+            <p>Sim. Cada compra é realizada individualmente pela plataforma Hotmart. Se tiver dúvidas sobre qual ferramenta escolher, nossa equipe pode ajudar pelo WhatsApp antes da compra.</p>
+          </details>
         </div>
       </div>
     </section>
 
-    <!-- CTA final -->
-    <section class="section shop-cta-band">
+    <!-- CTA FINAL -->
+    <section class="final-cta">
       <div class="container">
-        <span class="eyebrow">Ainda tem dúvidas?</span>
-        <h2>Nossa equipe está à disposição.</h2>
-        <p>Entre em contato pelo WhatsApp antes de comprar. Vamos indicar a ferramenta certa para sua situação.</p>
-        <div class="shop-cta-actions">
-          <a class="button button-arrow" href="https://wa.me/554936740176?text=Ol%C3%A1!%20Vim%20pela%20Loja%20GCONT%20e%20gostaria%20de%20ajuda%20para%20escolher%20a%20ferramenta%20ideal.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer" data-whatsapp-message="Olá! Vim pela Loja GCONT e gostaria de ajuda para escolher a ferramenta ideal. Pode me ajudar?">Falar no WhatsApp</a>
-          <a class="button button-secondary" href="#produtos">Ver ferramentas</a>
+        <div class="final-cta-panel">
+          <div class="final-cta-text">
+            <span class="eyebrow">Pronto para começar?</span>
+            <h2>Sua gestão pode ser mais simples. Comece pelas ferramentas certas.</h2>
+            <p>Conheça nossas soluções digitais e encontre recursos práticos para apoiar as decisões e a organização da sua empresa.</p>
+          </div>
+          <div class="final-cta-actions">
+            <a class="button button-arrow" href="#produtos" data-track="final_cta_products">Explorar ferramentas</a>
+            <a class="button button-secondary" href="https://wa.me/554936740176?text=Ol%C3%A1!%20Vim%20pela%20Loja%20GCONT%20e%20gostaria%20de%20ajuda%20para%20escolher%20a%20ferramenta%20ideal.%20Pode%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer">Falar com a GCONT TECH</a>
+          </div>
         </div>
       </div>
     </section>
@@ -455,6 +1075,8 @@
           <h2>Loja</h2>
           <div class="footer-links">
             <a href="#produtos">Ver ferramentas</a>
+            <a href="#como-funciona">Como funciona</a>
+            <a href="#seguranca">Compra segura</a>
             <a href="#faq">Dúvidas frequentes</a>
           </div>
         </div>
