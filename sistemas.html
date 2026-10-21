@@ -379,6 +379,10 @@
       align-items: center;
     }
     .security-photo {
+      width: 100%;
+      max-width: 460px;
+      aspect-ratio: 4 / 3;
+      justify-self: center;
       border-radius: 20px;
       overflow: hidden;
       border: 1px solid rgba(246,185,28,.11);
@@ -386,8 +390,8 @@
     }
     .security-photo img {
       width: 100%;
+      height: 100%;
       display: block;
-      aspect-ratio: 4/3;
       object-fit: cover;
       object-position: center 15%;
     }
@@ -593,7 +597,7 @@
       .how-steps { grid-template-columns: 1fr 1fr; }
       .how-steps::before { display: none; }
       .security-grid { grid-template-columns: 1fr; }
-      .security-photo { max-width: 500px; }
+      .security-photo { max-width: 460px; }
       .why-head { grid-template-columns: 1fr; gap: 16px; }
       .why-lead { align-self: auto; }
       .why-grid { grid-template-columns: repeat(2, 1fr); border-radius: 16px; }
