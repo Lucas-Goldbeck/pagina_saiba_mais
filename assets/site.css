@@ -781,8 +781,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .solutions-page .footer-links a { overflow-wrap: anywhere; }
 }
 
-/* Home hero photo and text-only product section */
-.product-showcase--text-only { grid-template-columns: minmax(0, 820px); justify-content: center; }
+/* Home hero photo and GCONT IA illustration */
+.ai-home-visual { min-width: 0; margin: 0; }
+.ai-home-visual figcaption { margin-top: 10px; color: #647487; font-size: 11px; line-height: 1.5; text-align: center; }
 .hero-visual.hero-photo-visual {
   width: min(100%, 490px);
   min-height: 0;
