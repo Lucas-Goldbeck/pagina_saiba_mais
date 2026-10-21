@@ -221,10 +221,11 @@
       font-weight: 800;
       letter-spacing: .06em;
       text-transform: uppercase;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 180px;
+      line-height: 1.3;
+      white-space: normal;
+      overflow-wrap: break-word;
+      min-width: 0;
+      max-width: calc(100% - 52px);
     }
     .shop-card-icon {
       flex-shrink: 0;
@@ -539,7 +540,22 @@
       padding-block: 10px;
     }
     .faq-list summary::-webkit-details-marker { display: none; }
-    .faq-list summary::after { content: "+"; color: var(--gold-light); font-size: 22px; flex-shrink: 0; line-height: 1; }
+    .faq-list summary::after {
+      content: "+";
+      display: grid;
+      place-items: center;
+      flex: 0 0 24px;
+      width: 24px;
+      height: 24px;
+      box-sizing: border-box;
+      padding: 0;
+      border-radius: 50%;
+      background: rgba(246,185,28,.1);
+      color: var(--gold-light);
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+    }
     .faq-list details[open] summary::after { content: "−"; }
     .faq-list details p { margin: 0; padding: 0 0 18px; color: var(--muted); font-size: 14px; line-height: 1.65; }
 
@@ -571,23 +587,6 @@
     .final-cta-actions { display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
 
     /* Ponte Contábil — chamada institucional separada do catálogo */
-    .ponte-store-callout { padding: 28px 0; }
-    .ponte-store-panel {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-      padding: clamp(24px,3.5vw,38px);
-      border: 1px solid rgba(246,185,28,.18);
-      border-radius: 20px;
-      background: radial-gradient(ellipse at 90% 0%, rgba(246,185,28,.08), transparent 42%), linear-gradient(135deg,#101d2b,#08111d);
-    }
-    .ponte-store-panel > div { min-width: 0; }
-    .ponte-store-panel .eyebrow { margin-bottom: 10px; }
-    .ponte-store-panel h2 { margin: 0 0 8px; font-size: clamp(22px,2.6vw,32px); line-height: 1.15; letter-spacing: -.03em; }
-    .ponte-store-panel p { max-width: 660px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.65; }
-    .ponte-store-panel .button { flex: 0 0 auto; }
-
     /* ── Responsive 900px ── */
     @media (max-width: 900px) {
       .loja-hero-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -603,7 +602,6 @@
       .why-grid { grid-template-columns: repeat(2, 1fr); border-radius: 16px; }
       .final-cta-panel { grid-template-columns: 1fr; gap: 24px; }
       .final-cta-actions { flex-direction: row; flex-wrap: wrap; }
-      .ponte-store-panel { align-items: flex-start; flex-direction: column; }
     }
 
     /* ── Responsive 680px ── */
@@ -622,7 +620,6 @@
       .security-section .section-head h2 { font-size: clamp(20px,5vw,30px); }
       .how-steps { gap: 18px; }
       .why-card { padding: 20px 18px; }
-      .ponte-store-panel { padding: 24px 20px; }
     }
 
     /* ── Responsive 520px ── */
@@ -632,7 +629,6 @@
       .how-steps { grid-template-columns: 1fr; gap: 20px; }
       .shop-card-footer { flex-direction: column; align-items: stretch; gap: 10px; }
       .shop-btn { justify-content: center; width: 100%; }
-      .ponte-store-panel .button { width: 100%; justify-content: center; }
       .loja-trust-strip { gap: 10px; }
       .shop-card-badge { font-size: 9px; padding: 3px 8px; }
       .why-grid { grid-template-columns: 1fr; border-radius: 14px; }
@@ -652,7 +648,7 @@
       .loja-trust-strip { margin-top: 16px; padding-top: 14px; gap: 8px; }
       .loja-trust-item { font-size: 11.5px; }
       .proof-item { font-size: 11.5px; }
-      .shop-card-badge { max-width: 145px; font-size: 8.5px; }
+      .shop-card-badge { font-size: 8.5px; }
       .shop-card-icon { width: 36px; height: 36px; }
       .shop-card h3 { font-size: 16px; }
       .faq-list summary { font-size: 13px; min-height: 52px; }
@@ -1621,19 +1617,6 @@
       </div>
     </section>
 
-    <!-- Ponte Contábil — divulgação institucional, fora do catálogo de compra -->
-    <section class="ponte-store-callout" aria-labelledby="ponte-store-title">
-      <div class="container">
-        <div class="ponte-store-panel">
-          <div>
-            <span class="eyebrow">Plataforma para escritórios e clientes</span>
-            <h2 id="ponte-store-title">Procurando uma solução mais completa?</h2>
-            <p>Conheça o Ponte Contábil, uma plataforma que aproxima a rotina do escritório contábil e de seus clientes.</p>
-          </div>
-          <a class="button button-arrow" href="https://pontecontabil.com/landing/" target="_blank" rel="noopener noreferrer" data-track="ponte_landing_click">Conhecer o Ponte Contábil</a>
-        </div>
-      </div>
-    </section>
 
     <!-- CTA FINAL -->
     <section class="final-cta">
