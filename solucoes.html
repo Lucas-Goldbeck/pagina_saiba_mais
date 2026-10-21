@@ -55,24 +55,26 @@
           </div>
           <p class="solutions-hero-note">Ferramentas desenvolvidas a partir da rotina contábil.</p>
         </div>
-        <figure class="solutions-hero-visual">
-          <div class="solutions-image-frame">
-            <img src="/assets/pexels-ogutomacedo-19879395.jpg" alt="Pessoa usando um notebook para consultar um documento digital" width="4160" height="6240" fetchpriority="high">
-          </div>
-        </figure>
+        <nav class="solutions-hero-catalog" id="portfolio" aria-label="Explore as soluções">
+          <p class="solutions-hero-catalog-label">Soluções por rotina</p>
+          <a class="solutions-hero-catalog-link" href="#confis">
+            <span class="solutions-hero-catalog-number">01</span>
+            <span class="solutions-hero-catalog-copy"><strong>CONFIS</strong><span>Conferência fiscal de XMLs</span></span>
+            <span class="solutions-hero-catalog-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="solutions-hero-catalog-link" href="#gcont-ia">
+            <span class="solutions-hero-catalog-number">02</span>
+            <span class="solutions-hero-catalog-copy"><strong>GCONT IA</strong><span>Consultas empresariais</span></span>
+            <span class="solutions-hero-catalog-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="solutions-hero-catalog-link" href="#ponte-contabil">
+            <span class="solutions-hero-catalog-number">03</span>
+            <span class="solutions-hero-catalog-copy"><strong>Ponte Contábil</strong><span>Escritório e clientes</span></span>
+            <span class="solutions-hero-catalog-arrow" aria-hidden="true">↗</span>
+          </a>
+        </nav>
       </div>
     </section>
-
-    <nav class="solutions-index" id="portfolio" aria-label="Explore as soluções">
-      <div class="container solutions-index-inner">
-        <span class="solutions-index-label">Explore nossas soluções</span>
-        <div class="solutions-index-links">
-          <a href="#confis">CONFIS <span>Rotinas fiscais</span></a>
-          <a href="#gcont-ia">GCONT IA <span>Dados empresariais</span></a>
-          <a href="#ponte-contabil">Ponte Contábil <span>Escritório e clientes</span></a>
-        </div>
-      </div>
-    </nav>
 
     <section class="solution-detail solution-detail--confis" id="confis" aria-labelledby="confis-title">
       <div class="container solution-detail-grid">
@@ -92,32 +94,24 @@
             <a class="button button-secondary" href="/contato?solucao=notasync" data-track="demo_request">Agendar demonstração</a>
           </div>
         </div>
-        <aside class="solution-type-panel solution-type-panel--confis" aria-label="Escopo fiscal do CONFIS">
-          <span class="solution-panel-kicker">Conferência fiscal</span>
-          <strong class="solution-panel-wordmark">CONFIS</strong>
-          <p>Documentos XML organizados para apoiar a rotina fiscal do escritório.</p>
-          <div class="solution-tags" aria-label="Documentos e conferências">
-            <span>NF-e</span><span>NFS-e</span><span>ISS</span><span>DIFAL</span><span>ICMS-ST</span>
-          </div>
-        </aside>
+        <figure class="solution-interface solution-interface--confis">
+          <img src="/assets/confis-interface.webp" alt="Tela do leitor de NF-e com área para importar XMLs e consultar notas, sem dados carregados." width="1355" height="696" loading="lazy" decoding="async">
+          <figcaption>Captura do módulo de conferência fiscal exibido na demonstração do sistema.</figcaption>
+        </figure>
       </div>
     </section>
 
     <section class="solution-detail solution-detail--ia" id="gcont-ia" aria-labelledby="gcont-ia-title">
       <div class="container solution-detail-grid solution-detail-grid--reverse">
-        <aside class="solution-type-panel solution-type-panel--ia" aria-label="Escopo da GCONT IA">
-          <span class="solution-panel-kicker">Integração sob diagnóstico</span>
-          <strong class="solution-panel-wordmark">GCONT IA</strong>
-          <p>Fontes autorizadas, escopo e permissões definidos conforme cada operação.</p>
-          <div class="solution-tags" aria-label="Pontos definidos no diagnóstico">
-            <span>Bases autorizadas</span><span>Escopo</span><span>Permissões</span>
-          </div>
-        </aside>
+        <figure class="solution-interface solution-interface--ia">
+          <img src="/assets/gcont-ia-interface.webp" alt="Exemplo da demonstração da GCONT IA respondendo uma consulta sobre itens e códigos fiscais." width="935" height="365" loading="lazy" decoding="async">
+          <figcaption>Exemplo de consulta exibido na demonstração da GCONT IA.</figcaption>
+        </figure>
         <div class="solution-copy">
           <span class="eyebrow">Dados empresariais</span>
           <p class="solution-product-name">GCONT IA</p>
           <h2 id="gcont-ia-title">Consultas empresariais com fontes e acessos definidos.</h2>
-          <p class="solution-description">Uma integração de inteligência artificial com bases de dados autorizadas, configurada após diagnóstico conforme as necessidades e os controles da empresa.</p>
+          <p class="solution-description">Uma integração de inteligência artificial para consultar dados empresariais e fiscais em bases autorizadas, definida após diagnóstico conforme as necessidades e os controles da empresa.</p>
           <ul class="solution-benefits">
             <li>Consulta a dados de empresas e CNPJs em bases autorizadas.</li>
             <li>Apoio a consultas de certidões e situação fiscal empresarial.</li>
@@ -136,16 +130,20 @@
         <div class="ponte-editorial-heading">
           <span class="eyebrow">Solução do ecossistema GCONT TECH</span>
           <p class="solution-product-name">Ponte Contábil</p>
-          <h2 id="ponte-title">Uma rotina compartilhada entre escritório e clientes.</h2>
-          <p class="solution-description">O boletim de caixa que o escritório controla — do lançamento à entrega para a carteira. Movimentações, histórico e informações ficam organizados para apoiar a conferência e o fechamento.</p>
+          <h2 id="ponte-title">Emissão de notas fiscais rápida e simples para escritórios e clientes.</h2>
+          <p class="solution-description">O Ponte Contábil conecta o escritório e as empresas atendidas em uma rotina compartilhada para organizar o financeiro e a rotina fiscal.</p>
         </div>
+        <figure class="solution-interface solution-interface--ponte ponte-editorial-interface">
+          <img src="/assets/ponte-emissao-interface.webp" alt="Tela de demonstração do Ponte Contábil com dados da nota, itens, resumo fiscal e opção de salvar e emitir NFC-e." width="1316" height="690" loading="lazy" decoding="async">
+          <figcaption>Tela de emissão de NFC-e na demonstração oficial da Ponte Contábil.</figcaption>
+        </figure>
         <div class="ponte-editorial-details">
-          <span class="solution-panel-kicker">Para a rotina financeira e fiscal</span>
+          <span class="solution-panel-kicker">Emissão fiscal</span>
+          <p class="ponte-fiscal-types" aria-label="Notas fiscais eletrônicas e de serviço"><span>NF-e</span><span>NFC-e</span><span>NFS-e</span></p>
           <ul class="solution-benefits">
-            <li>Acompanhe várias empresas em um único ambiente.</li>
-            <li>Organize entradas, saídas e transferências com histórico.</li>
-            <li>Consulte resumos e exportações para o fechamento contábil.</li>
-            <li>Emita notas fiscais de forma rápida e fácil.</li>
+            <li>Emita notas fiscais com rapidez e simplicidade.</li>
+            <li>Acompanhe várias empresas e seus clientes em um só ambiente.</li>
+            <li>Organize movimentações e histórico para apoiar o fechamento.</li>
           </ul>
           <a class="button button-arrow" href="https://pontecontabil.com/landing/" target="_blank" rel="noopener noreferrer" data-track="ponte_landing_click">Conhecer o Ponte Contábil</a>
           <p class="solution-note">Apresentação e jornada comercial no site oficial do produto.</p>
