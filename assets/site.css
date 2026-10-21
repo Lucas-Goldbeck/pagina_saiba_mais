@@ -306,7 +306,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .value-item p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.65; }
 .section-light .value-item { background: rgba(255,255,255,.7); border-color: rgba(0,0,0,.08); }
 .section-light .value-item h3 { color: #1a2637; }
-.section-light .value-item p { color: #344252; }
+.section-light .value-item p { color: #1a2535; }
 .section-light .value-num { color: #9b6d00; }
 
 /* ---- Solutions page ---- */
