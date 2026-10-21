@@ -585,18 +585,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .solutions-hero-note { margin: 19px 0 0; color: var(--faint); font-size: 13px; }
 .solutions-hero-visual {
   margin: 0;
-  padding: clamp(16px, 2vw, 24px);
-  border: 1px solid rgba(210, 223, 234, .13);
-  border-radius: 22px;
-  background: linear-gradient(145deg, rgba(18, 33, 49, .9), rgba(11, 23, 36, .82));
-  box-shadow: 0 26px 72px rgba(0, 0, 0, .25);
 }
-.solutions-image-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 4px 10px; border-bottom: 1px solid rgba(212, 222, 232, .12); }
-.solutions-image-heading span { color: var(--faint); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
-.solutions-image-heading strong { color: var(--text); font-size: 13px; }
-.solutions-image-frame { height: clamp(360px, 41vw, 460px); padding-top: 9px; overflow: hidden; border-radius: 14px; background: #101d2b; }
-.solutions-image-frame img { width: 100%; height: 100%; object-fit: cover; object-position: center 31%; }
-.solutions-hero-visual figcaption { margin: 2px 4px 0; color: var(--faint); font-size: 11px; text-align: right; }
+.solutions-image-frame { height: clamp(360px, 41vw, 460px); overflow: hidden; border-radius: 20px; }
+.solutions-image-frame img { display: block; width: 100%; height: 100%; border-radius: inherit; object-fit: cover; object-position: center 31%; }
 
 .solutions-index { padding: 18px 0; border-block: 1px solid rgba(212, 222, 232, .11); background: #0d1928; }
 .solutions-index-inner { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 28px; }
@@ -680,9 +671,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .solutions-hero-actions, .solution-actions { display: grid; grid-template-columns: minmax(0, 1fr); }
   .solutions-hero-actions .button, .solution-actions .button, .ponte-editorial-details > .button, .solutions-cta-panel > .button { width: 100%; }
   .solutions-hero-note { font-size: 12px; }
-  .solutions-hero-visual { padding: 12px; border-radius: 17px; }
   .solutions-image-frame { height: clamp(330px, 110vw, 410px); }
-  .solutions-image-heading span { font-size: 9px; }
   .solutions-index { padding: 16px 0; }
   .solutions-index-inner { gap: 9px; }
   .solutions-index-links { grid-template-columns: minmax(0, 1fr); gap: 3px; }
