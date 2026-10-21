@@ -414,6 +414,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 /* ---- Editorial: Pain / Desafios ---- */
 .pain-editorial { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 88px); align-items: start; }
+#desafios .pain-editorial { align-items: center; }
 .pain-lead h2 { margin: 14px 0 16px; font-size: clamp(28px, 3.5vw, 44px); line-height: 1.12; letter-spacing: -.035em; color: #1a2637; }
 .pain-lead > p { color: #4d6070; font-size: 17px; margin: 0 0 32px; }
 .pain-items { display: grid; gap: 22px; }
