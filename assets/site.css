@@ -1034,3 +1034,70 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .legal-section + .legal-section { margin-top: 26px; }
   .legal-section p { font-size: 14px; }
 }
+
+/* ================================================================
+   LEGAL SUBNAV + PAGE TRANSITION  ·  termos ↔ privacidade
+   ================================================================ */
+
+/* ── Subnav strip ── */
+.legal-subnav {
+  border-bottom: 1px solid var(--line);
+  background: rgba(8, 17, 29, .72);
+}
+.legal-subnav-inner {
+  display: flex;
+  gap: 0;
+}
+.legal-subnav-link {
+  position: relative;
+  padding: 10px 20px 9px;
+  color: var(--faint);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .01em;
+  text-decoration: none;
+  transition: color .18s ease;
+}
+.legal-subnav-link:hover { color: var(--text); }
+.legal-subnav-link[aria-current="page"] { color: var(--text); }
+.legal-subnav-link[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  border-radius: 2px 2px 0 0;
+  background: var(--gold);
+  transform-origin: left center;
+}
+
+/* ── Transitions (respects prefers-reduced-motion) ── */
+@media (prefers-reduced-motion: no-preference) {
+  /* Page content enters from below */
+  main.legal-page {
+    animation: gcont-enter .34s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes gcont-enter {
+    from { opacity: 0; transform: translateY(9px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Active subnav indicator grows from left */
+  .legal-subnav-link[aria-current="page"]::after {
+    animation: gcont-indicator .44s cubic-bezier(0.22, 1, 0.36, 1) .05s both;
+  }
+  @keyframes gcont-indicator {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+
+  /* Header bottom border glows gold on page entry */
+  .is-page-entered .site-header {
+    animation: gcont-header-glow .7s ease-out both;
+  }
+  @keyframes gcont-header-glow {
+    from { box-shadow: 0 1px 0 rgba(246, 185, 28, .5); }
+    to   { box-shadow: 0 1px 0 rgba(246, 185, 28, 0); }
+  }
+}

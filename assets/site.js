@@ -117,6 +117,42 @@
     });
   });
 
+  // ── Legal page navigation transition ──
+  var mainLegal = document.querySelector("main.legal-page");
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (document.querySelector(".legal-subnav") && !reduceMotion) {
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        document.body.classList.add("is-page-entered");
+      });
+    });
+  }
+
+  if (mainLegal && !reduceMotion) {
+    document.addEventListener("click", function (event) {
+      var link = event.target.closest("a[href]");
+      if (!link) return;
+      var href = link.getAttribute("href");
+      if (!href || href.charAt(0) === "#") return;
+      if (/^(https?:|mailto:|tel:)/.test(href)) return;
+      if (link.target === "_blank" || link.hasAttribute("data-whatsapp-message")) return;
+      if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+      event.preventDefault();
+      var dest = link.href;
+
+      mainLegal.style.animation = "none";
+      void mainLegal.offsetHeight;
+      mainLegal.style.transition = "opacity .13s ease, transform .13s ease";
+      mainLegal.style.opacity = "0";
+      mainLegal.style.transform = "translateY(-6px)";
+      mainLegal.style.pointerEvents = "none";
+
+      setTimeout(function () { window.location.href = dest; }, 155);
+    });
+  }
+
   document.querySelectorAll("[data-whatsapp-form]").forEach(function (form) {
     var status = form.querySelector("[data-form-status]");
     var fallback = form.querySelector("[data-form-fallback]");
