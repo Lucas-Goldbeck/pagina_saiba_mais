@@ -1036,7 +1036,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 /* ================================================================
-   LEGAL SUBNAV + PAGE TRANSITION  ·  termos ↔ privacidade
+   LEGAL SUBNAV + PAGE TRANSITION  ·  site-wide
    ================================================================ */
 
 /* ── Subnav strip ── */
@@ -1074,8 +1074,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 /* ── Transitions (respects prefers-reduced-motion) ── */
 @media (prefers-reduced-motion: no-preference) {
-  /* Page content enters from below */
-  main.legal-page {
+  /* Page content enters from below — all pages */
+  main {
     animation: gcont-enter .34s cubic-bezier(0.22, 1, 0.36, 1) both;
   }
   @keyframes gcont-enter {
