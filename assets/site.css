@@ -1072,32 +1072,3 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transform-origin: left center;
 }
 
-/* ── Transitions (respects prefers-reduced-motion) ── */
-@media (prefers-reduced-motion: no-preference) {
-  /* Page content enters from below — all pages */
-  main {
-    animation: gcont-enter .34s cubic-bezier(0.22, 1, 0.36, 1) both;
-  }
-  @keyframes gcont-enter {
-    from { opacity: 0; transform: translateY(9px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Active subnav indicator grows from left */
-  .legal-subnav-link[aria-current="page"]::after {
-    animation: gcont-indicator .44s cubic-bezier(0.22, 1, 0.36, 1) .05s both;
-  }
-  @keyframes gcont-indicator {
-    from { transform: scaleX(0); }
-    to   { transform: scaleX(1); }
-  }
-
-  /* Header bottom border glows gold on page entry */
-  .is-page-entered .site-header {
-    animation: gcont-header-glow .7s ease-out both;
-  }
-  @keyframes gcont-header-glow {
-    from { box-shadow: 0 1px 0 rgba(246, 185, 28, .5); }
-    to   { box-shadow: 0 1px 0 rgba(246, 185, 28, 0); }
-  }
-}

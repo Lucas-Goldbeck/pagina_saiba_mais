@@ -117,44 +117,6 @@
     });
   });
 
-  // ── Site-wide navigation transition ──
-  var mainEl = document.querySelector("main");
-  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  if (!reduceMotion) {
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () {
-        document.body.classList.add("is-page-entered");
-      });
-    });
-
-    if (mainEl) {
-      var navigating = false;
-      document.addEventListener("click", function (event) {
-        if (navigating) return;
-        var link = event.target.closest("a[href]");
-        if (!link) return;
-        var href = link.getAttribute("href");
-        if (!href || href.charAt(0) === "#") return;
-        if (/^(https?:|mailto:|tel:)/.test(href)) return;
-        if (link.target === "_blank" || link.hasAttribute("data-whatsapp-message")) return;
-        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-
-        navigating = true;
-        event.preventDefault();
-        var dest = link.href;
-
-        mainEl.style.animation = "none";
-        void mainEl.offsetHeight;
-        mainEl.style.transition = "opacity .13s ease, transform .13s ease";
-        mainEl.style.opacity = "0";
-        mainEl.style.transform = "translateY(-6px)";
-        mainEl.style.pointerEvents = "none";
-
-        setTimeout(function () { window.location.href = dest; }, 155);
-      });
-    }
-  }
 
   document.querySelectorAll("[data-whatsapp-form]").forEach(function (form) {
     var status = form.querySelector("[data-form-status]");
