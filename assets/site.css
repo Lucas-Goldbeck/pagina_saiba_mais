@@ -685,7 +685,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   box-shadow: 0 22px 60px rgba(0, 0, 0, .22);
 }
 .solution-interface--placeholder { min-height: 282px; display: grid; place-items: center; padding: 28px; border-style: dashed; box-shadow: none; }
+.solution-interface--video { min-height: 0; padding: 0; aspect-ratio: 16 / 9; }
+.solution-demo-video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: contain; background: #07111d; }
 .solution-interface--ia { background: #e8edf2; border-color: rgba(21, 36, 53, .2); box-shadow: none; }
+.solution-detail--ia .solution-demo-video { background: #152435; }
 .solution-interface--ponte { min-height: 330px; }
 .image-coming-soon { display: grid; justify-items: center; align-content: center; gap: 12px; min-width: 0; text-align: center; }
 .image-coming-soon-icon { display: grid; place-items: center; width: 54px; height: 54px; border: 1px solid rgba(246,185,28,.28); border-radius: 16px; color: var(--gold-light); background: rgba(246,185,28,.08); }

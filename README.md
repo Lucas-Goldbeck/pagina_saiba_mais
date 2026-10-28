@@ -17,7 +17,7 @@ Site estático servido por Nginx. Não há framework, etapa de build, banco de d
 
 Use a configuração Nginx do projeto para testar as rotas amigáveis. O `Dockerfile` prepara a imagem local de homologação; a publicação em produção não faz parte desta alteração.
 
-A imagem inclui somente o logo e a ilustração usados pela loja. Gravações de demonstração e outros ativos antigos ficam fora do pacote até a equipe confirmar autorização e remover informações internas, se necessário.
+A página `/solucoes` exibe os vídeos `logos/notasync-demo.mp4` (CONFIS) e `logos/explicação_ia2.mp4` (GCONT IA). O Dockerfile copia a pasta `logos` inteira para a imagem; remova gravações que não devam ser distribuídas e higienize informações internas antes de publicar.
 
 ## Contato e métricas
 
