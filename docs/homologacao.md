@@ -11,7 +11,7 @@
 
 ## Conteúdo e limites comerciais
 
-- A página Soluções apresenta a solução fiscal como **CONFIS**, conforme solicitação da equipe. `assets/site-config.js` ainda define **NotaSync** para as páginas que usam o nome centralizado.
+- A solução fiscal usa o nome **CONFIS** também nas páginas que carregam o nome centralizado em `assets/site-config.js`.
 - A adoção de **CONFIS** no restante do site exige alinhar os metadados e as páginas de detalhe. Os documentos comerciais citados para confirmar o escopo do produto não estão presentes no repositório.
 - A página fiscal deixa explícito que o sistema não captura XMLs: o escritório obtém os documentos pelos sistemas atuais e disponibiliza os arquivos. Formatos, módulos, integrações, retenção e condições devem ser confirmados em demonstração.
 - GCONT IA é apresentada como integração sujeita a diagnóstico, autorização e escopo. Não promete acesso irrestrito nem alteração autônoma de bases de produção.
