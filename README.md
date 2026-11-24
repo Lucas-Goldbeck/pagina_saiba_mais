@@ -6,7 +6,7 @@ Site estático servido por Nginx. Não há framework, etapa de build, banco de d
 
 - `/` — homepage institucional e comercial.
 - `/solucoes` — visão geral do portfólio.
-- `/notasync` — página da solução fiscal com o nome público atual centralizado em `assets/site-config.js`.
+- `/confis` — página da solução fiscal com o nome público atual centralizado em `assets/site-config.js`.
 - `/gcont-ia` — apresentação da proposta de integração com IA.
 - `/sobre` e `/contato` — páginas institucionais e de contato.
 - `/loja` — loja existente em `sistemas.html`; `/sistemas` continua como endereço compatível.

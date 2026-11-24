@@ -4,7 +4,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 COPY index.html /usr/share/nginx/html/index.html
 COPY solucoes.html /usr/share/nginx/html/solucoes.html
-COPY notasync.html /usr/share/nginx/html/notasync.html
+COPY confis.html /usr/share/nginx/html/confis.html
 COPY gcont-ia.html /usr/share/nginx/html/gcont-ia.html
 COPY sobre.html /usr/share/nginx/html/sobre.html
 COPY contato.html /usr/share/nginx/html/contato.html

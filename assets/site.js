@@ -15,6 +15,7 @@
     var requestedSolution = new URLSearchParams(window.location.search).get("solucao");
     var solutionMap = {
       demonstracao: "Demonstração das soluções",
+      confis: "Solução fiscal",
       notasync: "Solução fiscal",
       "gcont-ia": "GCONT IA",
       loja: "Loja de ferramentas"
