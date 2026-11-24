@@ -335,7 +335,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .faq-list details[open] summary { border-bottom: 1px solid var(--line); }
 .faq-list details p { padding: 16px 20px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
 
-/* ---- Flow steps (notasync) ---- */
+/* ---- Flow steps (CONFIS) ---- */
 .flow-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; counter-reset: flow; }
 .flow-step { position: relative; padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.03); counter-increment: flow; }
 .flow-step::before { content: "0" counter(flow); display: block; margin-bottom: 20px; color: var(--gold-light); font-size: 11px; letter-spacing: .1em; font-weight: 800; }

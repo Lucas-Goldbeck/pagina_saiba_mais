@@ -7,12 +7,12 @@
 - A loja está em `sistemas.html`; seus produtos, preços, chamadas JavaScript e quatro destinos Hotmart foram mantidos. O endereço `/sistemas` continua disponível e `/loja` é o endereço preferencial novo.
 - O número de WhatsApp e o e-mail foram reutilizados a partir do conteúdo existente: `+55 49 3674-0176` e `gcont@contabilsg.com.br`. A equipe deve reconfirmar esses dados antes da publicação.
 - O logo enviado nesta conversa substituiu o ativo usado pelas páginas novas e pela loja. O recorte mantém transparência e remove as margens vazias.
-- O Dockerfile copia as pastas `assets` e `logos` por inteiro. A página Soluções usa as gravações `logos/notasync-demo.mp4` para o CONFIS e `logos/explicação_ia2.mp4` para a GCONT IA; outros arquivos antigos de `logos` também entram na imagem.
+- O Dockerfile copia as pastas `assets` e `logos` por inteiro. A página Soluções usa as gravações `logos/confis-demo.mp4` para o CONFIS e `logos/explicação_ia2.mp4` para a GCONT IA; outros arquivos antigos de `logos` também entram na imagem.
 
 ## Conteúdo e limites comerciais
 
 - A solução fiscal usa o nome **CONFIS** também nas páginas que carregam o nome centralizado em `assets/site-config.js`.
-- A adoção de **CONFIS** no restante do site exige alinhar os metadados e as páginas de detalhe. Os documentos comerciais citados para confirmar o escopo do produto não estão presentes no repositório.
+- O nome **CONFIS** foi alinhado nos metadados, páginas de detalhe e conteúdos da solução fiscal. Os documentos comerciais citados para confirmar o escopo do produto não estão presentes no repositório.
 - A página fiscal deixa explícito que o sistema não captura XMLs: o escritório obtém os documentos pelos sistemas atuais e disponibiliza os arquivos. Formatos, módulos, integrações, retenção e condições devem ser confirmados em demonstração.
 - GCONT IA é apresentada como integração sujeita a diagnóstico, autorização e escopo. Não promete acesso irrestrito nem alteração autônoma de bases de produção.
 - Ponte Contábil é divulgada como solução GCONT TECH com jornada comercial independente. A landing oficial é `https://pontecontabil.com/landing/`; o site institucional direciona para ela e não oferece preço, plano ou checkout próprio.
@@ -43,7 +43,7 @@
 
 1. Revisar esta versão com os sócios e a equipe comercial.
 2. Conferir `GERALDO.docx`, `GERALDO CONFIS.docx`, escopo dos módulos, layouts, integrações, retenção, implantação e disponibilidade dos produtos.
-3. Aprovar o nome fiscal final e atualizar `assets/site-config.js` e os metadados/cópias antes de publicar a nova marca.
+3. Manter **CONFIS** como nome fiscal em novos materiais e conferir a consistência dos metadados e conteúdos antes de publicar.
 4. Validar telefone, e-mail, Instagram, dados de endereço existentes na loja e condições atuais dos produtos e checkout Hotmart.
 5. Revisar privacidade, termos, proteção antispam e o fluxo WhatsApp com as áreas responsáveis.
 6. Avaliar e autorizar imagens e gravações de demonstração antes de disponibilizá-las.
