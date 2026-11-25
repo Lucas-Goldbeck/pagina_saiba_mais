@@ -924,6 +924,42 @@
             </div>
           </article>
 
+          <!-- Produto 5 -->
+          <article class="shop-card">
+            <div class="shop-card-top">
+              <div class="shop-card-header">
+                <span class="shop-card-badge">Calculadora &middot; Gest&atilde;o Trabalhista</span>
+                <div class="shop-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                </div>
+              </div>
+              <h3>Calculador de Jornada de Trabalho e CLT</h3>
+              <p class="desc">Tenha mais clareza sobre a jornada de trabalho e os c&aacute;lculos trabalhistas do dia a dia. Organize hor&aacute;rios e acompanhe informa&ccedil;&otilde;es importantes sobre a carga hor&aacute;ria com uma ferramenta pr&aacute;tica para trabalhadores, profissionais de RH e empresas.</p>
+            </div>
+            <div class="shop-card-body">
+              <ul class="shop-card-benefits">
+                <li>Organiza informa&ccedil;&otilde;es da jornada de trabalho</li>
+                <li>Facilita a confer&ecirc;ncia da carga hor&aacute;ria informada</li>
+                <li>Apoia a an&aacute;lise de cen&aacute;rios e rotinas trabalhistas</li>
+                <li>Pr&aacute;tico para trabalhadores, RH e empresas</li>
+              </ul>
+              <div class="shop-card-meta">
+                <span class="shop-meta-tag">Calculador trabalhista</span>
+                <span class="shop-meta-tag">Acesso pela Hotmart</span>
+              </div>
+            </div>
+            <div class="shop-card-footer">
+              <div class="shop-price">
+                <strong>R$ 39,90</strong>
+                <small>pagamento &uacute;nico</small>
+              </div>
+              <button class="shop-btn" onclick="buyCalculadorJornadaCLT()" aria-label="Comprar Calculador de Jornada de Trabalho e CLT por R$ 39,90">
+                Comprar agora
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -1190,6 +1226,10 @@
     window.buyControleFerias13Salario = function(){
       if(window.GCONTTrack) window.GCONTTrack('checkout_start',{product:'Controle de Ferias e 13 Salario'});
       window.location.href = 'https://pay.hotmart.com/X107403028M';
+    };
+    window.buyCalculadorJornadaCLT = function(){
+      if(window.GCONTTrack) window.GCONTTrack('checkout_start',{product:'Calculador de Jornada de Trabalho e CLT'});
+      window.location.href = 'https://pay.hotmart.com/U108665320S';
     };
 
   </script>
